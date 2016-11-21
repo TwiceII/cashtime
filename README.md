@@ -1,2 +1,4 @@
 # Cash Time(line)
-in development
+
+open index.html file locally
+run `lein figwheel` in different process
