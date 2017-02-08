@@ -1,6 +1,7 @@
 (defproject cashtime "0.1.0-SNAPSHOT"
   :dependencies [[org.clojure/clojure "1.8.0"]
-                 [org.clojure/clojurescript "1.9.229"]]
+                 [org.clojure/clojurescript "1.9.229"]
+                 [rum "0.10.8"]]
   :plugins [[lein-figwheel "0.5.7"]]
   :clean-targets [:target-path "out"]
   :cljsbuild {
@@ -14,5 +15,4 @@
              }]
    }
   :figwheel {:css-dirs ["resources/css"]}
-
   )

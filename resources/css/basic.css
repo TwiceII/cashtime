@@ -1,0 +1,46 @@
+.ui.table {
+  border-radius: 0 !important;
+}
+
+.ui.grid>.column:not(.row), .ui.grid>.row>.column {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.values-div {
+  border-left: 2px solid #aaa;
+  width: 600px;
+  overflow-x: scroll;
+  margin-bottom: -8px;
+}
+
+.values-div::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+.values-div::-webkit-scrollbar-track {
+  background-color: #efefef;
+}
+
+.values-div::-webkit-scrollbar-thumb {
+  background-color: darkgrey;
+  outline: 1px solid slategrey;
+}
+
+.values-div .ui.very.basic.table {
+  text-align: right;
+}
+
+.ui.very.basic.compact.table td:first-child,
+.ui.very.basic.compact.table th:first-child {
+  padding-left: .5em;
+}
+
+.ui.basic.table td.dim-1 {
+  background: rgb(255, 244, 185);
+}
+
+.ui.basic.table td.dim-2 {
+  background: #ecfcfe;
+}

@@ -75,3 +75,399 @@ Notifyng browser that CSS file changed: resources/css/styles.css
 Notifyng browser that CSS file changed: resources/css/styles.css
 Notifyng browser that CSS file changed: resources/css/styles.css
 Notifyng browser that CSS file changed: resources/css/styles.css
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 2.372 seconds.[0m
+notifying browser that file changed:  resources/js/out/goog/deps.js
+notifying browser that file changed:  resources/js/out/cljs_deps.js
+notifying browser that file changed:  out\cashtime\core.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.285 seconds.[0m
+notifying browser that file changed:  resources/js/out/cljs_deps.js
+notifying browser that file changed:  out\cashtime\core.js
+Notifyng browser that CSS file changed: resources/css/untitled.css
+Notifyng browser that CSS file changed: resources/css/basic.css
+Notifyng browser that CSS file changed: resources/css/basic.css
+Notifyng browser that CSS file changed: resources/css/basic.css
+Notifyng browser that CSS file changed: resources/css/basic.css
+Notifyng browser that CSS file changed: resources/css/basic.css
+Notifyng browser that CSS file changed: resources/css/basic.css
+Notifyng browser that CSS file changed: resources/css/basic.css
+Notifyng browser that CSS file changed: resources/css/basic.css
+Notifyng browser that CSS file changed: resources/css/basic.css
+Notifyng browser that CSS file changed: resources/css/basic.css
+Notifyng browser that CSS file changed: resources/css/basic.css
+Notifyng browser that CSS file changed: resources/css/basic.css
+Notifyng browser that CSS file changed: resources/css/basic.css
+Notifyng browser that CSS file changed: resources/css/basic.css
+Notifyng browser that CSS file changed: resources/css/basic.css
+Notifyng browser that CSS file changed: resources/css/basic.css
+Notifyng browser that CSS file changed: resources/css/basic.css
+Notifyng browser that CSS file changed: resources/css/basic.css
+Notifyng browser that CSS file changed: resources/css/basic.css
+Notifyng browser that CSS file changed: resources/css/basic.css
+Notifyng browser that CSS file changed: resources/css/basic.css
+Notifyng browser that CSS file changed: resources/css/basic.css
+Notifyng browser that CSS file changed: resources/css/basic.css
+Notifyng browser that CSS file changed: resources/css/basic.css
+Notifyng browser that CSS file changed: resources/css/basic.css
+Notifyng browser that CSS file changed: resources/css/basic.css
+Notifyng browser that CSS file changed: resources/css/basic.css
+Notifyng browser that CSS file changed: resources/css/basic.css
+Notifyng browser that CSS file changed: resources/css/basic.css
+Notifyng browser that CSS file changed: resources/css/basic.css
+Notifyng browser that CSS file changed: resources/css/basic.css
+Notifyng browser that CSS file changed: resources/css/basic.css
+Notifyng browser that CSS file changed: resources/css/basic.css
+Notifyng browser that CSS file changed: resources/css/basic.css
+Notifyng browser that CSS file changed: resources/css/basic.css
+Notifyng browser that CSS file changed: resources/css/basic.css
+Notifyng browser that CSS file changed: resources/css/basic.css
+Notifyng browser that CSS file changed: resources/css/basic.css
+Notifyng browser that CSS file changed: resources/css/basic.css
+Notifyng browser that CSS file changed: resources/css/basic.css
+Notifyng browser that CSS file changed: resources/css/basic.css
+Notifyng browser that CSS file changed: resources/css/basic.css
+Notifyng browser that CSS file changed: resources/css/basic.css
+Notifyng browser that CSS file changed: resources/css/basic.css
+Notifyng browser that CSS file changed: resources/css/basic.css
+Notifyng browser that CSS file changed: resources/css/basic.css
+Notifyng browser that CSS file changed: resources/css/basic.css
+Notifyng browser that CSS file changed: resources/css/basic.css
+Notifyng browser that CSS file changed: resources/css/basic.css
+Notifyng browser that CSS file changed: resources/css/basic.css
+Notifyng browser that CSS file changed: resources/css/basic.css
+Notifyng browser that CSS file changed: resources/css/basic.css
+Notifyng browser that CSS file changed: resources/css/basic.css
+Notifyng browser that CSS file changed: resources/css/basic.css
+Notifyng browser that CSS file changed: resources/css/basic.css
+Notifyng browser that CSS file changed: resources/css/basic.css
+Notifyng browser that CSS file changed: resources/css/basic.css
+Notifyng browser that CSS file changed: resources/css/basic.css
+Notifyng browser that CSS file changed: resources/css/basic.css
+Notifyng browser that CSS file changed: resources/css/basic.css
+Notifyng browser that CSS file changed: resources/css/basic.css
+Notifyng browser that CSS file changed: resources/css/basic.css
+Notifyng browser that CSS file changed: resources/css/basic.css
+Notifyng browser that CSS file changed: resources/css/basic.css
+Notifyng browser that CSS file changed: resources/css/basic.css
+Notifyng browser that CSS file changed: resources/css/basic.css
+Notifyng browser that CSS file changed: resources/css/basic.css
+Notifyng browser that CSS file changed: resources/css/basic.css
+Notifyng browser that CSS file changed: resources/css/basic.css
+Notifyng browser that CSS file changed: resources/css/basic.css
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.291 seconds.[0m
+notifying browser that file changed:  out\cashtime\core.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.252 seconds.[0m
+notifying browser that file changed:  out\cashtime\core.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[31mFailed to compile "resources/js/main.js" in 0.151 seconds.[0m
+[36m----  Could not Read  src/cashtime/core.cljs   line:37  column:62  ----[0m
+
+  [1mUnmatched delimiter ][0m
+
+  [36m35[0m  [36m           :pay-type :plan[0m
+  [36m36[0m  [36m           :flow-type :expense[0m
+  [33m37[0m  [1m           :value {:summ 10000 :c-id 2}}][0m
+  [0m  [0m  [33m                                         ^--- Unmatched delimiter ][0m
+  [36m38[0m  [36m}))[0m
+
+[36m----  Reader Error : Please see src/cashtime/core.cljs  ----[0m
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.283 seconds.[0m
+notifying browser that file changed:  out\cashtime\core.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.217 seconds.[0m
+notifying browser that file changed:  resources/js/out/cljs_deps.js
+notifying browser that file changed:  out\cashtime\core.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[31mFailed to compile "resources/js/main.js" in 0.127 seconds.[0m
+[36m----  Could not Read  src/cashtime/core.cljs   line:72  column:8  ----[0m
+
+  [1mEOF while reading, starting at line 72 and column 8[0m
+
+  [36m70[0m  [36m[:div[0m
+  [36m71[0m  [36m [:table.ui.very.basic.celled.compact.table[0m
+  [33m72[0m  [1m  [:thead[0m
+  [0m  [0m  [33m  ^--- EOF while reading, starting at line 72 and column 8[0m
+
+[36m----  Reader Error : Please see src/cashtime/core.cljs  ----[0m
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[31mFailed to compile "resources/js/main.js" in 0.124 seconds.[0m
+[36m----  Could not Read  src/cashtime/core.cljs   line:74  column:8  ----[0m
+
+  [1mEOF while reading, starting at line 74 and column 8[0m
+
+  [36m72[0m  [36m[:div[0m
+  [36m73[0m  [36m [:table.ui.very.basic.celled.compact.table[0m
+  [33m74[0m  [1m  [:thead[0m
+  [0m  [0m  [33m  ^--- EOF while reading, starting at line 74 and column 8[0m
+
+[36m----  Reader Error : Please see src/cashtime/core.cljs  ----[0m
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[31mFailed to compile "resources/js/main.js" in 0.449 seconds.[0m
+[36m----  Could not Read  src/cashtime/core.cljs   line:80  column:8  ----[0m
+
+  [1mEOF while reading, starting at line 80 and column 8[0m
+
+  [36m78[0m  [36m[:div[0m
+  [36m79[0m  [36m [:table.ui.very.basic.celled.compact.table[0m
+  [33m80[0m  [1m  [:thead[0m
+  [0m  [0m  [33m  ^--- EOF while reading, starting at line 80 and column 8[0m
+
+[36m----  Reader Error : Please see src/cashtime/core.cljs  ----[0m
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[31mFailed to compile "resources/js/main.js" in 0.144 seconds.[0m
+[36m----  Could not Read  src/cashtime/core.cljs   line:88  column:8  ----[0m
+
+  [1mEOF while reading, starting at line 88 and column 8[0m
+
+  [36m86[0m  [36m[:div[0m
+  [36m87[0m  [36m [:table.ui.very.basic.celled.compact.table[0m
+  [33m88[0m  [1m  [:thead[0m
+  [0m  [0m  [33m  ^--- EOF while reading, starting at line 88 and column 8[0m
+
+[36m----  Reader Error : Please see src/cashtime/core.cljs  ----[0m
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.232 seconds.[0m
+notifying browser that file changed:  out\cashtime\core.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.226 seconds.[0m
+notifying browser that file changed:  resources/js/out/cljs_deps.js
+notifying browser that file changed:  out\cashtime\core.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.203 seconds.[0m
+notifying browser that file changed:  resources/js/out/cljs_deps.js
+notifying browser that file changed:  out\cashtime\core.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[36m----  Compiler Warning on   src/cashtime/core.cljs   line:66  column:12  ----[0m
+
+  [1mWrong number of args (1) passed to cljs.core/get-in[0m
+
+  [36m62[0m  [36m   ;; пример одного измерения[0m
+  [36m63[0m  [36m   {2 1}])[0m
+  [36m64[0m  [36m[0m
+  [36m65[0m  [36m(->> avail-dim-pairs[0m
+  [33m66[0m  [1m     (map #(get-in avail-dimensions ))[0m
+  [0m  [0m  [33m           ^--- Wrong number of args (1) passed to cljs.core/get-in[0m
+  [36m67[0m  [36m     )[0m
+  [36m68[0m  [36m[0m
+  [36m69[0m  [36m;; (rum/defc dimensions-view[0m
+  [36m70[0m  [36m;;   [dimensions][0m
+  [36m71[0m  [36m;;   [:div[0m
+
+[36m----  Compiler Warning : Please see src/cashtime/core.cljs  ----[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.263 seconds.[0m
+notifying browser that file changed:  resources/js/out/cljs_deps.js
+notifying browser that file changed:  out\cashtime\core.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[36m----  Compiler Warning on   src/cashtime/core.cljs   line:66  column:12  ----[0m
+
+  [1mWrong number of args (1) passed to cljs.core/get-in[0m
+
+  [36m62[0m  [36m   ;; пример одного измерения[0m
+  [36m63[0m  [36m   {2 1}])[0m
+  [36m64[0m  [36m[0m
+  [36m65[0m  [36m(->> avail-dim-pairs[0m
+  [33m66[0m  [1m     (map #(get-in avail-dimensions ))[0m
+  [0m  [0m  [33m           ^--- Wrong number of args (1) passed to cljs.core/get-in[0m
+  [36m67[0m  [36m     )[0m
+  [36m68[0m  [36m[0m
+  [36m69[0m  [36m;; (rum/defc dimensions-view[0m
+  [36m70[0m  [36m;;   [dimensions][0m
+  [36m71[0m  [36m;;   [:div[0m
+
+[36m----  Compiler Warning : Please see src/cashtime/core.cljs  ----[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.249 seconds.[0m
+notifying browser that file changed:  out\cashtime\core.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.222 seconds.[0m
+notifying browser that file changed:  resources/js/out/cljs_deps.js
+notifying browser that file changed:  out\cashtime\core.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.191 seconds.[0m
+notifying browser that file changed:  resources/js/out/cljs_deps.js
+notifying browser that file changed:  out\cashtime\core.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[31mFailed to compile "resources/js/main.js" in 0.114 seconds.[0m
+[36m----  Could not Read  src/cashtime/core.cljs   line:72  column:17  ----[0m
+
+  [1mUnmatched delimiter )[0m
+
+  [36m70[0m  [36m         (-> (get-in avail-dimensions [k :entries v])[0m
+  [36m71[0m  [36m             :name))))[0m
+  [33m72[0m  [1m     {1 2, 2 3})[0m
+  [0m  [0m  [33m                ^--- Unmatched delimiter )[0m
+  [36m73[0m  [36m[0m
+  [36m74[0m  [36m(->> avail-dim-pairs[0m
+  [36m75[0m  [36m     (map #(get-in avail-dimensions %)))[0m
+
+[36m----  Reader Error : Please see src/cashtime/core.cljs  ----[0m
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.231 seconds.[0m
+notifying browser that file changed:  out\cashtime\core.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.208 seconds.[0m
+notifying browser that file changed:  out\cashtime\core.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.197 seconds.[0m
+notifying browser that file changed:  out\cashtime\core.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.207 seconds.[0m
+notifying browser that file changed:  out\cashtime\core.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[31mFailed to compile "resources/js/main.js" in 0.306 seconds.[0m
+[36m----  Could not Read  src/cashtime/core.cljs   line:96  column:13  ----[0m
+
+  [1mEOF while reading, starting at line 96 and column 13[0m
+
+  [36m94[0m  [36m    [:tbody[0m
+  [36m95[0m  [36m     (map ([:tr[0m
+  [33m96[0m  [1m            [:td[0m
+  [0m  [0m  [33m            ^--- EOF while reading, starting at line 96 and column 13[0m
+  [36m97[0m  [36m[0m
+  [36m98[0m  [36m;; (rum/defc main-view[0m
+  [36m99[0m  [36m;;   [][0m
+
+[36m----  Reader Error : Please see src/cashtime/core.cljs  ----[0m
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[36m----  Compiler Warning on   src/cashtime/core.cljs   line:75  column:6  ----[0m
+
+  [1mUse of undeclared Var cashtime.core/avail-dim-pairs[0m
+
+  [36m71[0m  [36m             :name)) tuple))[0m
+  [36m72[0m  [36m[0m
+  [36m73[0m  [36m(names-for-tuple {1 2, 2 3})[0m
+  [36m74[0m  [36m[0m
+  [33m75[0m  [1m(->> avail-dim-pairs[0m
+  [0m  [0m  [33m     ^--- Use of undeclared Var cashtime.core/avail-dim-pairs[0m
+  [36m76[0m  [36m     (map names-for-tuple))[0m
+  [36m77[0m  [36m[0m
+  [36m78[0m  [36m(rum/defc tuple-tr-view[0m
+  [36m79[0m  [36m  [dimensions tuple][0m
+  [36m80[0m  [36m  [:tr[0m
+
+[36m----  Compiler Warning : Please see src/cashtime/core.cljs  ----[0m
+[31mFailed to compile "resources/js/main.js" in 0.221 seconds.[0m
+[36m----  Could not Read  src/cashtime/core.cljs   line:96  column:13  ----[0m
+
+  [1mEOF while reading, starting at line 96 and column 13[0m
+
+  [36m94[0m  [36m    [:tbody[0m
+  [36m95[0m  [36m     (map ([:tr[0m
+  [33m96[0m  [1m            [:td[0m
+  [0m  [0m  [33m            ^--- EOF while reading, starting at line 96 and column 13[0m
+  [36m97[0m  [36m[0m
+  [36m98[0m  [36m;; (rum/defc main-view[0m
+  [36m99[0m  [36m;;   [][0m
+
+[36m----  Reader Error : Please see src/cashtime/core.cljs  ----[0m
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[31mFailed to compile "resources/js/main.js" in 0.144 seconds.[0m
+[36m----  Could not Read  src/cashtime/core.cljs   line:96  column:13  ----[0m
+
+  [1mEOF while reading, starting at line 96 and column 13[0m
+
+  [36m94[0m  [36m    [:tbody[0m
+  [36m95[0m  [36m     (map ([:tr[0m
+  [33m96[0m  [1m            [:td[0m
+  [0m  [0m  [33m            ^--- EOF while reading, starting at line 96 and column 13[0m
+  [36m97[0m  [36m[0m
+  [36m98[0m  [36m;; (rum/defc main-view[0m
+  [36m99[0m  [36m;;   [][0m
+
+[36m----  Reader Error : Please see src/cashtime/core.cljs  ----[0m
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[31mFailed to compile "resources/js/main.js" in 0.134 seconds.[0m
+[36m----  Could not Read  src/cashtime/core.cljs   line:104  column:13  ----[0m
+
+  [1mEOF while reading, starting at line 104 and column 13[0m
+
+  [36m102[0m  [36m    [:tbody[0m
+  [36m103[0m  [36m     (map ([:tr[0m
+  [33m104[0m  [1m            [:td[0m
+  [0m   [0m  [33m            ^--- EOF while reading, starting at line 104 and column 13[0m
+  [36m105[0m  [36m[0m
+  [36m106[0m  [36m;; (rum/defc main-view[0m
+  [36m107[0m  [36m;;   [][0m
+
+[36m----  Reader Error : Please see src/cashtime/core.cljs  ----[0m
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[31mFailed to compile "resources/js/main.js" in 0.15 seconds.[0m
+[36m----  Could not Read  src/cashtime/core.cljs   line:104  column:13  ----[0m
+
+  [1mEOF while reading, starting at line 104 and column 13[0m
+
+  [36m102[0m  [36m    [:tbody[0m
+  [36m103[0m  [36m     (map ([:tr[0m
+  [33m104[0m  [1m            [:td[0m
+  [0m   [0m  [33m            ^--- EOF while reading, starting at line 104 and column 13[0m
+  [36m105[0m  [36m[0m
+  [36m106[0m  [36m;; (rum/defc main-view[0m
+  [36m107[0m  [36m;;   [][0m
+
+[36m----  Reader Error : Please see src/cashtime/core.cljs  ----[0m
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[31mFailed to compile "resources/js/main.js" in 0.178 seconds.[0m
+[36m----  Could not Read  src/cashtime/core.cljs   line:104  column:13  ----[0m
+
+  [1mEOF while reading, starting at line 104 and column 13[0m
+
+  [36m102[0m  [36m    [:tbody[0m
+  [36m103[0m  [36m     (map ([:tr[0m
+  [33m104[0m  [1m            [:td[0m
+  [0m   [0m  [33m            ^--- EOF while reading, starting at line 104 and column 13[0m
+  [36m105[0m  [36m[0m
+  [36m106[0m  [36m;; (rum/defc main-view[0m
+  [36m107[0m  [36m;;   [][0m
+
+[36m----  Reader Error : Please see src/cashtime/core.cljs  ----[0m
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.257 seconds.[0m
+notifying browser that file changed:  out\cashtime\core.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.271 seconds.[0m
+notifying browser that file changed:  resources/js/out/cljs_deps.js
+notifying browser that file changed:  out\cashtime\core.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[31mFailed to compile "resources/js/main.js" in 0.155 seconds.[0m
+[36m----  Could not Read  src/cashtime/core.cljs   line:122  column:1  ----[0m
+
+  [1mEOF while reading, starting at line 122 and column 1[0m
+
+  [36m120[0m  [36m      ]]]])[0m
+  [36m121[0m  [36m[0m
+  [33m122[0m  [1m(rum/mount (main-view) (.getElementById js/document "main")[0m
+  [0m   [0m  [33m^--- EOF while reading, starting at line 122 and column 1[0m
+
+[36m----  Reader Error : Please see src/cashtime/core.cljs  ----[0m
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.192 seconds.[0m
+notifying browser that file changed:  resources/js/out/cljs_deps.js
+notifying browser that file changed:  out\cashtime\core.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.194 seconds.[0m
+notifying browser that file changed:  out\cashtime\core.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.233 seconds.[0m
+notifying browser that file changed:  resources/js/out/cljs_deps.js
+notifying browser that file changed:  out\cashtime\core.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.186 seconds.[0m
+notifying browser that file changed:  resources/js/out/cljs_deps.js
+notifying browser that file changed:  out\cashtime\core.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.209 seconds.[0m
+notifying browser that file changed:  resources/js/out/cljs_deps.js
+notifying browser that file changed:  out\cashtime\core.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.205 seconds.[0m
+notifying browser that file changed:  resources/js/out/cljs_deps.js
+notifying browser that file changed:  out\cashtime\core.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.201 seconds.[0m
+notifying browser that file changed:  out\cashtime\core.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.262 seconds.[0m
+notifying browser that file changed:  out\cashtime\core.js
