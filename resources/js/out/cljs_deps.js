@@ -30,5 +30,6 @@ goog.addDependency("../react-dom.inc.js", ['cljsjs.react.dom'], ['cljsjs.react']
 goog.addDependency("../sablono/core.js", ['sablono.core'], ['goog.dom', 'sablono.util', 'goog.string', 'cljs.core', 'cljsjs.react', 'cljsjs.react.dom', 'sablono.interpreter', 'sablono.normalize', 'clojure.string']);
 goog.addDependency("../rum/util.js", ['rum.util'], ['cljs.core']);
 goog.addDependency("../rum/core.js", ['rum.core'], ['rum.cursor', 'cljs.core', 'cljsjs.react', 'rum.derived_atom', 'sablono.core', 'cljsjs.react.dom', 'rum.util']);
-goog.addDependency("../cashtime/core.js", ['cashtime.core'], ['rum.core', 'cljs.core']);
+goog.addDependency("../cashtime/moment_utils.js", ['cashtime.moment_utils'], ['cljs.core', 'clojure.string']);
+goog.addDependency("../cashtime/core.js", ['cashtime.core'], ['cashtime.moment_utils', 'rum.core', 'cljs.core']);
 goog.addDependency("../AE5945C.js", ['figwheel.connect.dev'], ['cljs.core', 'cashtime.core', 'figwheel.client', 'figwheel.client.utils']);
