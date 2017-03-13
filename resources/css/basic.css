@@ -7,9 +7,16 @@
   padding-right: 0;
 }
 
+.search-div {
+  padding-right: 10px;
+}
+
+/**
+* Таблица значений
+**/
 .values-div {
   border-left: 2px solid #aaa;
-  width: 600px;
+/*   width: 600px; */
   overflow-x: scroll;
   margin-bottom: -8px;
 }
@@ -31,6 +38,32 @@
 .values-div .ui.very.basic.table {
   text-align: right;
 }
+
+/* .values-div .ui.very.basic.table tr td {
+  border-left: 1px solid #ffffff;
+  border-top: 1px solid #ffffff;
+} */
+
+.fact-value {
+ margin-right: 5px;
+}
+
+.plan-value {
+  color: #07a3f1;
+  margin-left: 5px;
+}
+
+.ui.celled.table td.total-cell {
+ background: #fcffd6;
+}
+
+/**
+* Итого
+**/
+.row-totals-div {
+  border-left: 2px solid #aaa;
+}
+
 
 .ui.very.basic.compact.table td:first-child,
 .ui.very.basic.compact.table th:first-child {

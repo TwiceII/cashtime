@@ -1,5 +1,5 @@
 ;;;; =================================================================================
-;;;; Работа с датами в momentjs
+;;;; Работа с momentjs (и в общем с датами)
 ;;;; =================================================================================
 (ns cashtime.moment-utils
   (:require [clojure.string :as cs]))
@@ -105,3 +105,12 @@
 ;;      (sort (if desc?
 ;;              str-moment-after?
 ;;              str-moment-before?) dates-in-vector))))
+
+
+(defn random-date-between
+  "Получить случайную vanilla js дату между двумя другими (со временем)"
+  [from-d to-d]
+  (->> (- (.getTime to-d) (.getTime from-d))
+       (* (.random js/Math))
+       (+ (.getTime from-d))
+       (js/Date.)))

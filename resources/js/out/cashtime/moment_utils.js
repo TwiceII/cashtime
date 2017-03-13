@@ -53,8 +53,8 @@ cashtime.moment_utils.diff_in_days = (function cashtime$moment_utils$diff_in_day
 return moment1.diff(moment2,"days");
 });
 cashtime.moment_utils.moment_comparison = (function cashtime$moment_utils$moment_comparison(cond_fn_str,moment_date1,moment_date2){
-var G__34751 = cond_fn_str;
-switch (G__34751) {
+var G__37534 = cond_fn_str;
+switch (G__37534) {
 case "isSame":
 return moment_date1.isSame(moment_date2);
 
@@ -85,23 +85,23 @@ cashtime.moment_utils.str_moment_same_QMARK_ = cljs.core.partial.call(null,casht
  * Сортировать список дат (к-ые в ISO формате)
  */
 cashtime.moment_utils.sort_dates = (function cashtime$moment_utils$sort_dates(var_args){
-var args34753 = [];
-var len__25835__auto___34756 = arguments.length;
-var i__25836__auto___34757 = (0);
+var args37536 = [];
+var len__25835__auto___37539 = arguments.length;
+var i__25836__auto___37540 = (0);
 while(true){
-if((i__25836__auto___34757 < len__25835__auto___34756)){
-args34753.push((arguments[i__25836__auto___34757]));
+if((i__25836__auto___37540 < len__25835__auto___37539)){
+args37536.push((arguments[i__25836__auto___37540]));
 
-var G__34758 = (i__25836__auto___34757 + (1));
-i__25836__auto___34757 = G__34758;
+var G__37541 = (i__25836__auto___37540 + (1));
+i__25836__auto___37540 = G__37541;
 continue;
 } else {
 }
 break;
 }
 
-var G__34755 = args34753.length;
-switch (G__34755) {
+var G__37538 = args37536.length;
+switch (G__37538) {
 case 1:
 return cashtime.moment_utils.sort_dates.cljs$core$IFn$_invoke$arity$1((arguments[(0)]));
 
@@ -111,7 +111,7 @@ return cashtime.moment_utils.sort_dates.cljs$core$IFn$_invoke$arity$2((arguments
 
 break;
 default:
-throw (new Error([cljs.core.str("Invalid arity: "),cljs.core.str(args34753.length)].join('')));
+throw (new Error([cljs.core.str("Invalid arity: "),cljs.core.str(args37536.length)].join('')));
 
 }
 });
@@ -126,5 +126,11 @@ return cljs.core.into.call(null,cljs.core.PersistentVector.EMPTY,cljs.core.sort.
 
 cashtime.moment_utils.sort_dates.cljs$lang$maxFixedArity = 2;
 
+/**
+ * Получить случайную vanilla js дату между двумя другими (со временем)
+ */
+cashtime.moment_utils.random_date_between = (function cashtime$moment_utils$random_date_between(from_d,to_d){
+return (new Date((from_d.getTime() + (Math.random() * (to_d.getTime() - from_d.getTime())))));
+});
 
-//# sourceMappingURL=moment_utils.js.map?rel=1489231100624
+//# sourceMappingURL=moment_utils.js.map?rel=1489406430616
