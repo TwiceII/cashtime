@@ -8,6 +8,9 @@
 (defn iso-str->moment [iso-str]
   (js/moment. iso-str))
 
+(defn moment->iso-str
+  [md]
+  (str (.format md "YYYY-MM-DD") "T00:00:00Z"))
 
 (defn to-print-datetime [iso-str]
   (.format
@@ -114,3 +117,17 @@
        (* (.random js/Math))
        (+ (.getTime from-d))
        (js/Date.)))
+
+
+(defn print-date-in-needed-format
+  [date d-group-mode]
+  (when-not (clojure.string/blank? date)
+    (-> date
+        js/moment.
+        (.format (case d-group-mode
+                   :by-month "MMMM, YYYY"
+                   :by-year "YYYY"
+                   "DD.MM.YYYY")))))
+
+
+

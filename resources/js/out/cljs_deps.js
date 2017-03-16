@@ -22,6 +22,7 @@ goog.addDependency("../figwheel/client/heads_up.js", ['figwheel.client.heads_up'
 goog.addDependency("../figwheel/client.js", ['figwheel.client'], ['goog.userAgent.product', 'goog.Uri', 'cljs.core', 'goog.object', 'cljs.core.async', 'figwheel.client.file_reloading', 'figwheel.client.utils', 'cljs.repl', 'figwheel.client.heads_up', 'figwheel.client.socket', 'clojure.string', 'cljs.reader']);
 goog.addDependency("../sablono/util.js", ['sablono.util'], ['goog.Uri', 'cljs.core', 'clojure.set', 'clojure.string']);
 goog.addDependency("../sablono/normalize.js", ['sablono.normalize'], ['sablono.util', 'cljs.core', 'clojure.set', 'clojure.string']);
+goog.addDependency("../cashtime/utils.js", ['cashtime.utils'], ['cljs.core', 'clojure.string']);
 goog.addDependency("../react.inc.js", ['cljsjs.react'], []);
 goog.addDependency("../sablono/interpreter.js", ['sablono.interpreter'], ['sablono.util', 'cljs.core', 'goog.object', 'cljsjs.react', 'sablono.normalize', 'clojure.string']);
 goog.addDependency("../rum/cursor.js", ['rum.cursor'], ['cljs.core']);
@@ -31,5 +32,6 @@ goog.addDependency("../sablono/core.js", ['sablono.core'], ['goog.dom', 'sablono
 goog.addDependency("../rum/util.js", ['rum.util'], ['cljs.core']);
 goog.addDependency("../rum/core.js", ['rum.core'], ['rum.cursor', 'cljs.core', 'cljsjs.react', 'rum.derived_atom', 'sablono.core', 'cljsjs.react.dom', 'rum.util']);
 goog.addDependency("../cashtime/moment_utils.js", ['cashtime.moment_utils'], ['cljs.core', 'clojure.string']);
-goog.addDependency("../cashtime/core.js", ['cashtime.core'], ['cashtime.moment_utils', 'rum.core', 'cljs.core']);
+goog.addDependency("../cashtime/random_utils.js", ['cashtime.random_utils'], ['cashtime.moment_utils', 'cljs.core']);
+goog.addDependency("../cashtime/core.js", ['cashtime.core'], ['cashtime.utils', 'cashtime.moment_utils', 'cashtime.random_utils', 'rum.core', 'cljs.core']);
 goog.addDependency("../AE5945C.js", ['figwheel.connect.dev'], ['cljs.core', 'cashtime.core', 'figwheel.client', 'figwheel.client.utils']);

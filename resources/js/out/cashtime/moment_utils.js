@@ -5,6 +5,9 @@ goog.require('clojure.string');
 cashtime.moment_utils.iso_str__GT_moment = (function cashtime$moment_utils$iso_str__GT_moment(iso_str){
 return (new moment(iso_str));
 });
+cashtime.moment_utils.moment__GT_iso_str = (function cashtime$moment_utils$moment__GT_iso_str(md){
+return [cljs.core.str(md.format("YYYY-MM-DD")),cljs.core.str("T00:00:00Z")].join('');
+});
 cashtime.moment_utils.to_print_datetime = (function cashtime$moment_utils$to_print_datetime(iso_str){
 return moment.utc(iso_str).format("DD.MM.YYYY HH:mm:ss");
 });
@@ -53,8 +56,8 @@ cashtime.moment_utils.diff_in_days = (function cashtime$moment_utils$diff_in_day
 return moment1.diff(moment2,"days");
 });
 cashtime.moment_utils.moment_comparison = (function cashtime$moment_utils$moment_comparison(cond_fn_str,moment_date1,moment_date2){
-var G__37534 = cond_fn_str;
-switch (G__37534) {
+var G__36997 = cond_fn_str;
+switch (G__36997) {
 case "isSame":
 return moment_date1.isSame(moment_date2);
 
@@ -85,23 +88,23 @@ cashtime.moment_utils.str_moment_same_QMARK_ = cljs.core.partial.call(null,casht
  * Сортировать список дат (к-ые в ISO формате)
  */
 cashtime.moment_utils.sort_dates = (function cashtime$moment_utils$sort_dates(var_args){
-var args37536 = [];
-var len__25835__auto___37539 = arguments.length;
-var i__25836__auto___37540 = (0);
+var args36999 = [];
+var len__25836__auto___37002 = arguments.length;
+var i__25837__auto___37003 = (0);
 while(true){
-if((i__25836__auto___37540 < len__25835__auto___37539)){
-args37536.push((arguments[i__25836__auto___37540]));
+if((i__25837__auto___37003 < len__25836__auto___37002)){
+args36999.push((arguments[i__25837__auto___37003]));
 
-var G__37541 = (i__25836__auto___37540 + (1));
-i__25836__auto___37540 = G__37541;
+var G__37004 = (i__25837__auto___37003 + (1));
+i__25837__auto___37003 = G__37004;
 continue;
 } else {
 }
 break;
 }
 
-var G__37538 = args37536.length;
-switch (G__37538) {
+var G__37001 = args36999.length;
+switch (G__37001) {
 case 1:
 return cashtime.moment_utils.sort_dates.cljs$core$IFn$_invoke$arity$1((arguments[(0)]));
 
@@ -111,7 +114,7 @@ return cashtime.moment_utils.sort_dates.cljs$core$IFn$_invoke$arity$2((arguments
 
 break;
 default:
-throw (new Error([cljs.core.str("Invalid arity: "),cljs.core.str(args37536.length)].join('')));
+throw (new Error([cljs.core.str("Invalid arity: "),cljs.core.str(args36999.length)].join('')));
 
 }
 });
@@ -132,5 +135,26 @@ cashtime.moment_utils.sort_dates.cljs$lang$maxFixedArity = 2;
 cashtime.moment_utils.random_date_between = (function cashtime$moment_utils$random_date_between(from_d,to_d){
 return (new Date((from_d.getTime() + (Math.random() * (to_d.getTime() - from_d.getTime())))));
 });
+cashtime.moment_utils.print_date_in_needed_format = (function cashtime$moment_utils$print_date_in_needed_format(date,d_group_mode){
+if(clojure.string.blank_QMARK_.call(null,date)){
+return null;
+} else {
+return (new moment(date)).format((function (){var G__37007 = (((d_group_mode instanceof cljs.core.Keyword))?d_group_mode.fqn:null);
+switch (G__37007) {
+case "by-month":
+return "MMMM, YYYY";
 
-//# sourceMappingURL=moment_utils.js.map?rel=1489406430616
+break;
+case "by-year":
+return "YYYY";
+
+break;
+default:
+return "DD.MM.YYYY";
+
+}
+})());
+}
+});
+
+//# sourceMappingURL=moment_utils.js.map?rel=1489666187952
