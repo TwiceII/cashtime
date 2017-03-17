@@ -16,6 +16,11 @@
   [pred-fn l]
   (some #(when (pred-fn %) %) l))
 
+(defn has-substr?
+  "Есть ли в строке подстрока (независимо от регистров)"
+  [s ss]
+  (boolean (re-find (re-pattern (cs/lower-case ss)) (cs/lower-case s))))
+
 
 (defn get-number-with-decimals-str
   "Вывести число с разделениями, запятой и т.д"
@@ -94,7 +99,13 @@
           {} seq-of-maps))
 
 
-
+(defn k-of-v
+  "Получить ключ в хм у к-го значение равно нужному"
+  [m v]
+  (->> m
+       vec
+       (some #(when (= (second %) v)
+                (first %)))))
 
 
 

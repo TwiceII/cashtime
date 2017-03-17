@@ -16,6 +16,14 @@
 }
 
 /**
+* Таблица измерений
+**/
+.dimensions-div .ui.sortable.table {
+  border: none;
+}
+
+
+/**
 * Таблица значений
 **/
 .values-div {

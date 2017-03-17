@@ -5088,3 +5088,1259 @@ notifying browser that file changed:  out\cashtime\core.js
 [32mSuccessfully compiled "resources/js/main.js" in 0.395 seconds.[0m
 notifying browser that file changed:  resources/js/out/cljs_deps.js
 notifying browser that file changed:  out\cashtime\core.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.602 seconds.[0m
+notifying browser that file changed:  out\cashtime\core.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.352 seconds.[0m
+notifying browser that file changed:  resources/js/out/cljs_deps.js
+notifying browser that file changed:  out\cashtime\core.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.582 seconds.[0m
+notifying browser that file changed:  resources/js/out/goog/deps.js
+notifying browser that file changed:  resources/js/out/cljs_deps.js
+notifying browser that file changed:  out\cashtime\core.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[36m----  Compiler Warning on   src/cashtime/core.cljs   line:359  column:42  ----[0m
+
+  [1mUse of undeclared Var cashtime.core/%[0m
+
+  [36m355[0m  [36m;;;[0m
+  [36m356[0m  [36m(rum/defc row-total-tr-view[0m
+  [36m357[0m  [36m  "Вьюшка для итого по строке"[0m
+  [36m358[0m  [36m  [total][0m
+  [33m359[0m  [1m  [:tr [:td.total-cell (entry-value-view %)]])[0m
+  [0m   [0m  [33m                                         ^--- Use of undeclared Var cashtime.core/%[0m
+  [36m360[0m  [36m[0m
+  [36m361[0m  [36m(rum/defc row-totals-view[0m
+  [36m362[0m  [36m  "Вьюшка для Итого по строкам"[0m
+  [36m363[0m  [36m  [totals][0m
+  [36m364[0m  [36m  [:table.ui.very.basic.padded.table[0m
+
+[36m----  Compiler Warning : Please see src/cashtime/core.cljs  ----[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.977 seconds.[0m
+notifying browser that file changed:  resources/js/out/cljs_deps.js
+notifying browser that file changed:  out\cashtime\core.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[36m----  Compiler Warning on   src/cashtime/core.cljs   line:359  column:42  ----[0m
+
+  [1mUse of undeclared Var cashtime.core/%[0m
+
+  [36m355[0m  [36m;;;[0m
+  [36m356[0m  [36m(rum/defc row-total-tr-view[0m
+  [36m357[0m  [36m  "Вьюшка для итого по строке"[0m
+  [36m358[0m  [36m  [total][0m
+  [33m359[0m  [1m  [:tr [:td.total-cell (entry-value-view %)]])[0m
+  [0m   [0m  [33m                                         ^--- Use of undeclared Var cashtime.core/%[0m
+  [36m360[0m  [36m[0m
+  [36m361[0m  [36m(rum/defc row-totals-view[0m
+  [36m362[0m  [36m  "Вьюшка для Итого по строкам"[0m
+  [36m363[0m  [36m  [totals][0m
+  [36m364[0m  [36m  [:table.ui.very.basic.padded.table[0m
+
+[36m----  Compiler Warning : Please see src/cashtime/core.cljs  ----[0m
+[36m----  Compiler Warning on   src/cashtime/core.cljs   line:370  column:43  ----[0m
+
+  [1mUse of undeclared Var cashtime.core/%[0m
+
+  [36m366[0m  [36m [:tr[0m
+  [36m367[0m  [36m  [:th "Итого за месяц"]]][0m
+  [36m368[0m  [36m[:tbody[0m
+  [36m369[0m  [36m ;; сами строки[0m
+  [33m370[0m  [1m (map (rum/with-key (row-total-tr-view %) %)[0m
+  [0m   [0m  [33m                                       ^--- Use of undeclared Var cashtime.core/%[0m
+  [36m371[0m  [36m      totals)[0m
+  [36m372[0m  [36m ;; итого[0m
+  [36m373[0m  [36m [:tr[0m
+  [36m374[0m  [36m  [:td.total-cell (entry-value-view (reduce (fn [m v][0m
+  [36m375[0m  [36m                                              (-> m[0m
+
+[36m----  Compiler Warning : Please see src/cashtime/core.cljs  ----[0m
+[36m----  Compiler Warning on   src/cashtime/core.cljs   line:370  column:46  ----[0m
+
+  [1mUse of undeclared Var cashtime.core/%[0m
+
+  [36m366[0m  [36m [:tr[0m
+  [36m367[0m  [36m  [:th "Итого за месяц"]]][0m
+  [36m368[0m  [36m[:tbody[0m
+  [36m369[0m  [36m ;; сами строки[0m
+  [33m370[0m  [1m (map (rum/with-key (row-total-tr-view %) %)[0m
+  [0m   [0m  [33m                                          ^--- Use of undeclared Var cashtime.core/%[0m
+  [36m371[0m  [36m      totals)[0m
+  [36m372[0m  [36m ;; итого[0m
+  [36m373[0m  [36m [:tr[0m
+  [36m374[0m  [36m  [:td.total-cell (entry-value-view (reduce (fn [m v][0m
+  [36m375[0m  [36m                                              (-> m[0m
+
+[36m----  Compiler Warning : Please see src/cashtime/core.cljs  ----[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.503 seconds.[0m
+notifying browser that file changed:  out\cashtime\core.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[36m----  Compiler Warning on   src/cashtime/core.cljs   line:370  column:43  ----[0m
+
+  [1mUse of undeclared Var cashtime.core/%[0m
+
+  [36m366[0m  [36m [:tr[0m
+  [36m367[0m  [36m  [:th "Итого за месяц"]]][0m
+  [36m368[0m  [36m[:tbody[0m
+  [36m369[0m  [36m ;; сами строки[0m
+  [33m370[0m  [1m (map (rum/with-key (row-total-tr-view %) %)[0m
+  [0m   [0m  [33m                                       ^--- Use of undeclared Var cashtime.core/%[0m
+  [36m371[0m  [36m      totals)[0m
+  [36m372[0m  [36m ;; итого[0m
+  [36m373[0m  [36m [:tr[0m
+  [36m374[0m  [36m  [:td.total-cell (entry-value-view (reduce (fn [m v][0m
+  [36m375[0m  [36m                                              (-> m[0m
+
+[36m----  Compiler Warning : Please see src/cashtime/core.cljs  ----[0m
+[36m----  Compiler Warning on   src/cashtime/core.cljs   line:370  column:46  ----[0m
+
+  [1mUse of undeclared Var cashtime.core/%[0m
+
+  [36m366[0m  [36m [:tr[0m
+  [36m367[0m  [36m  [:th "Итого за месяц"]]][0m
+  [36m368[0m  [36m[:tbody[0m
+  [36m369[0m  [36m ;; сами строки[0m
+  [33m370[0m  [1m (map (rum/with-key (row-total-tr-view %) %)[0m
+  [0m   [0m  [33m                                          ^--- Use of undeclared Var cashtime.core/%[0m
+  [36m371[0m  [36m      totals)[0m
+  [36m372[0m  [36m ;; итого[0m
+  [36m373[0m  [36m [:tr[0m
+  [36m374[0m  [36m  [:td.total-cell (entry-value-view (reduce (fn [m v][0m
+  [36m375[0m  [36m                                              (-> m[0m
+
+[36m----  Compiler Warning : Please see src/cashtime/core.cljs  ----[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.463 seconds.[0m
+notifying browser that file changed:  out\cashtime\core.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.364 seconds.[0m
+notifying browser that file changed:  out\cashtime\core.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.366 seconds.[0m
+notifying browser that file changed:  out\cashtime\core.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.367 seconds.[0m
+notifying browser that file changed:  out\cashtime\core.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.381 seconds.[0m
+notifying browser that file changed:  out\cashtime\core.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.339 seconds.[0m
+notifying browser that file changed:  out\cashtime\core.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[36m----  Compiler Warning on   src/cashtime/core.cljs   line:286  column:12  ----[0m
+
+  [1mUse of undeclared Var cashtime.core/dim-groups[0m
+
+  [36m282[0m  [36m[:thead[0m
+  [36m283[0m  [36m [:tr[0m
+  [36m284[0m  [36m  (map #(rum/with-key (dim-group-header-view %)[0m
+  [36m285[0m  [36m                      (:id %))[0m
+  [33m286[0m  [1m       dim-groups)]][0m
+  [0m   [0m  [33m       ^--- Use of undeclared Var cashtime.core/dim-groups[0m
+  [36m287[0m  [36m[:tbody[0m
+  [36m288[0m  [36m (map #(rum/with-key (tuple-tr-view dim-groups %)[0m
+  [36m289[0m  [36m                     %) tuples)[0m
+  [36m290[0m  [36m [:tr[0m
+  [36m291[0m  [36m  [:td {:colSpan (count dim-groups)[0m
+
+[36m----  Compiler Warning : Please see src/cashtime/core.cljs  ----[0m
+[36m----  Compiler Warning on   src/cashtime/core.cljs   line:288  column:41  ----[0m
+
+  [1mUse of undeclared Var cashtime.core/dim-groups[0m
+
+  [36m284[0m  [36m  (map #(rum/with-key (dim-group-header-view %)[0m
+  [36m285[0m  [36m                      (:id %))[0m
+  [36m286[0m  [36m       dim-groups)]][0m
+  [36m287[0m  [36m[:tbody[0m
+  [33m288[0m  [1m (map #(rum/with-key (tuple-tr-view dim-groups %)[0m
+  [0m   [0m  [33m                                    ^--- Use of undeclared Var cashtime.core/dim-groups[0m
+  [36m289[0m  [36m                     %) tuples)[0m
+  [36m290[0m  [36m [:tr[0m
+  [36m291[0m  [36m  [:td {:colSpan (count dim-groups)[0m
+  [36m292[0m  [36m        :style {:font-weight "bold"}} "Итого"]]]]])[0m
+
+[36m----  Compiler Warning : Please see src/cashtime/core.cljs  ----[0m
+[36m----  Compiler Warning on   src/cashtime/core.cljs   line:291  column:29  ----[0m
+
+  [1mUse of undeclared Var cashtime.core/dim-groups[0m
+
+  [36m287[0m  [36m    [:tbody[0m
+  [36m288[0m  [36m     (map #(rum/with-key (tuple-tr-view dim-groups %)[0m
+  [36m289[0m  [36m                         %) tuples)[0m
+  [36m290[0m  [36m     [:tr[0m
+  [33m291[0m  [1m      [:td {:colSpan (count dim-groups)[0m
+  [0m   [0m  [33m                            ^--- Use of undeclared Var cashtime.core/dim-groups[0m
+  [36m292[0m  [36m            :style {:font-weight "bold"}} "Итого"]]]]])[0m
+  [36m293[0m  [36m[0m
+  [36m294[0m  [36m[0m
+  [36m295[0m  [36m;;;[0m
+  [36m296[0m  [36m;;; Записи с датами (центральная часть)[0m
+
+[36m----  Compiler Warning : Please see src/cashtime/core.cljs  ----[0m
+[36m----  Compiler Warning on   src/cashtime/core.cljs   line:291  column:29  ----[0m
+
+  [1mUse of undeclared Var cashtime.core/dim-groups[0m
+
+  [36m287[0m  [36m    [:tbody[0m
+  [36m288[0m  [36m     (map #(rum/with-key (tuple-tr-view dim-groups %)[0m
+  [36m289[0m  [36m                         %) tuples)[0m
+  [36m290[0m  [36m     [:tr[0m
+  [33m291[0m  [1m      [:td {:colSpan (count dim-groups)[0m
+  [0m   [0m  [33m                            ^--- Use of undeclared Var cashtime.core/dim-groups[0m
+  [36m292[0m  [36m            :style {:font-weight "bold"}} "Итого"]]]]])[0m
+  [36m293[0m  [36m[0m
+  [36m294[0m  [36m[0m
+  [36m295[0m  [36m;;;[0m
+  [36m296[0m  [36m;;; Записи с датами (центральная часть)[0m
+
+[36m----  Compiler Warning : Please see src/cashtime/core.cljs  ----[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.497 seconds.[0m
+notifying browser that file changed:  out\cashtime\core.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.295 seconds.[0m
+notifying browser that file changed:  out\cashtime\core.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.343 seconds.[0m
+notifying browser that file changed:  out\cashtime\core.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.346 seconds.[0m
+notifying browser that file changed:  out\cashtime\core.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.353 seconds.[0m
+notifying browser that file changed:  out\cashtime\core.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.349 seconds.[0m
+notifying browser that file changed:  out\cashtime\core.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.342 seconds.[0m
+notifying browser that file changed:  out\cashtime\core.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[31mFailed to compile "resources/js/main.js" in 0.15 seconds.[0m
+[36m----  Could not Read  src/cashtime/core.cljs   line:148  column:3  ----[0m
+
+  [1mEOF while reading, starting at line 148 and column 3[0m
+
+  [36m146[0m  [36m(defn has-substr?[0m
+  [36m147[0m  [36m  [s ss][0m
+  [33m148[0m  [1m  (boolean (re-find #(lower-case "nova med"))[0m
+  [0m   [0m  [33m  ^--- EOF while reading, starting at line 148 and column 3[0m
+  [36m149[0m  [36m[0m
+  [36m150[0m  [36m;; (->> test-dim-groups[0m
+  [36m151[0m  [36m;;      (filter (fn [dg][0m
+
+[36m----  Reader Error : Please see src/cashtime/core.cljs  ----[0m
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.36 seconds.[0m
+notifying browser that file changed:  resources/js/out/cljs_deps.js
+notifying browser that file changed:  out\cashtime\core.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.345 seconds.[0m
+notifying browser that file changed:  resources/js/out/cljs_deps.js
+notifying browser that file changed:  out\cashtime\core.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.337 seconds.[0m
+notifying browser that file changed:  resources/js/out/cljs_deps.js
+notifying browser that file changed:  out\cashtime\utils.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.355 seconds.[0m
+notifying browser that file changed:  out\cashtime\core.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[36m----  Compiler Warning on   src/cashtime/core.cljs   line:149  column:24  ----[0m
+
+  [1mUse of undeclared Var cashtime.utils/has-substsr?[0m
+
+  [36m147[0m  [36m(->> test-dim-groups[0m
+  [36m148[0m  [36m     (filter (fn [dg][0m
+  [33m149[0m  [1m               (some #(u/has-substsr? % "nova")[0m
+  [0m   [0m  [33m                       ^--- Use of undeclared Var cashtime.utils/has-substsr?[0m
+  [36m150[0m  [36m                     (->> dg[0m
+  [36m151[0m  [36m                          :dims[0m
+  [36m152[0m  [36m                          vals[0m
+  [36m153[0m  [36m                          (map :name))[0m
+
+[36m----  Compiler Warning : Please see src/cashtime/core.cljs  ----[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.421 seconds.[0m
+notifying browser that file changed:  out\cashtime\core.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.336 seconds.[0m
+notifying browser that file changed:  out\cashtime\core.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[31mFailed to compile "resources/js/main.js" in 0.125 seconds.[0m
+[36m----  Could not Read  src/cashtime/core.cljs   line:152  column:24  ----[0m
+
+  [1mNested #()s are not allowed[0m
+
+  [36m150[0m  [36mvals[0m
+  [36m151[0m  [36m(filter (fn [dg][0m
+  [33m152[0m  [1m          (some #(u/has-substr? % "nova")[0m
+  [0m   [0m  [33m                  ^--- Nested #()s are not allowed[0m
+  [36m153[0m  [36m                (->> dg[0m
+  [36m154[0m  [36m                     :dims[0m
+  [36m155[0m  [36m                     vals[0m
+
+[36m----  Reader Error : Please see src/cashtime/core.cljs  ----[0m
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.337 seconds.[0m
+notifying browser that file changed:  resources/js/out/cljs_deps.js
+notifying browser that file changed:  out\cashtime\core.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.307 seconds.[0m
+notifying browser that file changed:  resources/js/out/cljs_deps.js
+notifying browser that file changed:  out\cashtime\core.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.355 seconds.[0m
+notifying browser that file changed:  out\cashtime\core.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[31mFailed to compile "resources/js/main.js" in 0.127 seconds.[0m
+[36m----  Could not Read  src/cashtime/core.cljs   line:153  column:1  ----[0m
+
+  [1mEOF while reading, starting at line 153 and column 1[0m
+
+  [36m151[0m  [36m                (map :name))))[0m
+  [36m152[0m  [36m[0m
+  [33m153[0m  [1m(defn get-dim-group-ids-with-substr[0m
+  [0m   [0m  [33m^--- EOF while reading, starting at line 153 and column 1[0m
+  [36m154[0m  [36m  [dim-groups ss][0m
+  [36m155[0m  [36m  (->> dim-groups[0m
+  [36m156[0m  [36m       vals[0m
+
+[36m----  Reader Error : Please see src/cashtime/core.cljs  ----[0m
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.321 seconds.[0m
+notifying browser that file changed:  out\cashtime\core.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.32 seconds.[0m
+notifying browser that file changed:  out\cashtime\core.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.339 seconds.[0m
+notifying browser that file changed:  out\cashtime\core.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.325 seconds.[0m
+notifying browser that file changed:  out\cashtime\core.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.322 seconds.[0m
+notifying browser that file changed:  out\cashtime\core.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.319 seconds.[0m
+notifying browser that file changed:  out\cashtime\core.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.325 seconds.[0m
+notifying browser that file changed:  resources/js/out/cljs_deps.js
+notifying browser that file changed:  out\cashtime\core.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.328 seconds.[0m
+notifying browser that file changed:  resources/js/out/cljs_deps.js
+notifying browser that file changed:  out\cashtime\core.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.326 seconds.[0m
+notifying browser that file changed:  out\cashtime\core.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[31mFailed to compile "resources/js/main.js" in 0.236 seconds.[0m
+[36m----  Could not Read  src/cashtime/core.cljs   line:489  column:20  ----[0m
+
+  [1mUnmatched delimiter }[0m
+
+  [36m487[0m  [36m   [:input {:type "text"[0m
+  [36m488[0m  [36m            :on-change (reset! (rum/cursor[0m
+  [33m489[0m  [1m            }]]]][0m
+  [0m   [0m  [33m             ^--- Unmatched delimiter }[0m
+  [36m490[0m  [36m[:div.ten.wide.column[0m
+  [36m491[0m  [36m (timeline-panel-view d-params)][0m
+  [36m492[0m  [36m[:div.two.wide.column]][0m
+
+[36m----  Reader Error : Please see src/cashtime/core.cljs  ----[0m
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.308 seconds.[0m
+notifying browser that file changed:  out\cashtime\core.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.323 seconds.[0m
+notifying browser that file changed:  out\cashtime\core.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.312 seconds.[0m
+notifying browser that file changed:  out\cashtime\core.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.381 seconds.[0m
+notifying browser that file changed:  out\cashtime\core.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.385 seconds.[0m
+notifying browser that file changed:  out\cashtime\core.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[31mFailed to compile "resources/js/main.js" in 0.213 seconds.[0m
+[36m----  Could not Read  src/cashtime/core.cljs   line:490  column:20  ----[0m
+
+  [1mUnmatched delimiter }[0m
+
+  [36m488[0m  [36m   [:input {:type "text"[0m
+  [36m489[0m  [36m            :on-change #(set-search-str (-> % .-target .-value)[0m
+  [33m490[0m  [1m            }]]]][0m
+  [0m   [0m  [33m             ^--- Unmatched delimiter }[0m
+  [36m491[0m  [36m[:div.ten.wide.column[0m
+  [36m492[0m  [36m (timeline-panel-view d-params)][0m
+  [36m493[0m  [36m[:div.two.wide.column]][0m
+
+[36m----  Reader Error : Please see src/cashtime/core.cljs  ----[0m
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.317 seconds.[0m
+notifying browser that file changed:  out\cashtime\core.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[31mFailed to compile "resources/js/main.js" in 0.055 seconds.[0m
+[36m----  Exception    ----[0m
+
+  [1mNo ns form found in src\cashtime\untitled.cljs[0m
+
+[36m----  Exception Stack Trace  ----[0m
+
+java.lang.AssertionError: No ns form found in src\cashtime\untitled.cljs
+ at cljs.analyzer$parse_ns$fn__2420.invoke (analyzer.cljc:3059)
+    cljs.analyzer$parse_ns.invokeStatic (analyzer.cljc:3009)
+    cljs.analyzer$parse_ns.invoke (analyzer.cljc:2991)
+    cljs.analyzer$parse_ns.invokeStatic (analyzer.cljc:3001)
+    cljs.analyzer$parse_ns.invoke (analyzer.cljc:2991)
+    cljs.compiler$find_source.invokeStatic (compiler.cljc:1432)
+    cljs.compiler$find_source.invoke (compiler.cljc:1431)
+    clojure.core$map$fn__4785.invoke (core.clj:2646)
+    clojure.lang.LazySeq.sval (LazySeq.java:40)
+    clojure.lang.LazySeq.seq (LazySeq.java:49)
+    clojure.lang.Cons.next (Cons.java:39)
+    clojure.lang.RT.next (RT.java:688)
+    clojure.core$next__4341.invokeStatic (core.clj:64)
+    clojure.core$reduce1.invokeStatic (core.clj:925)
+    clojure.core$set.invokeStatic (core.clj:3983)
+    clojure.core$set.invoke (core.clj:3975)
+    cljs.closure$add_dependency_sources.invokeStatic (closure.clj:798)
+    cljs.closure$add_dependency_sources.invoke (closure.clj:792)
+    cljs.closure$build.invokeStatic (closure.clj:1986)
+    cljs.closure$build.invoke (closure.clj:1927)
+    cljs.build.api$build.invokeStatic (api.clj:199)
+    cljs.build.api$build.invoke (api.clj:187)
+    figwheel_sidecar.components.cljs_autobuild$cljs_build.invokeStatic (cljs_autobuild.clj:28)
+    figwheel_sidecar.components.cljs_autobuild$cljs_build.invoke (cljs_autobuild.clj:27)
+    figwheel_sidecar.build_middleware.injection$hook$fn__23868.invoke (injection.clj:132)
+    figwheel_sidecar.components.cljs_autobuild$notify_command_hook$fn__24263.invoke (cljs_autobuild.clj:68)
+    figwheel_sidecar.components.cljs_autobuild$figwheel_start_and_end_messages$fn__24255.invoke (cljs_autobuild.clj:48)
+    figwheel_sidecar.build_middleware.notifications$hook$fn__24093.invoke (notifications.clj:179)
+    figwheel_sidecar.build_middleware.clj_reloading$hook$fn__24169.invoke (clj_reloading.clj:115)
+    figwheel_sidecar.build_middleware.javascript_reloading$hook$fn__24215.invoke (javascript_reloading.clj:60)
+    figwheel_sidecar.components.cljs_autobuild$color_output$fn__24267.invoke (cljs_autobuild.clj:79)
+    figwheel_sidecar.components.cljs_autobuild$execute_build$fn__24308.invoke (cljs_autobuild.clj:231)
+    figwheel_sidecar.utils$sync_exec$fn__2477$fn__2478.invoke (utils.clj:13)
+    figwheel_sidecar.utils$sync_exec$fn__2477.invoke (utils.clj:12)
+    clojure.core$binding_conveyor_fn$fn__4676.invoke (core.clj:1941)
+    clojure.lang.AFn.applyToHelper (AFn.java:154)
+    clojure.lang.RestFn.applyTo (RestFn.java:132)
+    clojure.lang.Agent$Action.doRun (Agent.java:114)
+    clojure.lang.Agent$Action.run (Agent.java:163)
+    java.util.concurrent.ThreadPoolExecutor.runWorker (ThreadPoolExecutor.java:1142)
+    java.util.concurrent.ThreadPoolExecutor$Worker.run (ThreadPoolExecutor.java:617)
+    java.lang.Thread.run (Thread.java:745)
+
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[31mFailed to compile "resources/js/main.js" in 0.065 seconds.[0m
+[36m----  Exception    ----[0m
+
+  [1mNo ns form found in src\cashtime\dom_utils.cljs[0m
+
+[36m----  Exception Stack Trace  ----[0m
+
+java.lang.AssertionError: No ns form found in src\cashtime\dom_utils.cljs
+ at cljs.analyzer$parse_ns$fn__2420.invoke (analyzer.cljc:3059)
+    cljs.analyzer$parse_ns.invokeStatic (analyzer.cljc:3009)
+    cljs.analyzer$parse_ns.invoke (analyzer.cljc:2991)
+    cljs.analyzer$parse_ns.invokeStatic (analyzer.cljc:3001)
+    cljs.analyzer$parse_ns.invoke (analyzer.cljc:2991)
+    cljs.compiler$find_source.invokeStatic (compiler.cljc:1432)
+    cljs.compiler$find_source.invoke (compiler.cljc:1431)
+    clojure.core$map$fn__4785.invoke (core.clj:2646)
+    clojure.lang.LazySeq.sval (LazySeq.java:40)
+    clojure.lang.LazySeq.seq (LazySeq.java:49)
+    clojure.lang.Cons.next (Cons.java:39)
+    clojure.lang.RT.next (RT.java:688)
+    clojure.core$next__4341.invokeStatic (core.clj:64)
+    clojure.core$reduce1.invokeStatic (core.clj:925)
+    clojure.core$set.invokeStatic (core.clj:3983)
+    clojure.core$set.invoke (core.clj:3975)
+    cljs.closure$add_dependency_sources.invokeStatic (closure.clj:798)
+    cljs.closure$add_dependency_sources.invoke (closure.clj:792)
+    cljs.closure$build.invokeStatic (closure.clj:1986)
+    cljs.closure$build.invoke (closure.clj:1927)
+    cljs.build.api$build.invokeStatic (api.clj:199)
+    cljs.build.api$build.invoke (api.clj:187)
+    figwheel_sidecar.components.cljs_autobuild$cljs_build.invokeStatic (cljs_autobuild.clj:28)
+    figwheel_sidecar.components.cljs_autobuild$cljs_build.invoke (cljs_autobuild.clj:27)
+    figwheel_sidecar.build_middleware.injection$hook$fn__23868.invoke (injection.clj:132)
+    figwheel_sidecar.components.cljs_autobuild$notify_command_hook$fn__24263.invoke (cljs_autobuild.clj:68)
+    figwheel_sidecar.components.cljs_autobuild$figwheel_start_and_end_messages$fn__24255.invoke (cljs_autobuild.clj:48)
+    figwheel_sidecar.build_middleware.notifications$hook$fn__24093.invoke (notifications.clj:179)
+    figwheel_sidecar.build_middleware.clj_reloading$hook$fn__24169.invoke (clj_reloading.clj:115)
+    figwheel_sidecar.build_middleware.javascript_reloading$hook$fn__24215.invoke (javascript_reloading.clj:60)
+    figwheel_sidecar.components.cljs_autobuild$color_output$fn__24267.invoke (cljs_autobuild.clj:79)
+    figwheel_sidecar.components.cljs_autobuild$execute_build$fn__24308.invoke (cljs_autobuild.clj:231)
+    figwheel_sidecar.utils$sync_exec$fn__2477$fn__2478.invoke (utils.clj:13)
+    figwheel_sidecar.utils$sync_exec$fn__2477.invoke (utils.clj:12)
+    clojure.core$binding_conveyor_fn$fn__4676.invoke (core.clj:1941)
+    clojure.lang.AFn.applyToHelper (AFn.java:154)
+    clojure.lang.RestFn.applyTo (RestFn.java:132)
+    clojure.lang.Agent$Action.doRun (Agent.java:114)
+    clojure.lang.Agent$Action.run (Agent.java:163)
+    java.util.concurrent.ThreadPoolExecutor.runWorker (ThreadPoolExecutor.java:1142)
+    java.util.concurrent.ThreadPoolExecutor$Worker.run (ThreadPoolExecutor.java:617)
+    java.lang.Thread.run (Thread.java:745)
+
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.224 seconds.[0m
+notifying browser that file changed:  resources/js/out/cljs_deps.js
+notifying browser that file changed:  out\cashtime\dom_utils.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.32 seconds.[0m
+notifying browser that file changed:  resources/js/out/cljs_deps.js
+notifying browser that file changed:  out\cashtime\core.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.362 seconds.[0m
+notifying browser that file changed:  out\cashtime\dom_utils.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.354 seconds.[0m
+notifying browser that file changed:  out\cashtime\dom_utils.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.342 seconds.[0m
+notifying browser that file changed:  out\cashtime\core.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.332 seconds.[0m
+notifying browser that file changed:  resources/js/out/cljs_deps.js
+notifying browser that file changed:  out\cashtime\core.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[31mFailed to compile "resources/js/main.js" in 0.151 seconds.[0m
+[36m----  Could not Read  src/cashtime/core.cljs   line:297  column:16  ----[0m
+
+  [1mEOF while reading, starting at line 297 and column 16[0m
+
+  [36m295[0m  [36m(add-watch (state-cursor [:search-dim-str]) :search-str-watch[0m
+  [36m296[0m  [36m           (fn [k a old-s new-s][0m
+  [33m297[0m  [1m             (when-not (= old-s new-s)[0m
+  [0m   [0m  [33m             ^--- EOF while reading, starting at line 297 and column 16[0m
+  [36m298[0m  [36m               ([0m
+  [36m299[0m  [36m)[0m
+
+[36m----  Reader Error : Please see src/cashtime/core.cljs  ----[0m
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[31mFailed to compile "resources/js/main.js" in 0.15 seconds.[0m
+[36m----  Could not Read  src/cashtime/core.cljs   line:297  column:16  ----[0m
+
+  [1mEOF while reading, starting at line 297 and column 16[0m
+
+  [36m295[0m  [36m(add-watch (state-cursor [:search-dim-str]) :search-str-watch[0m
+  [36m296[0m  [36m           (fn [k a old-s new-s][0m
+  [33m297[0m  [1m             (when-not (= old-s new-s)[0m
+  [0m   [0m  [33m             ^--- EOF while reading, starting at line 297 and column 16[0m
+  [36m298[0m  [36m               ([0m
+  [36m299[0m  [36m)[0m
+
+[36m----  Reader Error : Please see src/cashtime/core.cljs  ----[0m
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[31mFailed to compile "resources/js/main.js" in 0.182 seconds.[0m
+[36m----  Could not Read  src/cashtime/core.cljs   line:302  column:16  ----[0m
+
+  [1mEOF while reading, starting at line 302 and column 16[0m
+
+  [36m300[0m  [36m(add-watch (state-cursor [:search-dim-str]) :search-str-watch[0m
+  [36m301[0m  [36m           (fn [k a old-s new-s][0m
+  [33m302[0m  [1m             (when-not (= old-s new-s)[0m
+  [0m   [0m  [33m             ^--- EOF while reading, starting at line 302 and column 16[0m
+  [36m303[0m  [36m               ([0m
+  [36m304[0m  [36m)[0m
+
+[36m----  Reader Error : Please see src/cashtime/core.cljs  ----[0m
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.329 seconds.[0m
+notifying browser that file changed:  resources/js/out/cljs_deps.js
+notifying browser that file changed:  out\cashtime\core.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.317 seconds.[0m
+notifying browser that file changed:  resources/js/out/cljs_deps.js
+notifying browser that file changed:  out\cashtime\core.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[36m----  Compiler Warning on   src/cashtime/core.cljs   line:218  column:44  ----[0m
+
+  [1mUse of undeclared Var cashtime.core/get-dim-group-ids-with-substr[0m
+
+  [36m214[0m  [36m"Обновить записи в формат.виде"[0m
+  [36m215[0m  [36m[][0m
+  [36m216[0m  [36m(let [plain-entries @(state-cursor [:plain-entries])[0m
+  [36m217[0m  [36m      search-str @(state-cursor [:search-dim-str])[0m
+  [33m218[0m  [1m      filtered-dim-ids (when search-str (get-dim-group-ids-with-substr @(state-cursor [:avail-dim-groups])[0m
+  [0m   [0m  [33m                                         ^--- Use of undeclared Var cashtime.core/get-dim-group-ids-with-substr[0m
+  [36m219[0m  [36m                                                                       search-str))[0m
+  [36m220[0m  [36m      result-plain-entries (if filtered-dim-ids ; если нужно фильтровать[0m
+  [36m221[0m  [36m                             (filter (fn[pe](some #(u/in? filtered-dim-ids %)[0m
+  [36m222[0m  [36m                                                  (-> pe :dims keys)))[0m
+  [36m223[0m  [36m                                     plain-entries)[0m
+
+[36m----  Compiler Warning : Please see src/cashtime/core.cljs  ----[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.378 seconds.[0m
+notifying browser that file changed:  resources/js/out/cljs_deps.js
+notifying browser that file changed:  out\cashtime\core.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[36m----  Compiler Warning on   src/cashtime/core.cljs   line:220  column:44  ----[0m
+
+  [1mUse of undeclared Var cashtime.core/get-dim-group-ids-with-substr[0m
+
+  [36m216[0m  [36m"Обновить записи в формат.виде"[0m
+  [36m217[0m  [36m[][0m
+  [36m218[0m  [36m(let [plain-entries @(state-cursor [:plain-entries])[0m
+  [36m219[0m  [36m      search-str @(state-cursor [:search-dim-str])[0m
+  [33m220[0m  [1m      filtered-dim-ids (when search-str (get-dim-group-ids-with-substr @(state-cursor [:avail-dim-groups])[0m
+  [0m   [0m  [33m                                         ^--- Use of undeclared Var cashtime.core/get-dim-group-ids-with-substr[0m
+  [36m221[0m  [36m                                                                       search-str))[0m
+  [36m222[0m  [36m      result-plain-entries (if filtered-dim-ids ; если нужно фильтровать[0m
+  [36m223[0m  [36m                             (filter (fn[pe](some #(u/in? filtered-dim-ids %)[0m
+  [36m224[0m  [36m                                                  (-> pe :dims keys)))[0m
+  [36m225[0m  [36m                                     plain-entries)[0m
+
+[36m----  Compiler Warning : Please see src/cashtime/core.cljs  ----[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.377 seconds.[0m
+notifying browser that file changed:  out\cashtime\core.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[36m----  Compiler Warning on   src/cashtime/core.cljs   line:220  column:44  ----[0m
+
+  [1mUse of undeclared Var cashtime.core/get-dim-group-ids-with-substr[0m
+
+  [36m216[0m  [36m"Обновить записи в формат.виде"[0m
+  [36m217[0m  [36m[][0m
+  [36m218[0m  [36m(let [plain-entries @(state-cursor [:plain-entries])[0m
+  [36m219[0m  [36m      search-str @(state-cursor [:search-dim-str])[0m
+  [33m220[0m  [1m      filtered-dim-ids (when search-str (get-dim-group-ids-with-substr @(state-cursor [:avail-dim-groups])[0m
+  [0m   [0m  [33m                                         ^--- Use of undeclared Var cashtime.core/get-dim-group-ids-with-substr[0m
+  [36m221[0m  [36m                                                                       search-str))[0m
+  [36m222[0m  [36m      result-plain-entries (if filtered-dim-ids ; если нужно фильтровать[0m
+  [36m223[0m  [36m                             (filter (fn[pe](some #(u/in? filtered-dim-ids %)[0m
+  [36m224[0m  [36m                                                  (-> pe :dims keys)))[0m
+  [36m225[0m  [36m                                     plain-entries)[0m
+
+[36m----  Compiler Warning : Please see src/cashtime/core.cljs  ----[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.368 seconds.[0m
+notifying browser that file changed:  out\cashtime\core.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[36m----  Compiler Warning on   src/cashtime/core.cljs   line:223  column:44  ----[0m
+
+  [1mUse of undeclared Var cashtime.core/get-dim-group-ids-with-substr[0m
+
+  [36m219[0m  [36m"Обновить записи в формат.виде"[0m
+  [36m220[0m  [36m[][0m
+  [36m221[0m  [36m(let [plain-entries @(state-cursor [:plain-entries])[0m
+  [36m222[0m  [36m      search-str @(state-cursor [:search-dim-str])[0m
+  [33m223[0m  [1m      filtered-dim-ids (when search-str (get-dim-group-ids-with-substr @(state-cursor [:avail-dim-groups])[0m
+  [0m   [0m  [33m                                         ^--- Use of undeclared Var cashtime.core/get-dim-group-ids-with-substr[0m
+  [36m224[0m  [36m                                                                       search-str))[0m
+  [36m225[0m  [36m      result-plain-entries (if filtered-dim-ids ; если нужно фильтровать[0m
+  [36m226[0m  [36m                             (filter (fn[pe](some #(u/in? filtered-dim-ids %)[0m
+  [36m227[0m  [36m                                                  (-> pe :dims keys)))[0m
+  [36m228[0m  [36m                                     plain-entries)[0m
+
+[36m----  Compiler Warning : Please see src/cashtime/core.cljs  ----[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.366 seconds.[0m
+notifying browser that file changed:  resources/js/out/cljs_deps.js
+notifying browser that file changed:  out\cashtime\core.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[36m----  Compiler Warning on   src/cashtime/core.cljs   line:223  column:44  ----[0m
+
+  [1mUse of undeclared Var cashtime.core/get-dim-group-ids-with-substr[0m
+
+  [36m219[0m  [36m"Обновить записи в формат.виде"[0m
+  [36m220[0m  [36m[][0m
+  [36m221[0m  [36m(let [plain-entries @(state-cursor [:plain-entries])[0m
+  [36m222[0m  [36m      search-str @(state-cursor [:search-dim-str])[0m
+  [33m223[0m  [1m      filtered-dim-ids (when search-str (get-dim-group-ids-with-substr @(state-cursor [:avail-dim-groups])[0m
+  [0m   [0m  [33m                                         ^--- Use of undeclared Var cashtime.core/get-dim-group-ids-with-substr[0m
+  [36m224[0m  [36m                                                                       search-str))[0m
+  [36m225[0m  [36m      result-plain-entries (if filtered-dim-ids ; если нужно фильтровать[0m
+  [36m226[0m  [36m                             (filter (fn[pe](some #(u/in? filtered-dim-ids %)[0m
+  [36m227[0m  [36m                                                  (-> pe :dims keys)))[0m
+  [36m228[0m  [36m                                     plain-entries)[0m
+
+[36m----  Compiler Warning : Please see src/cashtime/core.cljs  ----[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.338 seconds.[0m
+notifying browser that file changed:  resources/js/out/cljs_deps.js
+notifying browser that file changed:  out\cashtime\core.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[36m----  Compiler Warning on   src/cashtime/core.cljs   line:168  column:2  ----[0m
+
+  [1mUse of undeclared Var cashtime.core/get-dim-pairs-with-substr[0m
+
+  [36m164[0m  [36m               {})[0m
+  [36m165[0m  [36m       ))[0m
+  [36m166[0m  [36m[0m
+  [36m167[0m  [36m[0m
+  [33m168[0m  [1m(get-dim-pairs-with-substr test-dim-groups "го")[0m
+  [0m   [0m  [33m ^--- Use of undeclared Var cashtime.core/get-dim-pairs-with-substr[0m
+  [36m169[0m  [36m[0m
+  [36m170[0m  [36m[0m
+  [36m171[0m  [36m(defn get-used-dims-ids[0m
+  [36m172[0m  [36m  "Получить из всех записей id используемых измерений"[0m
+  [36m173[0m  [36m  [entries][0m
+
+[36m----  Compiler Warning : Please see src/cashtime/core.cljs  ----[0m
+[36m----  Compiler Warning on   src/cashtime/core.cljs   line:223  column:44  ----[0m
+
+  [1mUse of undeclared Var cashtime.core/get-dim-group-ids-with-substr[0m
+
+  [36m219[0m  [36m"Обновить записи в формат.виде"[0m
+  [36m220[0m  [36m[][0m
+  [36m221[0m  [36m(let [plain-entries @(state-cursor [:plain-entries])[0m
+  [36m222[0m  [36m      search-str @(state-cursor [:search-dim-str])[0m
+  [33m223[0m  [1m      filtered-dim-ids (when search-str (get-dim-group-ids-with-substr @(state-cursor [:avail-dim-groups])[0m
+  [0m   [0m  [33m                                         ^--- Use of undeclared Var cashtime.core/get-dim-group-ids-with-substr[0m
+  [36m224[0m  [36m                                                                       search-str))[0m
+  [36m225[0m  [36m      result-plain-entries (if filtered-dim-ids ; если нужно фильтровать[0m
+  [36m226[0m  [36m                             (filter (fn[pe](some #(u/in? filtered-dim-ids %)[0m
+  [36m227[0m  [36m                                                  (-> pe :dims keys)))[0m
+  [36m228[0m  [36m                                     plain-entries)[0m
+
+[36m----  Compiler Warning : Please see src/cashtime/core.cljs  ----[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.386 seconds.[0m
+notifying browser that file changed:  resources/js/out/cljs_deps.js
+notifying browser that file changed:  out\cashtime\core.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[36m----  Compiler Warning on   src/cashtime/core.cljs   line:167  column:2  ----[0m
+
+  [1mUse of undeclared Var cashtime.core/get-dim-pairs-with-substr[0m
+
+  [36m163[0m  [36m                     m)))[0m
+  [36m164[0m  [36m               {})))[0m
+  [36m165[0m  [36m[0m
+  [36m166[0m  [36m[0m
+  [33m167[0m  [1m(get-dim-pairs-with-substr test-dim-groups "го")[0m
+  [0m   [0m  [33m ^--- Use of undeclared Var cashtime.core/get-dim-pairs-with-substr[0m
+  [36m168[0m  [36m[0m
+  [36m169[0m  [36m[0m
+  [36m170[0m  [36m(defn get-used-dims-ids[0m
+  [36m171[0m  [36m  "Получить из всех записей id используемых измерений"[0m
+  [36m172[0m  [36m  [entries][0m
+
+[36m----  Compiler Warning : Please see src/cashtime/core.cljs  ----[0m
+[36m----  Compiler Warning on   src/cashtime/core.cljs   line:222  column:44  ----[0m
+
+  [1mUse of undeclared Var cashtime.core/get-dim-group-ids-with-substr[0m
+
+  [36m218[0m  [36m"Обновить записи в формат.виде"[0m
+  [36m219[0m  [36m[][0m
+  [36m220[0m  [36m(let [plain-entries @(state-cursor [:plain-entries])[0m
+  [36m221[0m  [36m      search-str @(state-cursor [:search-dim-str])[0m
+  [33m222[0m  [1m      filtered-dim-ids (when search-str (get-dim-group-ids-with-substr @(state-cursor [:avail-dim-groups])[0m
+  [0m   [0m  [33m                                         ^--- Use of undeclared Var cashtime.core/get-dim-group-ids-with-substr[0m
+  [36m223[0m  [36m                                                                       search-str))[0m
+  [36m224[0m  [36m      result-plain-entries (if filtered-dim-ids ; если нужно фильтровать[0m
+  [36m225[0m  [36m                             (filter (fn[pe](some #(u/in? filtered-dim-ids %)[0m
+  [36m226[0m  [36m                                                  (-> pe :dims keys)))[0m
+  [36m227[0m  [36m                                     plain-entries)[0m
+
+[36m----  Compiler Warning : Please see src/cashtime/core.cljs  ----[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.412 seconds.[0m
+notifying browser that file changed:  resources/js/out/cljs_deps.js
+notifying browser that file changed:  out\cashtime\core.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[36m----  Compiler Warning on   src/cashtime/core.cljs   line:222  column:44  ----[0m
+
+  [1mUse of undeclared Var cashtime.core/get-dim-group-ids-with-substr[0m
+
+  [36m218[0m  [36m"Обновить записи в формат.виде"[0m
+  [36m219[0m  [36m[][0m
+  [36m220[0m  [36m(let [plain-entries @(state-cursor [:plain-entries])[0m
+  [36m221[0m  [36m      search-str @(state-cursor [:search-dim-str])[0m
+  [33m222[0m  [1m      filtered-dim-ids (when search-str (get-dim-group-ids-with-substr @(state-cursor [:avail-dim-groups])[0m
+  [0m   [0m  [33m                                         ^--- Use of undeclared Var cashtime.core/get-dim-group-ids-with-substr[0m
+  [36m223[0m  [36m                                                                       search-str))[0m
+  [36m224[0m  [36m      result-plain-entries (if filtered-dim-ids ; если нужно фильтровать[0m
+  [36m225[0m  [36m                             (filter (fn[pe](some #(u/in? filtered-dim-ids %)[0m
+  [36m226[0m  [36m                                                  (-> pe :dims keys)))[0m
+  [36m227[0m  [36m                                     plain-entries)[0m
+
+[36m----  Compiler Warning : Please see src/cashtime/core.cljs  ----[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.352 seconds.[0m
+notifying browser that file changed:  out\cashtime\core.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[36m----  Compiler Warning on   src/cashtime/core.cljs   line:233  column:44  ----[0m
+
+  [1mUse of undeclared Var cashtime.core/get-dim-group-ids-with-substr[0m
+
+  [36m229[0m  [36m"Обновить записи в формат.виде"[0m
+  [36m230[0m  [36m[][0m
+  [36m231[0m  [36m(let [plain-entries @(state-cursor [:plain-entries])[0m
+  [36m232[0m  [36m      search-str @(state-cursor [:search-dim-str])[0m
+  [33m233[0m  [1m      filtered-dim-ids (when search-str (get-dim-group-ids-with-substr @(state-cursor [:avail-dim-groups])[0m
+  [0m   [0m  [33m                                         ^--- Use of undeclared Var cashtime.core/get-dim-group-ids-with-substr[0m
+  [36m234[0m  [36m                                                                       search-str))[0m
+  [36m235[0m  [36m      result-plain-entries (if filtered-dim-ids ; если нужно фильтровать[0m
+  [36m236[0m  [36m                             (filter (fn[pe](some #(u/in? filtered-dim-ids %)[0m
+  [36m237[0m  [36m                                                  (-> pe :dims keys)))[0m
+  [36m238[0m  [36m                                     plain-entries)[0m
+
+[36m----  Compiler Warning : Please see src/cashtime/core.cljs  ----[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.38 seconds.[0m
+notifying browser that file changed:  resources/js/out/cljs_deps.js
+notifying browser that file changed:  out\cashtime\core.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[36m----  Compiler Warning on   src/cashtime/core.cljs   line:232  column:44  ----[0m
+
+  [1mUse of undeclared Var cashtime.core/get-dim-group-ids-with-substr[0m
+
+  [36m228[0m  [36m"Обновить записи в формат.виде"[0m
+  [36m229[0m  [36m[][0m
+  [36m230[0m  [36m(let [plain-entries @(state-cursor [:plain-entries])[0m
+  [36m231[0m  [36m      search-str @(state-cursor [:search-dim-str])[0m
+  [33m232[0m  [1m      filtered-dim-ids (when search-str (get-dim-group-ids-with-substr @(state-cursor [:avail-dim-groups])[0m
+  [0m   [0m  [33m                                         ^--- Use of undeclared Var cashtime.core/get-dim-group-ids-with-substr[0m
+  [36m233[0m  [36m                                                                       search-str))[0m
+  [36m234[0m  [36m      result-plain-entries (if filtered-dim-ids ; если нужно фильтровать[0m
+  [36m235[0m  [36m                             (filter (fn[pe](some #(u/in? filtered-dim-ids %)[0m
+  [36m236[0m  [36m                                                  (-> pe :dims keys)))[0m
+  [36m237[0m  [36m                                     plain-entries)[0m
+
+[36m----  Compiler Warning : Please see src/cashtime/core.cljs  ----[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.346 seconds.[0m
+notifying browser that file changed:  resources/js/out/cljs_deps.js
+notifying browser that file changed:  out\cashtime\core.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[36m----  Compiler Warning on   src/cashtime/core.cljs   line:167  column:2  ----[0m
+
+  [1mUse of undeclared Var cashtime.core/get-dim-tuples-with-substr[0m
+
+  [36m163[0m  [36m                     m)))[0m
+  [36m164[0m  [36m               {})))[0m
+  [36m165[0m  [36m[0m
+  [36m166[0m  [36m[0m
+  [33m167[0m  [1m(get-dim-tuples-with-substr test-dim-groups "го")[0m
+  [0m   [0m  [33m ^--- Use of undeclared Var cashtime.core/get-dim-tuples-with-substr[0m
+  [36m168[0m  [36m[0m
+  [36m169[0m  [36m[0m
+  [36m170[0m  [36m(defn pair-in-search-tuples?[0m
+  [36m171[0m  [36m  "Находится ли пара в тапле для поиска[0m
+  [36m172[0m  [36m  пример: (pair-in-search-tuples? [1 7] {1 [4 7], 2 [4]}) - true"[0m
+
+[36m----  Compiler Warning : Please see src/cashtime/core.cljs  ----[0m
+[31mFailed to compile "resources/js/main.js" in 0.19 seconds.[0m
+[36m----  Could not Read  src/cashtime/core.cljs   line:180  column:1  ----[0m
+
+  [1mEOF while reading, starting at line 180 and column 1[0m
+
+  [36m178[0m  [36m(pair-in-search-tuples? [3 5] {1 '(4 7), 2 '(4)})[0m
+  [36m179[0m  [36m[0m
+  [33m180[0m  [1m(def tuple-in-search[0m
+  [0m   [0m  [33m^--- EOF while reading, starting at line 180 and column 1[0m
+  [36m181[0m  [36m[0m
+  [36m182[0m  [36m(defn get-used-dims-ids[0m
+  [36m183[0m  [36m  "Получить из всех записей id используемых измерений"[0m
+
+[36m----  Reader Error : Please see src/cashtime/core.cljs  ----[0m
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[31mFailed to compile "resources/js/main.js" in 0.145 seconds.[0m
+[36m----  Could not Read  src/cashtime/core.cljs   line:180  column:1  ----[0m
+
+  [1mEOF while reading, starting at line 180 and column 1[0m
+
+  [36m178[0m  [36m(pair-in-search-tuples? [3 5] {1 '(4 7), 2 '(4)})[0m
+  [36m179[0m  [36m[0m
+  [33m180[0m  [1m(def tuple-in-search[0m
+  [0m   [0m  [33m^--- EOF while reading, starting at line 180 and column 1[0m
+  [36m181[0m  [36m[0m
+  [36m182[0m  [36m(defn get-used-dims-ids[0m
+  [36m183[0m  [36m  "Получить из всех записей id используемых измерений"[0m
+
+[36m----  Reader Error : Please see src/cashtime/core.cljs  ----[0m
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[36m----  Compiler Warning on   src/cashtime/core.cljs   line:167  column:2  ----[0m
+
+  [1mUse of undeclared Var cashtime.core/get-search-tuples-with-substr[0m
+
+  [36m163[0m  [36m                     m)))[0m
+  [36m164[0m  [36m               {})))[0m
+  [36m165[0m  [36m[0m
+  [36m166[0m  [36m[0m
+  [33m167[0m  [1m(get-search-tuples-with-substr test-dim-groups "го")[0m
+  [0m   [0m  [33m ^--- Use of undeclared Var cashtime.core/get-search-tuples-with-substr[0m
+  [36m168[0m  [36m[0m
+  [36m169[0m  [36m[0m
+  [36m170[0m  [36m(defn pair-in-search-tuples?[0m
+  [36m171[0m  [36m  "Находится ли пара в тапле для поиска[0m
+  [36m172[0m  [36m  пример: (pair-in-search-tuples? [1 7] {1 [4 7], 2 [4]}) - true"[0m
+
+[36m----  Compiler Warning : Please see src/cashtime/core.cljs  ----[0m
+[31mFailed to compile "resources/js/main.js" in 0.158 seconds.[0m
+[36m----  Could not Read  src/cashtime/core.cljs   line:178  column:1  ----[0m
+
+  [1mEOF while reading, starting at line 178 and column 1[0m
+
+  [36m176[0m  [36m                    (second pair)))))[0m
+  [36m177[0m  [36m[0m
+  [33m178[0m  [1m(defn tuple-in-search-tuple[0m
+  [0m   [0m  [33m^--- EOF while reading, starting at line 178 and column 1[0m
+  [36m179[0m  [36m[0m
+  [36m180[0m  [36m(defn get-used-dims-ids[0m
+  [36m181[0m  [36m  "Получить из всех записей id используемых измерений"[0m
+
+[36m----  Reader Error : Please see src/cashtime/core.cljs  ----[0m
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[31mFailed to compile "resources/js/main.js" in 0.137 seconds.[0m
+[36m----  Could not Read  src/cashtime/core.cljs   line:178  column:1  ----[0m
+
+  [1mEOF while reading, starting at line 178 and column 1[0m
+
+  [36m176[0m  [36m                    (second pair)))))[0m
+  [36m177[0m  [36m[0m
+  [33m178[0m  [1m(defn tuple-in-search-tuple[0m
+  [0m   [0m  [33m^--- EOF while reading, starting at line 178 and column 1[0m
+  [36m179[0m  [36m[0m
+  [36m180[0m  [36m(defn get-used-dims-ids[0m
+  [36m181[0m  [36m  "Получить из всех записей id используемых измерений"[0m
+
+[36m----  Reader Error : Please see src/cashtime/core.cljs  ----[0m
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[31mFailed to compile "resources/js/main.js" in 0.131 seconds.[0m
+[36m----  Could not Read  src/cashtime/core.cljs   line:178  column:1  ----[0m
+
+  [1mEOF while reading, starting at line 178 and column 1[0m
+
+  [36m176[0m  [36m                    (second pair)))))[0m
+  [36m177[0m  [36m[0m
+  [33m178[0m  [1m(defn tuple-in-search-tuple[0m
+  [0m   [0m  [33m^--- EOF while reading, starting at line 178 and column 1[0m
+  [36m179[0m  [36m[0m
+  [36m180[0m  [36m(defn get-used-dims-ids[0m
+  [36m181[0m  [36m  "Получить из всех записей id используемых измерений"[0m
+
+[36m----  Reader Error : Please see src/cashtime/core.cljs  ----[0m
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[36m----  Compiler Warning on   src/cashtime/core.cljs   line:185  column:1  ----[0m
+
+  [1mWrong number of args (2) passed to cljs.core/some?[0m
+
+  [36m181[0m  [36m     vec[0m
+  [36m182[0m  [36m     (some #(pair-in-search-tuple? % {1 [4 7], 2 [4]}))[0m
+  [36m183[0m  [36m     )[0m
+  [36m184[0m  [36m[0m
+  [33m185[0m  [1m(some? #(pair-in-search-tuple? % {1 [4 7], 2 [4]}) [[1 2] [2 3]])[0m
+  [0m   [0m  [33m^--- Wrong number of args (2) passed to cljs.core/some?[0m
+  [36m186[0m  [36m[0m
+  [36m187[0m  [36m(defn tuple-in-search-tuple?[0m
+  [36m188[0m  [36m  [tuple search-tuple][0m
+  [36m189[0m  [36m  ([0m
+
+[36m----  Compiler Warning : Please see src/cashtime/core.cljs  ----[0m
+[31mFailed to compile "resources/js/main.js" in 0.178 seconds.[0m
+[36m----  Could not Read  src/cashtime/core.cljs   line:189  column:3  ----[0m
+
+  [1mEOF while reading, starting at line 189 and column 3[0m
+
+  [36m187[0m  [36m(defn tuple-in-search-tuple?[0m
+  [36m188[0m  [36m  [tuple search-tuple][0m
+  [33m189[0m  [1m  ([0m
+  [0m   [0m  [33m  ^--- EOF while reading, starting at line 189 and column 3[0m
+  [36m190[0m  [36m[0m
+  [36m191[0m  [36m(defn get-used-dims-ids[0m
+  [36m192[0m  [36m  "Получить из всех записей id используемых измерений"[0m
+
+[36m----  Reader Error : Please see src/cashtime/core.cljs  ----[0m
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[31mFailed to compile "resources/js/main.js" in 0.148 seconds.[0m
+[36m----  Could not Read  src/cashtime/core.cljs   line:189  column:3  ----[0m
+
+  [1mEOF while reading, starting at line 189 and column 3[0m
+
+  [36m187[0m  [36m(defn tuple-in-search-tuple?[0m
+  [36m188[0m  [36m  [tuple search-tuple][0m
+  [33m189[0m  [1m  ([0m
+  [0m   [0m  [33m  ^--- EOF while reading, starting at line 189 and column 3[0m
+  [36m190[0m  [36m[0m
+  [36m191[0m  [36m(defn get-used-dims-ids[0m
+  [36m192[0m  [36m  "Получить из всех записей id используемых измерений"[0m
+
+[36m----  Reader Error : Please see src/cashtime/core.cljs  ----[0m
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[36m----  Compiler Warning on   src/cashtime/core.cljs   line:246  column:44  ----[0m
+
+  [1mUse of undeclared Var cashtime.core/get-dim-group-ids-with-substr[0m
+
+  [36m242[0m  [36m"Обновить записи в формат.виде"[0m
+  [36m243[0m  [36m[][0m
+  [36m244[0m  [36m(let [plain-entries @(state-cursor [:plain-entries])[0m
+  [36m245[0m  [36m      search-str @(state-cursor [:search-dim-str])[0m
+  [33m246[0m  [1m      filtered-dim-ids (when search-str (get-dim-group-ids-with-substr @(state-cursor [:avail-dim-groups])[0m
+  [0m   [0m  [33m                                         ^--- Use of undeclared Var cashtime.core/get-dim-group-ids-with-substr[0m
+  [36m247[0m  [36m                                                                       search-str))[0m
+  [36m248[0m  [36m      result-plain-entries (if filtered-dim-ids ; если нужно фильтровать[0m
+  [36m249[0m  [36m                             (filter (fn[pe](some #(u/in? filtered-dim-ids %)[0m
+  [36m250[0m  [36m                                                  (-> pe :dims keys)))[0m
+  [36m251[0m  [36m                                     plain-entries)[0m
+
+[36m----  Compiler Warning : Please see src/cashtime/core.cljs  ----[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.371 seconds.[0m
+notifying browser that file changed:  out\cashtime\core.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[36m----  Compiler Warning on   src/cashtime/core.cljs   line:240  column:44  ----[0m
+
+  [1mUse of undeclared Var cashtime.core/get-dim-group-ids-with-substr[0m
+
+  [36m236[0m  [36m"Обновить записи в формат.виде"[0m
+  [36m237[0m  [36m[][0m
+  [36m238[0m  [36m(let [plain-entries @(state-cursor [:plain-entries])[0m
+  [36m239[0m  [36m      search-str @(state-cursor [:search-dim-str])[0m
+  [33m240[0m  [1m      filtered-dim-ids (when search-str (get-dim-group-ids-with-substr @(state-cursor [:avail-dim-groups])[0m
+  [0m   [0m  [33m                                         ^--- Use of undeclared Var cashtime.core/get-dim-group-ids-with-substr[0m
+  [36m241[0m  [36m                                                                       search-str))[0m
+  [36m242[0m  [36m      result-plain-entries (if filtered-dim-ids ; если нужно фильтровать[0m
+  [36m243[0m  [36m                             (filter (fn[pe](some #(u/in? filtered-dim-ids %)[0m
+  [36m244[0m  [36m                                                  (-> pe :dims keys)))[0m
+  [36m245[0m  [36m                                     plain-entries)[0m
+
+[36m----  Compiler Warning : Please see src/cashtime/core.cljs  ----[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.357 seconds.[0m
+notifying browser that file changed:  resources/js/out/cljs_deps.js
+notifying browser that file changed:  out\cashtime\core.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[36m----  Compiler Warning on   src/cashtime/core.cljs   line:240  column:44  ----[0m
+
+  [1mUse of undeclared Var cashtime.core/get-dim-group-ids-with-substr[0m
+
+  [36m236[0m  [36m"Обновить записи в формат.виде"[0m
+  [36m237[0m  [36m[][0m
+  [36m238[0m  [36m(let [plain-entries @(state-cursor [:plain-entries])[0m
+  [36m239[0m  [36m      search-str @(state-cursor [:search-dim-str])[0m
+  [33m240[0m  [1m      filtered-dim-ids (when search-str (get-dim-group-ids-with-substr @(state-cursor [:avail-dim-groups])[0m
+  [0m   [0m  [33m                                         ^--- Use of undeclared Var cashtime.core/get-dim-group-ids-with-substr[0m
+  [36m241[0m  [36m                                                                       search-str))[0m
+  [36m242[0m  [36m      result-plain-entries (if filtered-dim-ids ; если нужно фильтровать[0m
+  [36m243[0m  [36m                             (filter (fn[pe](some #(u/in? filtered-dim-ids %)[0m
+  [36m244[0m  [36m                                                  (-> pe :dims keys)))[0m
+  [36m245[0m  [36m                                     plain-entries)[0m
+
+[36m----  Compiler Warning : Please see src/cashtime/core.cljs  ----[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.366 seconds.[0m
+notifying browser that file changed:  out\cashtime\core.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.338 seconds.[0m
+notifying browser that file changed:  out\cashtime\core.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.319 seconds.[0m
+notifying browser that file changed:  resources/js/out/cljs_deps.js
+notifying browser that file changed:  out\cashtime\core.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.332 seconds.[0m
+notifying browser that file changed:  out\cashtime\core.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.338 seconds.[0m
+notifying browser that file changed:  resources/js/out/cljs_deps.js
+notifying browser that file changed:  out\cashtime\core.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.357 seconds.[0m
+notifying browser that file changed:  resources/js/out/cljs_deps.js
+notifying browser that file changed:  out\cashtime\core.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.341 seconds.[0m
+notifying browser that file changed:  out\cashtime\core.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.355 seconds.[0m
+notifying browser that file changed:  out\cashtime\core.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.347 seconds.[0m
+notifying browser that file changed:  resources/js/out/cljs_deps.js
+notifying browser that file changed:  out\cashtime\core.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.334 seconds.[0m
+notifying browser that file changed:  resources/js/out/cljs_deps.js
+notifying browser that file changed:  out\cashtime\core.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.344 seconds.[0m
+notifying browser that file changed:  resources/js/out/cljs_deps.js
+notifying browser that file changed:  out\cashtime\core.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.33 seconds.[0m
+notifying browser that file changed:  resources/js/out/cljs_deps.js
+notifying browser that file changed:  out\cashtime\core.js
+Notifyng browser that CSS file changed: resources/css/basic.css
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.339 seconds.[0m
+notifying browser that file changed:  resources/js/out/cljs_deps.js
+notifying browser that file changed:  out\cashtime\core.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.329 seconds.[0m
+notifying browser that file changed:  out\cashtime\core.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.364 seconds.[0m
+notifying browser that file changed:  resources/js/out/cljs_deps.js
+notifying browser that file changed:  out\cashtime\core.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.306 seconds.[0m
+notifying browser that file changed:  out\cashtime\core.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.335 seconds.[0m
+notifying browser that file changed:  resources/js/out/cljs_deps.js
+notifying browser that file changed:  out\cashtime\core.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.316 seconds.[0m
+notifying browser that file changed:  resources/js/out/cljs_deps.js
+notifying browser that file changed:  out\cashtime\core.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.309 seconds.[0m
+notifying browser that file changed:  resources/js/out/cljs_deps.js
+notifying browser that file changed:  out\cashtime\core.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.334 seconds.[0m
+notifying browser that file changed:  resources/js/out/cljs_deps.js
+notifying browser that file changed:  out\cashtime\core.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.311 seconds.[0m
+notifying browser that file changed:  out\cashtime\core.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.334 seconds.[0m
+notifying browser that file changed:  out\cashtime\core.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.315 seconds.[0m
+notifying browser that file changed:  out\cashtime\core.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.332 seconds.[0m
+notifying browser that file changed:  out\cashtime\core.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.313 seconds.[0m
+notifying browser that file changed:  out\cashtime\core.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[31mFailed to compile "resources/js/main.js" in 0.14 seconds.[0m
+[36m----  Could not Read  src/cashtime/core.cljs   line:180  column:54  ----[0m
+
+  [1mNested #()s are not allowed[0m
+
+  [36m178[0m  [36m(#(assoc % :sorted-tuples-w-names (->> (:tuples-w-names %)[0m
+  [36m179[0m  [36m                                       vals[0m
+  [33m180[0m  [1m                                       (sort #((if desc? < >)[0m
+  [0m   [0m  [33m                                               ^--- Nested #()s are not allowed[0m
+  [36m181[0m  [36m                                               (or (get %1 sort-gr-id) "")[0m
+  [36m182[0m  [36m                                               (or (get %2 sort-gr-id) ""))))))[0m
+  [36m183[0m  [36m ))[0m
+
+[36m----  Reader Error : Please see src/cashtime/core.cljs  ----[0m
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[36m----  Compiler Warning on   src/cashtime/core.cljs   line:174  column:28  ----[0m
+
+  [1mUse of undeclared Var cashtime.core/tuple-w-ids[0m
+
+  [36m170[0m  [36m                  {2 5}[0m
+  [36m171[0m  [36m                  {1 2, 2 3}][0m
+  [36m172[0m  [36m    dim-groups test-dim-groups][0m
+  [36m173[0m  [36m(-> {}[0m
+  [33m174[0m  [1m    (assoc :tuples-w-ids tuple-w-ids)[0m
+  [0m   [0m  [33m                         ^--- Use of undeclared Var cashtime.core/tuple-w-ids[0m
+  [36m175[0m  [36m    (#(assoc % :tuples-w-names (reduce (fn[m tuple][0m
+  [36m176[0m  [36m                                         (assoc m tuple (tuple-w-ids->tuple-w-names dim-groups tuple)))[0m
+  [36m177[0m  [36m                                       {} (:tuples-w-ids %))))[0m
+  [36m178[0m  [36m    (#(assoc % :sorted-tuples-w-names (->> (:tuples-w-names %)[0m
+  [36m179[0m  [36m                                           vals[0m
+
+[36m----  Compiler Warning : Please see src/cashtime/core.cljs  ----[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.346 seconds.[0m
+notifying browser that file changed:  out\cashtime\core.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.339 seconds.[0m
+notifying browser that file changed:  resources/js/out/cljs_deps.js
+notifying browser that file changed:  out\cashtime\core.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.33 seconds.[0m
+notifying browser that file changed:  resources/js/out/cljs_deps.js
+notifying browser that file changed:  out\cashtime\core.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.327 seconds.[0m
+notifying browser that file changed:  out\cashtime\core.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[31mFailed to compile "resources/js/main.js" in 0.145 seconds.[0m
+[36m----  Could not Read  src/cashtime/core.cljs   line:196  column:51  ----[0m
+
+  [1mNested #()s are not allowed[0m
+
+  [36m194[0m  [36m                                                      (or (get t2 sort-gr-id) "")))))))[0m
+  [36m195[0m  [36m      (#(assoc % :sorted-tuples-w-ids (->> (:sorted-tuples-w-names %)[0m
+  [33m196[0m  [1m                                           (map #([0m
+  [0m   [0m  [33m                                                  ^--- Nested #()s are not allowed[0m
+  [36m197[0m  [36m[0m
+  [36m198[0m  [36m[0m
+  [36m199[0m  [36m       ))[0m
+
+[36m----  Reader Error : Please see src/cashtime/core.cljs  ----[0m
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[31mFailed to compile "resources/js/main.js" in 0.163 seconds.[0m
+[36m----  Could not Read  src/cashtime/core.cljs   line:196  column:51  ----[0m
+
+  [1mNested #()s are not allowed[0m
+
+  [36m194[0m  [36m                                                      (or (get t2 sort-gr-id) "")))))))[0m
+  [36m195[0m  [36m      (#(assoc % :sorted-tuples-w-ids (->> (:sorted-tuples-w-names %)[0m
+  [33m196[0m  [1m                                           (map #([0m
+  [0m   [0m  [33m                                                  ^--- Nested #()s are not allowed[0m
+  [36m197[0m  [36m[0m
+  [36m198[0m  [36m[0m
+  [36m199[0m  [36m       ))[0m
+
+[36m----  Reader Error : Please see src/cashtime/core.cljs  ----[0m
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.339 seconds.[0m
+notifying browser that file changed:  resources/js/out/cljs_deps.js
+notifying browser that file changed:  out\cashtime\core.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.328 seconds.[0m
+notifying browser that file changed:  resources/js/out/cljs_deps.js
+notifying browser that file changed:  out\cashtime\core.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.324 seconds.[0m
+notifying browser that file changed:  resources/js/out/cljs_deps.js
+notifying browser that file changed:  out\cashtime\core.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.332 seconds.[0m
+notifying browser that file changed:  resources/js/out/cljs_deps.js
+notifying browser that file changed:  out\cashtime\core.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[31mFailed to compile "resources/js/main.js" in 0.156 seconds.[0m
+[36m----  Could not Read  src/cashtime/core.cljs   line:167  column:1  ----[0m
+
+  [1mEOF while reading, starting at line 167 and column 1[0m
+
+  [33m167[0m  [1m(let [sort-gr-id 1[0m
+  [0m   [0m  [33m^--- EOF while reading, starting at line 167 and column 1[0m
+  [36m168[0m  [36m      desc? true[0m
+  [36m169[0m  [36m      tuples-w-ids [{1 4, 3 1}[0m
+  [36m170[0m  [36m                    {2 5}[0m
+
+[36m----  Reader Error : Please see src/cashtime/core.cljs  ----[0m
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.345 seconds.[0m
+notifying browser that file changed:  resources/js/out/cljs_deps.js
+notifying browser that file changed:  out\cashtime\core.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.326 seconds.[0m
+notifying browser that file changed:  out\cashtime\core.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.318 seconds.[0m
+notifying browser that file changed:  out\cashtime\core.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.33 seconds.[0m
+notifying browser that file changed:  resources/js/out/cljs_deps.js
+notifying browser that file changed:  out\cashtime\core.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.333 seconds.[0m
+notifying browser that file changed:  out\cashtime\core.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.335 seconds.[0m
+notifying browser that file changed:  resources/js/out/cljs_deps.js
+notifying browser that file changed:  out\cashtime\core.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.339 seconds.[0m
+notifying browser that file changed:  out\cashtime\core.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.344 seconds.[0m
+notifying browser that file changed:  resources/js/out/cljs_deps.js
+notifying browser that file changed:  out\cashtime\core.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.312 seconds.[0m
+notifying browser that file changed:  out\cashtime\core.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.315 seconds.[0m
+notifying browser that file changed:  resources/js/out/cljs_deps.js
+notifying browser that file changed:  out\cashtime\core.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.34 seconds.[0m
+notifying browser that file changed:  out\cashtime\core.js

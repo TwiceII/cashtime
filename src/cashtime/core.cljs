@@ -1,6 +1,8 @@
 (ns cashtime.core
   (:require [cashtime.moment-utils :as mu]
             [cashtime.random-utils :as rnd]
+            [cashtime.dom-utils :as dom]
+            [clojure.string :as cs]
             [cashtime.utils :as u]
             [rum.core :as rum]))
 
@@ -11,6 +13,7 @@
                     {:plain-entries [] ;; плоские данные, рандомно
                      :entries [] ; записи в формат.виде для отображения в таблице
                      :avail-dim-groups {1 {:id 1
+                                           :order-index 1 ; каким отображать по счету начиная слева
                                            :name "Статьи"
                                            :css-class "dim-1"
                                            :dims {1 {:id 1 :name "Сайт"}
@@ -25,6 +28,7 @@
                                            ;; :grouped false
                                            }
                                         2 {:id 2
+                                           :order-index 2
                                            :name "Контрагенты"
                                            :css-class "dim-2"
                                            :dims {1 {:id 1 :name "Nova Med"}
@@ -33,11 +37,18 @@
                                                   4 {:id 4 :name "Игорь"}
                                                   5 {:id 5 :name "Luxor"}}}
                                         3 {:id 3
+                                           :order-index 3
                                            :name "Компания"
                                            :css-class "dim-3"
                                            :dims {1 {:id 1 :name "DIIS"}
-                                                  2 {:id 2 :name "BRK"}}}
-                                        }
+                                                  2 {:id 2 :name "BRK"}}}}
+                     ;; значение поисковой строки
+                     :search-dim-str nil
+
+                     ;; сортировка для измерений
+                     :sort-dim-params {:group-id nil ; по какой группе измерений сортируем
+                                       :desc? false}
+
                      ;; параметры для дат
                      :date-params {:grouping-mode :by-day ; варианты: :by-day :by-month :by-year
                                    }
@@ -53,6 +64,9 @@
                         :max-entries 200
                         :min-summ -70000
                         :max-summ 100000})
+
+(select-keys {1 {:a 34234} 2 {:x 342} 3 {:x 45453}}
+             [1 2])
 
 (defn random-plain-entry
   "Получить случайную плоскую запись"
@@ -100,14 +114,141 @@
 ;;     :v-summ 2200}
 ;;    ])
 
-;; (def entries
-;;   "Тестовые используемые записи"
-;;   {{1 2, 2 3} {"2017-07-01T00:00:00Z" {:fact 10000 :plan 5000}
-;;                "2017-06-08T00:00:00Z" {:fact 8000 :plan nil}
-;;                "2017-07-03T00:00:00Z" {:fact 18000 :plan 2000}}
-;;    {1 3, 2 3} {"2017-06-05T00:00:00Z" {:fact 4000 :plan -15000}}
-;;    {2 1} {"2017-06-01T00:00:00Z" {:fact -3000 :plan nil :comment "some comment"}}})
+(def entries
+  "Тестовые используемые записи"
+  {{1 2, 2 3} {"2017-07-01T00:00:00Z" {:fact 10000 :plan 5000}
+               "2017-06-08T00:00:00Z" {:fact 8000 :plan nil}
+               "2017-07-03T00:00:00Z" {:fact 18000 :plan 2000}}
+   {1 3, 2 3} {"2017-06-05T00:00:00Z" {:fact 4000 :plan -15000}}
+   {2 1} {"2017-06-01T00:00:00Z" {:fact -3000 :plan nil :comment "some comment"}}})
 
+(def test-dim-groups
+  {1 {:id 1
+      :name "Статьи"
+      :css-class "dim-1"
+      :dims {1 {:id 1 :name "Сайт"}
+             2 {:id 2 :name "Визитки"}
+             3 {:id 3 :name "Маркетинг"}
+             4 {:id 4 :name "Логотип"}
+             5 {:id 5 :name "Фирменный стиль"}
+             6 {:id 6 :name "Лэндинг"}
+             7 {:id 7 :name "Другое"}}
+      ;; доп. для сортировки, группировки
+      ;; :sorted false
+      ;; :grouped false
+      }
+   2 {:id 2
+      :name "Контрагенты"
+      :css-class "dim-2"
+      :dims {1 {:id 1 :name "Nova Med"}
+             2 {:id 2 :name "GCC"}
+             3 {:id 3 :name "Bestprofi.kz"}
+             4 {:id 4 :name "Игорь"}
+             5 {:id 5 :name "Luxor"}}}
+   3 {:id 3
+      :name "Компания"
+      :css-class "dim-3"
+      :dims {1 {:id 1 :name "DIIS"}
+             2 {:id 2 :name "BRK"}}}
+   })
+
+(defn tuple-w-ids->tuple-w-names
+  "Таплы с id измерений в таплы с названиями измерений"
+  [all-dim-groups tuple-w-ids]
+  (->> tuple-w-ids
+     (reduce-kv (fn [m k v]
+                  (assoc m k (-> (get-in all-dim-groups [k :dims v])
+                                 :name)))
+                {})))
+
+;; (tuple-w-ids->tuple-w-names test-dim-groups {1 2, 2 3})
+
+(defn sort-tuples
+  "Сортировать список таплов по названиям в измерении"
+  [tuples dim-groups sort-gr-id desc?]
+  (-> {}
+      (assoc :tuples-w-ids tuples)
+      (#(assoc % :tuples-w-names-map (reduce (fn[m tuple]
+                                           (assoc m tuple (tuple-w-ids->tuple-w-names dim-groups tuple)))
+                                         {} (:tuples-w-ids %))))
+      (#(assoc % :sorted-tuples-w-names (->> (:tuples-w-names-map %)
+                                             vals
+                                             (sort (fn[t1 t2]
+                                                     ((if desc? < >)
+                                                      (or (get t1 sort-gr-id) "")
+                                                      (or (get t2 sort-gr-id) "")))))))
+      (#(assoc % :sorted-tuples-w-ids (->> (:sorted-tuples-w-names %)
+                                           (map (fn[t](u/k-of-v (:tuples-w-names-map %) t))))))
+      :sorted-tuples-w-ids))
+
+(sort-tuples [{1 4, 3 1}
+              {2 5}
+              {1 2, 2 3}] test-dim-groups 2 false)
+
+
+
+
+;; (let [sort-gr-id 1
+;;       desc? true]
+;;   (->> [{1 "Логотип", 3 "DIIS"}
+;;         {2 "Luxor"}
+;;         {1 "Визитки", 2 "Bestprofi.kz"}]
+;;        (sort #((if desc? < >)
+;;                (or (get %1 sort-gr-id) "")
+;;                (or (get %2 sort-gr-id) "")))))
+
+
+
+
+
+
+
+
+(defn get-search-tuple-with-substr
+  "Получить хмэп вида {id-группы [id-измерений]}, у которых есть в названиях подстрока"
+  [dim-groups ss]
+  (->> dim-groups
+       vals
+       (reduce (fn [m dg]
+                 (let [ids (->> dg
+
+                                :dims
+                                vals
+                                (filter #(u/has-substr? (:name %) ss))
+                                (map :id))]
+                   (if-not (u/nil-or-empty? ids) (assoc m (:id dg) ids)
+                     m)))
+               {})))
+
+
+(get-search-tuple-with-substr test-dim-groups "го")
+
+
+(defn pair-in-search-tuple?
+  "Находится ли пара в тапле для поиска
+  пример: (pair-in-search-tuples? [1 7] {1 [4 7], 2 [4]}) - true"
+  [pair search-tuples]
+  (when pair
+    (boolean (u/in? (get search-tuples (first pair))
+                    (second pair)))))
+
+(pair-in-search-tuple? [2 3] {1 [4 7], 2 [4]})
+
+(defn tuple-in-search-tuple?
+  "Содержится ли в тапле хоть одна пара удовл. таплу поиска"
+  [tuple search-tuple]
+  (->> tuple
+       vec
+       (some #(pair-in-search-tuple? % search-tuple))
+       boolean))
+
+(defn get-used-dims-ids
+  "Получить из всех записей id используемых измерений"
+  [entries]
+  (->> entries
+       keys
+       (mapcat keys)
+       distinct))
 
 (defn moment->iso-str
   [md]
@@ -145,12 +286,20 @@
                             + (or (:v-summ e) 0)))
                {})))
 
+
 (defn update-entries!
   "Обновить записи в формат.виде"
   []
-  (reset! (state-cursor [:entries])
-          (plain-entries->entries @(state-cursor [:plain-entries])
-                                  @(state-cursor [:date-params :grouping-mode]))))
+  (let [plain-entries @(state-cursor [:plain-entries])
+        search-str @(state-cursor [:search-dim-str])
+        search-tuple (when search-str (get-search-tuple-with-substr @(state-cursor [:avail-dim-groups]) search-str))
+        result-plain-entries (if search-tuple ; если нужно фильтровать
+                               (filter (fn[pe] (tuple-in-search-tuple? (:dims pe) search-tuple))
+                                       plain-entries)
+                               plain-entries)]
+    (reset! (state-cursor [:entries])
+            (plain-entries->entries result-plain-entries
+                                    @(state-cursor [:date-params :grouping-mode])))))
 
 (defn refresh-random-data
   "Обновить случайные данные записей"
@@ -160,27 +309,6 @@
     (reset! (state-cursor [:plain-entries]) plain-entries)
     ;; группируем формат.записи по дате
     (update-entries!)))
-
-
-(defn init-watchers
-  "Иниц. всех вотчеров"
-  []
-  (add-watch (state-cursor [:date-params :grouping-mode]) :d-group-mode-watch
-             (fn [k a old-s new-s]
-               (println "watch group mode")
-               (when-not (= old-s new-s)
-                 (update-entries!)))))
-
-;; (defn group-entries-by-dates
-;;   [entries]
-;;   (->> entries
-;;        (reduce-kv (fn [m tuple d-values]
-;;                     (assoc m tuple (reduce-kv (fn [dm d value]
-;;                                                 (-> dm
-;;                                                     (update-in [d :fact] + (or (:fact value) 0))
-;;                                                     (update-in [d :plan] + (or (:plan value) 0))))
-;;                                               {} d-values)))
-;;                   {})))
 
 (defn row-totals-from-entries
   "Посчитать итого для каждой строки"
@@ -216,6 +344,7 @@
                                  (update :plan + (or (get-in v [d :plan]) 0))))
                            {:fact 0 :plan 0} entries))))))
 
+;;; TODO: изменить структуру данных entries из хм в вектор
 (defn tuples-from-entries
   "Получить список всех таплов измерений внутри записей"
   [entries]
@@ -235,6 +364,21 @@
     (if-let [dim-id (get tuple group-id)]
       [group-id dim-id])))
 
+;;;
+;;; Watchers
+;;;
+(defn init-watchers
+  "Иниц. всех вотчеров"
+  []
+  (add-watch (state-cursor [:date-params :grouping-mode]) :d-group-mode-watch
+             (fn [k a old-s new-s]
+               (println "watch group mode")
+               (when-not (= old-s new-s)
+                 (update-entries!))))
+  (add-watch (state-cursor [:search-dim-str]) :search-str-watch
+             (fn [k a old-s new-s]
+               (when-not (= old-s new-s)
+                 (update-entries!)))))
 
 ;;; ---------------------------------------------------------------------------
 ;;; Методы для вьюшек
@@ -249,6 +393,10 @@
   [group-mode]
   (reset! (state-cursor [:date-params :grouping-mode]) group-mode))
 
+(defn set-search-str
+  "Новое значение в поисковой строке"
+  [s]
+  (reset! (state-cursor [:search-dim-str]) s))
 
 ;;; ---------------------------------------------------------------------------
 ;;; Вьюшки
@@ -257,12 +405,14 @@
 ;;; Измерения и группировки (левая часть)
 ;;;
 (rum/defc dim-td-view
+  "Ячейка с измерением"
   [dim-group dim]
   [:td {:class (when dim (:css-class dim-group))}
    (:name dim)])
 
 
 (rum/defc tuple-tr-view
+  "Строка названий конкретных измерений"
   [dim-groups tuple]
   [:tr
    (map (fn [dim-group]
@@ -274,26 +424,29 @@
 
 
 (rum/defc dim-group-header-view
+  "Заголовок для группы измерений"
   [dim-group]
   [:th (:name dim-group)])
 
 
 (rum/defc dimensions-view
-  "Вьюшка для измерений (левой части)"
-  [dim-groups tuples]
-  [:div
-   [:table.ui.very.basic.padded.table
-    [:thead
-     [:tr
-      (map #(rum/with-key (dim-group-header-view %)
-                          (:id %))
-           dim-groups)]]
-    [:tbody
-     (map #(rum/with-key (tuple-tr-view dim-groups %)
-                         %) tuples)
-     [:tr
-      [:td {:colSpan (count dim-groups)
-            :style {:font-weight "bold"}} "Итого"]]]]])
+  "Вьюшка для измерений (левой части)
+  used-dim-groups - используются только видимые справочники измерений"
+  [used-dim-groups tuples]
+  (let [ordered-dim-groups (sort-by :order-index used-dim-groups)]
+    [:div
+     [:table.ui.very.basic.padded.sortable.table
+      [:thead
+       [:tr
+        (map #(rum/with-key (dim-group-header-view %)
+                            (:id %))
+             ordered-dim-groups)]]
+      [:tbody
+       (map #(rum/with-key (tuple-tr-view ordered-dim-groups %)
+                           %) tuples)
+       [:tr
+        [:td {:colSpan (count ordered-dim-groups)
+              :style {:font-weight "bold"}} "Итого"]]]]]))
 
 
 ;;;
@@ -336,6 +489,10 @@
           (rum/with-key (value-cell-td-view (get date-values d)) d))
         dates)])
 
+(rum/defc date-total-td-view
+  "Вьюшка для итого по столбцу (дате)"
+  [date-total]
+  [:td.total-cell (entry-value-view date-total)])
 
 (rum/defc entries-view
   "Вьюшка для записей и дат (основная часть)"
@@ -354,12 +511,17 @@
            entries)
       ;; итого
       [:tr
-       (map #(-> [:td.total-cell (entry-value-view %)])
+       (map #(rum/with-key (date-total-td-view %)%)
             (date-totals-from-entries entries))]]]))
 
 ;;;
 ;;; Остальные вьюшки
 ;;;
+(rum/defc row-total-tr-view
+  "Вьюшка для итого по строке"
+  [total]
+  [:tr [:td.total-cell (entry-value-view total)]])
+
 (rum/defc row-totals-view
   "Вьюшка для Итого по строкам"
   [totals]
@@ -369,8 +531,7 @@
      [:th "Итого за месяц"]]]
    [:tbody
     ;; сами строки
-    (map #(->[:tr
-              [:td.total-cell (entry-value-view %)]])
+    (map #(rum/with-key (row-total-tr-view %) %)
          totals)
     ;; итого
     [:tr
@@ -406,6 +567,8 @@
 (rum/defc main-view < rum/reactive
   []
   (let [entries (rum/react (state-cursor [:entries]))
+        avail-dim-groups (rum/react (state-cursor [:avail-dim-groups]))
+        used-dim-groups (select-keys avail-dim-groups (get-used-dims-ids entries))
         row-totals (row-totals-from-entries entries)
         d-params (rum/react (state-cursor [:date-params]))]
     [:div.ui.padded.grid
@@ -418,21 +581,26 @@
       [:div.four.wide.column
        [:div.search-div
         [:div.ui.fluid.input
-         [:input {:type "text"}]]]]
+         [:input {:type "text"
+                  :on-change #(set-search-str (dom/value-of-input %))
+                  }]]]]
       [:div.ten.wide.column
        (timeline-panel-view d-params)]
       [:div.two.wide.column]]
-     ;;
+     ;; сама таблица
      [:div.stretched.bottom.aligned.row
       [:div.four.wide.column
-       [:div
-        (dimensions-view (vals (rum/react (state-cursor [:avail-dim-groups])))
+       [:div.dimensions-div
+        ;; измерения
+        (dimensions-view (vals used-dim-groups)
                          (tuples-from-entries entries))]]
       [:div.ten.wide.column
        [:div.values-div
+        ;; записи
         (entries-view entries d-params)]]
       [:div.two.wide.column
        [:div.row-totals-div
+        ;; итого по строкам
         (row-totals-view row-totals)]]
       ]]))
 

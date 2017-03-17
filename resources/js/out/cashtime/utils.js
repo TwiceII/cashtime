@@ -9,8 +9,8 @@ return ((x == null)) || (cljs.core.empty_QMARK_.call(null,x));
  * true if coll contains elm
  */
 cashtime.utils.in_QMARK_ = (function cashtime$utils$in_QMARK_(coll,elm){
-return cljs.core.some.call(null,(function (p1__25889_SHARP_){
-return cljs.core._EQ_.call(null,elm,p1__25889_SHARP_);
+return cljs.core.some.call(null,(function (p1__41644_SHARP_){
+return cljs.core._EQ_.call(null,elm,p1__41644_SHARP_);
 }),coll);
 });
 /**
@@ -18,35 +18,41 @@ return cljs.core._EQ_.call(null,elm,p1__25889_SHARP_);
  *   который удовлетв. условию
  */
 cashtime.utils.find_some = (function cashtime$utils$find_some(pred_fn,l){
-return cljs.core.some.call(null,(function (p1__25890_SHARP_){
-if(cljs.core.truth_(pred_fn.call(null,p1__25890_SHARP_))){
-return p1__25890_SHARP_;
+return cljs.core.some.call(null,(function (p1__41645_SHARP_){
+if(cljs.core.truth_(pred_fn.call(null,p1__41645_SHARP_))){
+return p1__41645_SHARP_;
 } else {
 return null;
 }
 }),l);
 });
 /**
+ * Есть ли в строке подстрока (независимо от регистров)
+ */
+cashtime.utils.has_substr_QMARK_ = (function cashtime$utils$has_substr_QMARK_(s,ss){
+return cljs.core.boolean$.call(null,cljs.core.re_find.call(null,cljs.core.re_pattern.call(null,clojure.string.lower_case.call(null,ss)),clojure.string.lower_case.call(null,s)));
+});
+/**
  * Вывести число с разделениями, запятой и т.д
  */
 cashtime.utils.get_number_with_decimals_str = (function cashtime$utils$get_number_with_decimals_str(var_args){
-var args25891 = [];
-var len__25835__auto___25894 = arguments.length;
-var i__25836__auto___25895 = (0);
+var args41646 = [];
+var len__25835__auto___41649 = arguments.length;
+var i__25836__auto___41650 = (0);
 while(true){
-if((i__25836__auto___25895 < len__25835__auto___25894)){
-args25891.push((arguments[i__25836__auto___25895]));
+if((i__25836__auto___41650 < len__25835__auto___41649)){
+args41646.push((arguments[i__25836__auto___41650]));
 
-var G__25896 = (i__25836__auto___25895 + (1));
-i__25836__auto___25895 = G__25896;
+var G__41651 = (i__25836__auto___41650 + (1));
+i__25836__auto___41650 = G__41651;
 continue;
 } else {
 }
 break;
 }
 
-var G__25893 = args25891.length;
-switch (G__25893) {
+var G__41648 = args41646.length;
+switch (G__41648) {
 case 1:
 return cashtime.utils.get_number_with_decimals_str.cljs$core$IFn$_invoke$arity$1((arguments[(0)]));
 
@@ -56,7 +62,7 @@ return cashtime.utils.get_number_with_decimals_str.cljs$core$IFn$_invoke$arity$2
 
 break;
 default:
-throw (new Error([cljs.core.str("Invalid arity: "),cljs.core.str(args25891.length)].join('')));
+throw (new Error([cljs.core.str("Invalid arity: "),cljs.core.str(args41646.length)].join('')));
 
 }
 });
@@ -132,10 +138,10 @@ return prev;
 }
 });
 cashtime.utils.rename_keys_in_map = (function cashtime$utils$rename_keys_in_map(map,kmap){
-return cljs.core.reduce.call(null,(function (m,p__25902){
-var vec__25903 = p__25902;
-var old = cljs.core.nth.call(null,vec__25903,(0),null);
-var new$ = cljs.core.nth.call(null,vec__25903,(1),null);
+return cljs.core.reduce.call(null,(function (m,p__41657){
+var vec__41658 = p__41657;
+var old = cljs.core.nth.call(null,vec__41658,(0),null);
+var new$ = cljs.core.nth.call(null,vec__41658,(1),null);
 if(cljs.core.contains_QMARK_.call(null,map,old)){
 return cljs.core.assoc.call(null,m,new$,cljs.core.get.call(null,map,old));
 } else {
@@ -159,5 +165,17 @@ return res_m;
 }
 }),cljs.core.PersistentArrayMap.EMPTY,seq_of_maps);
 });
+/**
+ * Получить ключ в хм у к-го значение равно нужному
+ */
+cashtime.utils.k_of_v = (function cashtime$utils$k_of_v(m,v){
+return cljs.core.some.call(null,(function (p1__41661_SHARP_){
+if(cljs.core._EQ_.call(null,cljs.core.second.call(null,p1__41661_SHARP_),v)){
+return cljs.core.first.call(null,p1__41661_SHARP_);
+} else {
+return null;
+}
+}),cljs.core.vec.call(null,m));
+});
 
-//# sourceMappingURL=utils.js.map?rel=1489668655440
+//# sourceMappingURL=utils.js.map?rel=1489747500141
