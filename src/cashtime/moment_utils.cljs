@@ -130,4 +130,18 @@
                    "DD.MM.YYYY")))))
 
 
+(defn iso-date-by-month
+  "Получить iso-str по месяцу (т.е 1-число месяца)"
+  [iso-str]
+  (-> (iso-str->moment iso-str)
+      (#(js/moment. #js [(.year %) (.month %)]))
+      moment->iso-str))
+
+(defn iso-date-by-year
+  "Получить iso-str по году (т.е 1 января этого года)"
+  [iso-str]
+  (-> (iso-str->moment iso-str)
+      (#(js/moment. #js [(.year %)]))
+      moment->iso-str))
+
 

@@ -9,8 +9,8 @@ return ((x == null)) || (cljs.core.empty_QMARK_.call(null,x));
  * true if coll contains elm
  */
 cashtime.utils.in_QMARK_ = (function cashtime$utils$in_QMARK_(coll,elm){
-return cljs.core.some.call(null,(function (p1__41644_SHARP_){
-return cljs.core._EQ_.call(null,elm,p1__41644_SHARP_);
+return cljs.core.some.call(null,(function (p1__38015_SHARP_){
+return cljs.core._EQ_.call(null,elm,p1__38015_SHARP_);
 }),coll);
 });
 /**
@@ -18,9 +18,9 @@ return cljs.core._EQ_.call(null,elm,p1__41644_SHARP_);
  *   который удовлетв. условию
  */
 cashtime.utils.find_some = (function cashtime$utils$find_some(pred_fn,l){
-return cljs.core.some.call(null,(function (p1__41645_SHARP_){
-if(cljs.core.truth_(pred_fn.call(null,p1__41645_SHARP_))){
-return p1__41645_SHARP_;
+return cljs.core.some.call(null,(function (p1__38016_SHARP_){
+if(cljs.core.truth_(pred_fn.call(null,p1__38016_SHARP_))){
+return p1__38016_SHARP_;
 } else {
 return null;
 }
@@ -36,23 +36,23 @@ return cljs.core.boolean$.call(null,cljs.core.re_find.call(null,cljs.core.re_pat
  * Вывести число с разделениями, запятой и т.д
  */
 cashtime.utils.get_number_with_decimals_str = (function cashtime$utils$get_number_with_decimals_str(var_args){
-var args41646 = [];
-var len__25835__auto___41649 = arguments.length;
-var i__25836__auto___41650 = (0);
+var args38017 = [];
+var len__25835__auto___38020 = arguments.length;
+var i__25836__auto___38021 = (0);
 while(true){
-if((i__25836__auto___41650 < len__25835__auto___41649)){
-args41646.push((arguments[i__25836__auto___41650]));
+if((i__25836__auto___38021 < len__25835__auto___38020)){
+args38017.push((arguments[i__25836__auto___38021]));
 
-var G__41651 = (i__25836__auto___41650 + (1));
-i__25836__auto___41650 = G__41651;
+var G__38022 = (i__25836__auto___38021 + (1));
+i__25836__auto___38021 = G__38022;
 continue;
 } else {
 }
 break;
 }
 
-var G__41648 = args41646.length;
-switch (G__41648) {
+var G__38019 = args38017.length;
+switch (G__38019) {
 case 1:
 return cashtime.utils.get_number_with_decimals_str.cljs$core$IFn$_invoke$arity$1((arguments[(0)]));
 
@@ -62,7 +62,7 @@ return cashtime.utils.get_number_with_decimals_str.cljs$core$IFn$_invoke$arity$2
 
 break;
 default:
-throw (new Error([cljs.core.str("Invalid arity: "),cljs.core.str(args41646.length)].join('')));
+throw (new Error([cljs.core.str("Invalid arity: "),cljs.core.str(args38017.length)].join('')));
 
 }
 });
@@ -138,10 +138,10 @@ return prev;
 }
 });
 cashtime.utils.rename_keys_in_map = (function cashtime$utils$rename_keys_in_map(map,kmap){
-return cljs.core.reduce.call(null,(function (m,p__41657){
-var vec__41658 = p__41657;
-var old = cljs.core.nth.call(null,vec__41658,(0),null);
-var new$ = cljs.core.nth.call(null,vec__41658,(1),null);
+return cljs.core.reduce.call(null,(function (m,p__38028){
+var vec__38029 = p__38028;
+var old = cljs.core.nth.call(null,vec__38029,(0),null);
+var new$ = cljs.core.nth.call(null,vec__38029,(1),null);
 if(cljs.core.contains_QMARK_.call(null,map,old)){
 return cljs.core.assoc.call(null,m,new$,cljs.core.get.call(null,map,old));
 } else {
@@ -169,13 +169,22 @@ return res_m;
  * Получить ключ в хм у к-го значение равно нужному
  */
 cashtime.utils.k_of_v = (function cashtime$utils$k_of_v(m,v){
-return cljs.core.some.call(null,(function (p1__41661_SHARP_){
-if(cljs.core._EQ_.call(null,cljs.core.second.call(null,p1__41661_SHARP_),v)){
-return cljs.core.first.call(null,p1__41661_SHARP_);
+return cljs.core.some.call(null,(function (p1__38032_SHARP_){
+if(cljs.core._EQ_.call(null,cljs.core.second.call(null,p1__38032_SHARP_),v)){
+return cljs.core.first.call(null,p1__38032_SHARP_);
 } else {
 return null;
 }
 }),cljs.core.vec.call(null,m));
 });
+/**
+ * Проиндексировать элементы в векторе и получить хм вида {элемент индекс_элемента}
+ *   (предполагается что элементы НЕ повторяются)
+ */
+cashtime.utils.indexed_hashmap_of_coll = (function cashtime$utils$indexed_hashmap_of_coll(coll){
+return cljs.core.into.call(null,cljs.core.PersistentArrayMap.EMPTY,cljs.core.keep_indexed.call(null,(function (p1__38034_SHARP_,p2__38033_SHARP_){
+return new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [p2__38033_SHARP_,p1__38034_SHARP_], null);
+}),coll));
+});
 
-//# sourceMappingURL=utils.js.map?rel=1489747500141
+//# sourceMappingURL=utils.js.map?rel=1489830074953
