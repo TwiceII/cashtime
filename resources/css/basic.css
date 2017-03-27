@@ -2,6 +2,10 @@
   border-radius: 0 !important;
 }
 
+.ui.table tr td {
+  white-space: pre;
+}
+
 .ui.table tr td:first-child {
   padding-left: 1em;
 }
@@ -49,6 +53,15 @@
 
 .values-div .ui.very.basic.table {
   text-align: right;
+}
+
+.row-totals-div .ui.very.basic.table {
+  text-align: right;
+}
+
+.values-div .ui.padded.basic.table tr th:last-child,
+.values-div .ui.padded.basic.table tr td:last-child {
+  padding-right: 1em;
 }
 
 /* .ui.table tr td {
@@ -116,5 +129,9 @@
 
 .ui.basic.table td.dim-3 {
   background: #fbedfb;
+}
+
+td.accented-td {
+  font-weight: bold;
 }
 

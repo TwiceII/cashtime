@@ -70,5 +70,14 @@ cashtime.dom_utils.greet = (function cashtime$dom_utils$greet(){
 return console.log("Hello world!");
 });
 goog.exportSymbol('cashtime.dom_utils.greet', cashtime.dom_utils.greet);
+/**
+ * Получить типичные для пункта меню настройки
+ *   (признак, что пункт активен и событие при щелчке на нем)
+ */
+cashtime.dom_utils.menu_item_props = (function cashtime$dom_utils$menu_item_props(active_QMARK_,on_click_fn,item_key){
+return new cljs.core.PersistentArrayMap(null, 2, [new cljs.core.Keyword(null,"class","class",-2030961996),(cljs.core.truth_(active_QMARK_)?"active":null),new cljs.core.Keyword(null,"on-click","on-click",1632826543),(function (){
+return on_click_fn.call(null,item_key);
+})], null);
+});
 
-//# sourceMappingURL=dom_utils.js.map?rel=1489739720301
+//# sourceMappingURL=dom_utils.js.map?rel=1490597384440

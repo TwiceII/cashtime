@@ -7809,3 +7809,777 @@ notifying browser that file changed:  out\cashtime\core.js
 [32mSuccessfully compiled "resources/js/main.js" in 0.357 seconds.[0m
 notifying browser that file changed:  resources/js/out/cljs_deps.js
 notifying browser that file changed:  out\cashtime\core.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[31mFailed to compile "resources/js/main.js" in 0.442 seconds.[0m
+[36m----  Could not Read  src/cashtime/core.cljs   line:673  column:6  ----[0m
+
+  [1mUnmatched delimiter )[0m
+
+  [36m671[0m  [36m        [:a.item (get-group-params :only-inflows) "доходы"]][0m
+  [36m672[0m  [36m     ][0m
+  [33m673[0m  [1m    ))[0m
+  [0m   [0m  [33m     ^--- Unmatched delimiter )[0m
+  [36m674[0m  [36m[0m
+  [36m675[0m  [36m(rum/mount (main-view) (.getElementById js/document "main"))[0m
+
+[36m----  Reader Error : Please see src/cashtime/core.cljs  ----[0m
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[36m----  Compiler Warning on   src/cashtime/core.cljs   line:669  column:26  ----[0m
+
+  [1mUse of undeclared Var cashtime.core/filter-flow-type[0m
+
+  [36m665[0m  [36m     ;; нижняя строка под таблицей[0m
+  [36m666[0m  [36m     [:div.row[0m
+  [36m667[0m  [36m      [:div.column[0m
+  [36m668[0m  [36m       [:div.ui.text.right.floated.compact.menu[0m
+  [33m669[0m  [1m        [:a.active.item (filter-flow-type :all) "Все"][0m
+  [0m   [0m  [33m                         ^--- Use of undeclared Var cashtime.core/filter-flow-type[0m
+  [36m670[0m  [36m        [:a.item (filter-flow-type :only-outflows) "расходы"][0m
+  [36m671[0m  [36m        [:a.item (filter-flow-type :only-inflows) "доходы"]]]][0m
+  [36m672[0m  [36m     ]))[0m
+  [36m673[0m  [36m[0m
+  [36m674[0m  [36m(rum/mount (main-view) (.getElementById js/document "main"))[0m
+
+[36m----  Compiler Warning : Please see src/cashtime/core.cljs  ----[0m
+[36m----  Compiler Warning on   src/cashtime/core.cljs   line:670  column:19  ----[0m
+
+  [1mUse of undeclared Var cashtime.core/filter-flow-type[0m
+
+  [36m666[0m  [36m     [:div.row[0m
+  [36m667[0m  [36m      [:div.column[0m
+  [36m668[0m  [36m       [:div.ui.text.right.floated.compact.menu[0m
+  [36m669[0m  [36m        [:a.active.item (filter-flow-type :all) "Все"][0m
+  [33m670[0m  [1m        [:a.item (filter-flow-type :only-outflows) "расходы"][0m
+  [0m   [0m  [33m                  ^--- Use of undeclared Var cashtime.core/filter-flow-type[0m
+  [36m671[0m  [36m        [:a.item (filter-flow-type :only-inflows) "доходы"]]]][0m
+  [36m672[0m  [36m     ]))[0m
+  [36m673[0m  [36m[0m
+  [36m674[0m  [36m(rum/mount (main-view) (.getElementById js/document "main"))[0m
+
+[36m----  Compiler Warning : Please see src/cashtime/core.cljs  ----[0m
+[36m----  Compiler Warning on   src/cashtime/core.cljs   line:671  column:19  ----[0m
+
+  [1mUse of undeclared Var cashtime.core/filter-flow-type[0m
+
+  [36m667[0m  [36m      [:div.column[0m
+  [36m668[0m  [36m       [:div.ui.text.right.floated.compact.menu[0m
+  [36m669[0m  [36m        [:a.active.item (filter-flow-type :all) "Все"][0m
+  [36m670[0m  [36m        [:a.item (filter-flow-type :only-outflows) "расходы"][0m
+  [33m671[0m  [1m        [:a.item (filter-flow-type :only-inflows) "доходы"]]]][0m
+  [0m   [0m  [33m                  ^--- Use of undeclared Var cashtime.core/filter-flow-type[0m
+  [36m672[0m  [36m     ]))[0m
+  [36m673[0m  [36m[0m
+  [36m674[0m  [36m(rum/mount (main-view) (.getElementById js/document "main"))[0m
+  [36m675[0m  [36m[0m
+  [36m676[0m  [36m(defn init[0m
+
+[36m----  Compiler Warning : Please see src/cashtime/core.cljs  ----[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.587 seconds.[0m
+notifying browser that file changed:  resources/js/out/goog/deps.js
+notifying browser that file changed:  resources/js/out/cljs_deps.js
+notifying browser that file changed:  out\cashtime\core.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.483 seconds.[0m
+notifying browser that file changed:  resources/js/out/cljs_deps.js
+notifying browser that file changed:  out\cashtime\core.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.47 seconds.[0m
+notifying browser that file changed:  resources/js/out/cljs_deps.js
+notifying browser that file changed:  out\cashtime\core.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.883 seconds.[0m
+notifying browser that file changed:  out\cashtime\core.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.476 seconds.[0m
+notifying browser that file changed:  out\cashtime\dom_utils.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[36m----  Compiler Warning on   src/cashtime/dom_utils.cljs   line:61  column:28  ----[0m
+
+  [1mUse of undeclared Var cashtime.dom-utils/menu-key[0m
+
+  [36m57[0m  [36m"Получить типичные для пункта меню настройки[0m
+  [36m58[0m  [36m(признак, что пункт активен и событие при щелчке на нем)"[0m
+  [36m59[0m  [36m[item-key active? on-click-fn][0m
+  [36m60[0m  [36m{:class (when active? "active")[0m
+  [33m61[0m  [1m :on-click #(on-click-fn menu-key)})[0m
+  [0m  [0m  [33m                         ^--- Use of undeclared Var cashtime.dom-utils/menu-key[0m
+
+[36m----  Compiler Warning : Please see src/cashtime/dom_utils.cljs  ----[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.48 seconds.[0m
+notifying browser that file changed:  resources/js/out/cljs_deps.js
+notifying browser that file changed:  out\cashtime\dom_utils.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[36m----  Compiler Warning on   src/cashtime/dom_utils.cljs   line:61  column:28  ----[0m
+
+  [1mUse of undeclared Var cashtime.dom-utils/menu-key[0m
+
+  [36m57[0m  [36m"Получить типичные для пункта меню настройки[0m
+  [36m58[0m  [36m(признак, что пункт активен и событие при щелчке на нем)"[0m
+  [36m59[0m  [36m[active? on-click-fn item-key][0m
+  [36m60[0m  [36m{:class (when active? "active")[0m
+  [33m61[0m  [1m :on-click #(on-click-fn menu-key)})[0m
+  [0m  [0m  [33m                         ^--- Use of undeclared Var cashtime.dom-utils/menu-key[0m
+
+[36m----  Compiler Warning : Please see src/cashtime/dom_utils.cljs  ----[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.462 seconds.[0m
+notifying browser that file changed:  out\cashtime\dom_utils.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.455 seconds.[0m
+notifying browser that file changed:  resources/js/out/cljs_deps.js
+notifying browser that file changed:  out\cashtime\core.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[36m----  Compiler Warning on   src/cashtime/core.cljs   line:612  column:35  ----[0m
+
+  [1mUse of undeclared Var cashtime.dom-utils/menu-item-props[0m
+
+  [36m608[0m  [36m(rum/defc timeline-panel-view[0m
+  [36m609[0m  [36m  "Вьюшка для управления временем"[0m
+  [36m610[0m  [36m  [date-params][0m
+  [36m611[0m  [36m  (let [d-group-mode (:grouping-mode date-params)[0m
+  [33m612[0m  [1m        get-group-params (fn[gm] (dom/menu-item-props (= d-group-mode gm)[0m
+  [0m   [0m  [33m                                  ^--- Use of undeclared Var cashtime.dom-utils/menu-item-props[0m
+  [36m613[0m  [36m                                                      set-dates-group-mode[0m
+  [36m614[0m  [36m                                                      gm))][0m
+  [36m615[0m  [36m    [:div[0m
+  [36m616[0m  [36m     [:a.ui.labeled.icon.tiny.button[0m
+  [36m617[0m  [36m      [:i.left.arrow.icon][0m
+
+[36m----  Compiler Warning : Please see src/cashtime/core.cljs  ----[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.5 seconds.[0m
+notifying browser that file changed:  resources/js/out/cljs_deps.js
+notifying browser that file changed:  out\cashtime\core.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[36m----  Compiler Warning on   src/cashtime/dom_utils.cljs   line:61  column:28  ----[0m
+
+  [1mUse of undeclared Var cashtime.dom-utils/menu-key[0m
+
+  [36m57[0m  [36m"Получить типичные для пункта меню настройки[0m
+  [36m58[0m  [36m(признак, что пункт активен и событие при щелчке на нем)"[0m
+  [36m59[0m  [36m[active? on-click-fn item-key][0m
+  [36m60[0m  [36m{:class (when active? "active")[0m
+  [33m61[0m  [1m :on-click #(on-click-fn menu-key)})[0m
+  [0m  [0m  [33m                         ^--- Use of undeclared Var cashtime.dom-utils/menu-key[0m
+
+[36m----  Compiler Warning : Please see src/cashtime/dom_utils.cljs  ----[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.452 seconds.[0m
+notifying browser that file changed:  resources/js/out/cljs_deps.js
+notifying browser that file changed:  out\cashtime\dom_utils.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.374 seconds.[0m
+notifying browser that file changed:  out\cashtime\dom_utils.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.397 seconds.[0m
+notifying browser that file changed:  resources/js/out/cljs_deps.js
+notifying browser that file changed:  out\cashtime\core.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.428 seconds.[0m
+notifying browser that file changed:  resources/js/out/cljs_deps.js
+notifying browser that file changed:  out\cashtime\core.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.398 seconds.[0m
+notifying browser that file changed:  resources/js/out/cljs_deps.js
+notifying browser that file changed:  out\cashtime\core.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.485 seconds.[0m
+notifying browser that file changed:  resources/js/out/cljs_deps.js
+notifying browser that file changed:  out\cashtime\core.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.418 seconds.[0m
+notifying browser that file changed:  resources/js/out/cljs_deps.js
+notifying browser that file changed:  out\cashtime\core.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.402 seconds.[0m
+notifying browser that file changed:  out\cashtime\core.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.378 seconds.[0m
+notifying browser that file changed:  out\cashtime\core.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.379 seconds.[0m
+notifying browser that file changed:  resources/js/out/cljs_deps.js
+notifying browser that file changed:  out\cashtime\core.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.373 seconds.[0m
+notifying browser that file changed:  out\cashtime\core.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.842 seconds.[0m
+notifying browser that file changed:  resources/js/out/cljs_deps.js
+notifying browser that file changed:  out\cashtime\core.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.4 seconds.[0m
+notifying browser that file changed:  resources/js/out/cljs_deps.js
+notifying browser that file changed:  out\cashtime\core.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.43 seconds.[0m
+notifying browser that file changed:  out\cashtime\core.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.476 seconds.[0m
+notifying browser that file changed:  resources/js/out/cljs_deps.js
+notifying browser that file changed:  out\cashtime\core.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.405 seconds.[0m
+notifying browser that file changed:  out\cashtime\core.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[36m----  Compiler Warning on   src/cashtime/core.cljs   line:336  column:30  ----[0m
+
+  [1mWrong number of args (3) passed to cashtime.core/filter-plain-entries[0m
+
+  [36m332[0m  [36m(let [plain-entries @(state-cursor [:plain-entries])[0m
+  [36m333[0m  [36m      search-str @(state-cursor [:search-dim-str])[0m
+  [36m334[0m  [36m      flow-filter-type @(state-cursor [:flow-filter-type])[0m
+  [36m335[0m  [36m      search-tuple (when search-str (get-search-tuple-with-substr @(state-cursor [:avail-dim-groups]) search-str))[0m
+  [33m336[0m  [1m      result-plain-entries (filter-plain-entries plain-entries flow-filter-type search-tuple)[0m
+  [0m   [0m  [33m                           ^--- Wrong number of args (3) passed to cashtime.core/filter-plain-entries[0m
+  [36m337[0m  [36m      sort-dim-params @(state-cursor [:sort-dim-params])][0m
+  [36m338[0m  [36m  (reset! (state-cursor [:entries])[0m
+  [36m339[0m  [36m          ;; конвертируем в записи[0m
+  [36m340[0m  [36m          (plain-entries->entries result-plain-entries @(state-cursor [:date-params :grouping-mode])))[0m
+  [36m341[0m  [36m  ;; CONSIDER: если изменилось кол-во измерений, то устанавливать новое значение сортировки по умолчанию[0m
+
+[36m----  Compiler Warning : Please see src/cashtime/core.cljs  ----[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.449 seconds.[0m
+notifying browser that file changed:  out\cashtime\core.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.386 seconds.[0m
+notifying browser that file changed:  resources/js/out/cljs_deps.js
+notifying browser that file changed:  out\cashtime\core.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.379 seconds.[0m
+notifying browser that file changed:  resources/js/out/cljs_deps.js
+notifying browser that file changed:  out\cashtime\core.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.398 seconds.[0m
+notifying browser that file changed:  resources/js/out/cljs_deps.js
+notifying browser that file changed:  out\cashtime\core.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.397 seconds.[0m
+notifying browser that file changed:  resources/js/out/cljs_deps.js
+notifying browser that file changed:  out\cashtime\core.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[36m----  Compiler Warning on   src/cashtime/core.cljs   line:650  column:74  ----[0m
+
+  [1mUse of undeclared Var cashtime.core/entries[0m
+
+  [36m646[0m  [36m[][0m
+  [36m647[0m  [36m(let [inflow-entries (rum/react (state-cursor [:inflow-entries]))[0m
+  [36m648[0m  [36m      outflow-entries (rum/react (state-cursor [:outflow-entries]))[0m
+  [36m649[0m  [36m      avail-dim-groups (rum/react (state-cursor [:avail-dim-groups]))[0m
+  [33m650[0m  [1m      used-dim-groups (select-keys avail-dim-groups (get-used-dims-ids entries))[0m
+  [0m   [0m  [33m                                                                       ^--- Use of undeclared Var cashtime.core/entries[0m
+  [36m651[0m  [36m      row-totals (row-totals-from-entries entries)[0m
+  [36m652[0m  [36m      d-params (rum/react (state-cursor [:date-params]))[0m
+  [36m653[0m  [36m      sort-dim-params (rum/react (state-cursor [:sort-dim-params]))[0m
+  [36m654[0m  [36m      flow-filter-type (rum/react (state-cursor [:flow-filter-type]))][0m
+  [36m655[0m  [36m  [:div.ui.padded.grid[0m
+
+[36m----  Compiler Warning : Please see src/cashtime/core.cljs  ----[0m
+[36m----  Compiler Warning on   src/cashtime/core.cljs   line:651  column:45  ----[0m
+
+  [1mUse of undeclared Var cashtime.core/entries[0m
+
+  [36m647[0m  [36m(let [inflow-entries (rum/react (state-cursor [:inflow-entries]))[0m
+  [36m648[0m  [36m      outflow-entries (rum/react (state-cursor [:outflow-entries]))[0m
+  [36m649[0m  [36m      avail-dim-groups (rum/react (state-cursor [:avail-dim-groups]))[0m
+  [36m650[0m  [36m      used-dim-groups (select-keys avail-dim-groups (get-used-dims-ids entries))[0m
+  [33m651[0m  [1m      row-totals (row-totals-from-entries entries)[0m
+  [0m   [0m  [33m                                          ^--- Use of undeclared Var cashtime.core/entries[0m
+  [36m652[0m  [36m      d-params (rum/react (state-cursor [:date-params]))[0m
+  [36m653[0m  [36m      sort-dim-params (rum/react (state-cursor [:sort-dim-params]))[0m
+  [36m654[0m  [36m      flow-filter-type (rum/react (state-cursor [:flow-filter-type]))][0m
+  [36m655[0m  [36m  [:div.ui.padded.grid[0m
+  [36m656[0m  [36m   [:div.row[0m
+
+[36m----  Compiler Warning : Please see src/cashtime/core.cljs  ----[0m
+[36m----  Compiler Warning on   src/cashtime/core.cljs   line:677  column:47  ----[0m
+
+  [1mUse of undeclared Var cashtime.core/entries[0m
+
+  [36m673[0m  [36m[:div.four.wide.column[0m
+  [36m674[0m  [36m [:div.dimensions-div[0m
+  [36m675[0m  [36m  ;; измерения[0m
+  [36m676[0m  [36m  (dimensions-view (vals used-dim-groups)[0m
+  [33m677[0m  [1m                   (tuples-from-entries entries)[0m
+  [0m   [0m  [33m                                        ^--- Use of undeclared Var cashtime.core/entries[0m
+  [36m678[0m  [36m                   sort-dim-params)]][0m
+  [36m679[0m  [36m[:div.ten.wide.column[0m
+  [36m680[0m  [36m [:div.values-div[0m
+  [36m681[0m  [36m  ;; записи[0m
+  [36m682[0m  [36m  (entries-view entries d-params)]][0m
+
+[36m----  Compiler Warning : Please see src/cashtime/core.cljs  ----[0m
+[36m----  Compiler Warning on   src/cashtime/core.cljs   line:682  column:23  ----[0m
+
+  [1mUse of undeclared Var cashtime.core/entries[0m
+
+  [36m678[0m  [36m                    sort-dim-params)]][0m
+  [36m679[0m  [36m [:div.ten.wide.column[0m
+  [36m680[0m  [36m  [:div.values-div[0m
+  [36m681[0m  [36m   ;; записи[0m
+  [33m682[0m  [1m   (entries-view entries d-params)]][0m
+  [0m   [0m  [33m                 ^--- Use of undeclared Var cashtime.core/entries[0m
+  [36m683[0m  [36m [:div.two.wide.column[0m
+  [36m684[0m  [36m  [:div.row-totals-div[0m
+  [36m685[0m  [36m   ;; итого по строкам[0m
+  [36m686[0m  [36m   (row-totals-view row-totals)]]][0m
+  [36m687[0m  [36m;; нижняя строка под таблицей[0m
+
+[36m----  Compiler Warning : Please see src/cashtime/core.cljs  ----[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.544 seconds.[0m
+notifying browser that file changed:  out\cashtime\core.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[36m----  Compiler Warning on   src/cashtime/core.cljs   line:650  column:74  ----[0m
+
+  [1mUse of undeclared Var cashtime.core/entries[0m
+
+  [36m646[0m  [36m[][0m
+  [36m647[0m  [36m(let [inflow-entries (rum/react (state-cursor [:inflow-entries]))[0m
+  [36m648[0m  [36m      outflow-entries (rum/react (state-cursor [:outflow-entries]))[0m
+  [36m649[0m  [36m      avail-dim-groups (rum/react (state-cursor [:avail-dim-groups]))[0m
+  [33m650[0m  [1m      used-dim-groups (select-keys avail-dim-groups (get-used-dims-ids entries))[0m
+  [0m   [0m  [33m                                                                       ^--- Use of undeclared Var cashtime.core/entries[0m
+  [36m651[0m  [36m      row-totals (row-totals-from-entries entries)[0m
+  [36m652[0m  [36m      d-params (rum/react (state-cursor [:date-params]))[0m
+  [36m653[0m  [36m      sort-dim-params (rum/react (state-cursor [:sort-dim-params]))[0m
+  [36m654[0m  [36m      flow-filter-type (rum/react (state-cursor [:flow-filter-type]))][0m
+  [36m655[0m  [36m  [:div.ui.padded.grid[0m
+
+[36m----  Compiler Warning : Please see src/cashtime/core.cljs  ----[0m
+[36m----  Compiler Warning on   src/cashtime/core.cljs   line:651  column:45  ----[0m
+
+  [1mUse of undeclared Var cashtime.core/entries[0m
+
+  [36m647[0m  [36m(let [inflow-entries (rum/react (state-cursor [:inflow-entries]))[0m
+  [36m648[0m  [36m      outflow-entries (rum/react (state-cursor [:outflow-entries]))[0m
+  [36m649[0m  [36m      avail-dim-groups (rum/react (state-cursor [:avail-dim-groups]))[0m
+  [36m650[0m  [36m      used-dim-groups (select-keys avail-dim-groups (get-used-dims-ids entries))[0m
+  [33m651[0m  [1m      row-totals (row-totals-from-entries entries)[0m
+  [0m   [0m  [33m                                          ^--- Use of undeclared Var cashtime.core/entries[0m
+  [36m652[0m  [36m      d-params (rum/react (state-cursor [:date-params]))[0m
+  [36m653[0m  [36m      sort-dim-params (rum/react (state-cursor [:sort-dim-params]))[0m
+  [36m654[0m  [36m      flow-filter-type (rum/react (state-cursor [:flow-filter-type]))][0m
+  [36m655[0m  [36m  [:div.ui.padded.grid[0m
+  [36m656[0m  [36m   [:div.row[0m
+
+[36m----  Compiler Warning : Please see src/cashtime/core.cljs  ----[0m
+[36m----  Compiler Warning on   src/cashtime/core.cljs   line:682  column:23  ----[0m
+
+  [1mUse of undeclared Var cashtime.core/entries[0m
+
+  [36m678[0m  [36m                    sort-dim-params)]][0m
+  [36m679[0m  [36m [:div.ten.wide.column[0m
+  [36m680[0m  [36m  [:div.values-div[0m
+  [36m681[0m  [36m   ;; записи[0m
+  [33m682[0m  [1m   (entries-view entries d-params)]][0m
+  [0m   [0m  [33m                 ^--- Use of undeclared Var cashtime.core/entries[0m
+  [36m683[0m  [36m [:div.two.wide.column[0m
+  [36m684[0m  [36m  [:div.row-totals-div[0m
+  [36m685[0m  [36m   ;; итого по строкам[0m
+  [36m686[0m  [36m   (row-totals-view row-totals)]]][0m
+  [36m687[0m  [36m;; нижняя строка под таблицей[0m
+
+[36m----  Compiler Warning : Please see src/cashtime/core.cljs  ----[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.484 seconds.[0m
+notifying browser that file changed:  out\cashtime\core.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[36m----  Compiler Warning on   src/cashtime/core.cljs   line:650  column:74  ----[0m
+
+  [1mUse of undeclared Var cashtime.core/entries[0m
+
+  [36m646[0m  [36m[][0m
+  [36m647[0m  [36m(let [inflow-entries (rum/react (state-cursor [:inflow-entries]))[0m
+  [36m648[0m  [36m      outflow-entries (rum/react (state-cursor [:outflow-entries]))[0m
+  [36m649[0m  [36m      avail-dim-groups (rum/react (state-cursor [:avail-dim-groups]))[0m
+  [33m650[0m  [1m      used-dim-groups (select-keys avail-dim-groups (get-used-dims-ids entries))[0m
+  [0m   [0m  [33m                                                                       ^--- Use of undeclared Var cashtime.core/entries[0m
+  [36m651[0m  [36m      row-totals (row-totals-from-entries entries)[0m
+  [36m652[0m  [36m      d-params (rum/react (state-cursor [:date-params]))[0m
+  [36m653[0m  [36m      sort-dim-params (rum/react (state-cursor [:sort-dim-params]))[0m
+  [36m654[0m  [36m      flow-filter-type (rum/react (state-cursor [:flow-filter-type]))][0m
+  [36m655[0m  [36m  [:div.ui.padded.grid[0m
+
+[36m----  Compiler Warning : Please see src/cashtime/core.cljs  ----[0m
+[36m----  Compiler Warning on   src/cashtime/core.cljs   line:651  column:45  ----[0m
+
+  [1mUse of undeclared Var cashtime.core/entries[0m
+
+  [36m647[0m  [36m(let [inflow-entries (rum/react (state-cursor [:inflow-entries]))[0m
+  [36m648[0m  [36m      outflow-entries (rum/react (state-cursor [:outflow-entries]))[0m
+  [36m649[0m  [36m      avail-dim-groups (rum/react (state-cursor [:avail-dim-groups]))[0m
+  [36m650[0m  [36m      used-dim-groups (select-keys avail-dim-groups (get-used-dims-ids entries))[0m
+  [33m651[0m  [1m      row-totals (row-totals-from-entries entries)[0m
+  [0m   [0m  [33m                                          ^--- Use of undeclared Var cashtime.core/entries[0m
+  [36m652[0m  [36m      d-params (rum/react (state-cursor [:date-params]))[0m
+  [36m653[0m  [36m      sort-dim-params (rum/react (state-cursor [:sort-dim-params]))[0m
+  [36m654[0m  [36m      flow-filter-type (rum/react (state-cursor [:flow-filter-type]))][0m
+  [36m655[0m  [36m  [:div.ui.padded.grid[0m
+  [36m656[0m  [36m   [:div.row[0m
+
+[36m----  Compiler Warning : Please see src/cashtime/core.cljs  ----[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.604 seconds.[0m
+notifying browser that file changed:  resources/js/out/cljs_deps.js
+notifying browser that file changed:  out\cashtime\core.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[36m----  Compiler Warning on   src/cashtime/core.cljs   line:651  column:45  ----[0m
+
+  [1mUse of undeclared Var cashtime.core/entries[0m
+
+  [36m647[0m  [36m(let [inflow-entries (rum/react (state-cursor [:inflow-entries]))[0m
+  [36m648[0m  [36m      outflow-entries (rum/react (state-cursor [:outflow-entries]))[0m
+  [36m649[0m  [36m      avail-dim-groups (rum/react (state-cursor [:avail-dim-groups]))[0m
+  [36m650[0m  [36m      used-dim-groups (select-keys avail-dim-groups (get-used-dims-ids inflow-entries))[0m
+  [33m651[0m  [1m      row-totals (row-totals-from-entries entries)[0m
+  [0m   [0m  [33m                                          ^--- Use of undeclared Var cashtime.core/entries[0m
+  [36m652[0m  [36m      d-params (rum/react (state-cursor [:date-params]))[0m
+  [36m653[0m  [36m      sort-dim-params (rum/react (state-cursor [:sort-dim-params]))[0m
+  [36m654[0m  [36m      flow-filter-type (rum/react (state-cursor [:flow-filter-type]))][0m
+  [36m655[0m  [36m  [:div.ui.padded.grid[0m
+  [36m656[0m  [36m   [:div.row[0m
+
+[36m----  Compiler Warning : Please see src/cashtime/core.cljs  ----[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.416 seconds.[0m
+notifying browser that file changed:  out\cashtime\core.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.358 seconds.[0m
+notifying browser that file changed:  out\cashtime\core.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.418 seconds.[0m
+notifying browser that file changed:  out\cashtime\core.js
+Notifyng browser that CSS file changed: resources/css/basic.css
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[36m----  Compiler Warning on   src/cashtime/core.cljs   line:594  column:12  ----[0m
+
+  [1mUse of undeclared Var cashtime.core/entries[0m
+
+  [36m590[0m  [36m;; итоги[0m
+  [36m591[0m  [36m;; сами строки[0m
+  [36m592[0m  [36m(map (fn[{:keys [tuple date-values]}][0m
+  [36m593[0m  [36m       (rum/with-key (values-row-tr-view dates date-values) tuple))[0m
+  [33m594[0m  [1m     entries)[0m
+  [0m   [0m  [33m     ^--- Use of undeclared Var cashtime.core/entries[0m
+  [36m595[0m  [36m;; итого[0m
+  [36m596[0m  [36m[:tr[0m
+  [36m597[0m  [36m (map #(rum/with-key (date-total-td-view %)%)[0m
+  [36m598[0m  [36m      (date-totals-from-entries entries))]]]))[0m
+
+[36m----  Compiler Warning : Please see src/cashtime/core.cljs  ----[0m
+[36m----  Compiler Warning on   src/cashtime/core.cljs   line:598  column:39  ----[0m
+
+  [1mUse of undeclared Var cashtime.core/entries[0m
+
+  [36m594[0m  [36m           entries)[0m
+  [36m595[0m  [36m      ;; итого[0m
+  [36m596[0m  [36m      [:tr[0m
+  [36m597[0m  [36m       (map #(rum/with-key (date-total-td-view %)%)[0m
+  [33m598[0m  [1m            (date-totals-from-entries entries))]]]))[0m
+  [0m   [0m  [33m                                      ^--- Use of undeclared Var cashtime.core/entries[0m
+  [36m599[0m  [36m[0m
+  [36m600[0m  [36m;;;[0m
+  [36m601[0m  [36m;;; Остальные вьюшки[0m
+  [36m602[0m  [36m;;;[0m
+  [36m603[0m  [36m(rum/defc row-total-tr-view[0m
+
+[36m----  Compiler Warning : Please see src/cashtime/core.cljs  ----[0m
+[36m----  Compiler Warning on   src/cashtime/core.cljs   line:598  column:39  ----[0m
+
+  [1mUse of undeclared Var cashtime.core/entries[0m
+
+  [36m594[0m  [36m           entries)[0m
+  [36m595[0m  [36m      ;; итого[0m
+  [36m596[0m  [36m      [:tr[0m
+  [36m597[0m  [36m       (map #(rum/with-key (date-total-td-view %)%)[0m
+  [33m598[0m  [1m            (date-totals-from-entries entries))]]]))[0m
+  [0m   [0m  [33m                                      ^--- Use of undeclared Var cashtime.core/entries[0m
+  [36m599[0m  [36m[0m
+  [36m600[0m  [36m;;;[0m
+  [36m601[0m  [36m;;; Остальные вьюшки[0m
+  [36m602[0m  [36m;;;[0m
+  [36m603[0m  [36m(rum/defc row-total-tr-view[0m
+
+[36m----  Compiler Warning : Please see src/cashtime/core.cljs  ----[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.552 seconds.[0m
+notifying browser that file changed:  resources/js/out/cljs_deps.js
+notifying browser that file changed:  out\cashtime\core.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[36m----  Compiler Warning on   src/cashtime/core.cljs   line:598  column:39  ----[0m
+
+  [1mUse of undeclared Var cashtime.core/entries[0m
+
+  [36m594[0m  [36m           outflow-entries)[0m
+  [36m595[0m  [36m      ;; итого[0m
+  [36m596[0m  [36m      [:tr[0m
+  [36m597[0m  [36m       (map #(rum/with-key (date-total-td-view %)%)[0m
+  [33m598[0m  [1m            (date-totals-from-entries entries))]]]))[0m
+  [0m   [0m  [33m                                      ^--- Use of undeclared Var cashtime.core/entries[0m
+  [36m599[0m  [36m[0m
+  [36m600[0m  [36m;;;[0m
+  [36m601[0m  [36m;;; Остальные вьюшки[0m
+  [36m602[0m  [36m;;;[0m
+  [36m603[0m  [36m(rum/defc row-total-tr-view[0m
+
+[36m----  Compiler Warning : Please see src/cashtime/core.cljs  ----[0m
+[36m----  Compiler Warning on   src/cashtime/core.cljs   line:598  column:39  ----[0m
+
+  [1mUse of undeclared Var cashtime.core/entries[0m
+
+  [36m594[0m  [36m           outflow-entries)[0m
+  [36m595[0m  [36m      ;; итого[0m
+  [36m596[0m  [36m      [:tr[0m
+  [36m597[0m  [36m       (map #(rum/with-key (date-total-td-view %)%)[0m
+  [33m598[0m  [1m            (date-totals-from-entries entries))]]]))[0m
+  [0m   [0m  [33m                                      ^--- Use of undeclared Var cashtime.core/entries[0m
+  [36m599[0m  [36m[0m
+  [36m600[0m  [36m;;;[0m
+  [36m601[0m  [36m;;; Остальные вьюшки[0m
+  [36m602[0m  [36m;;;[0m
+  [36m603[0m  [36m(rum/defc row-total-tr-view[0m
+
+[36m----  Compiler Warning : Please see src/cashtime/core.cljs  ----[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.449 seconds.[0m
+notifying browser that file changed:  resources/js/out/cljs_deps.js
+notifying browser that file changed:  out\cashtime\core.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.36 seconds.[0m
+notifying browser that file changed:  resources/js/out/cljs_deps.js
+notifying browser that file changed:  out\cashtime\core.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.397 seconds.[0m
+notifying browser that file changed:  resources/js/out/cljs_deps.js
+notifying browser that file changed:  out\cashtime\core.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.419 seconds.[0m
+notifying browser that file changed:  out\cashtime\core.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.408 seconds.[0m
+notifying browser that file changed:  out\cashtime\core.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.378 seconds.[0m
+notifying browser that file changed:  out\cashtime\core.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.392 seconds.[0m
+notifying browser that file changed:  resources/js/out/cljs_deps.js
+notifying browser that file changed:  out\cashtime\core.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.396 seconds.[0m
+notifying browser that file changed:  resources/js/out/cljs_deps.js
+notifying browser that file changed:  out\cashtime\core.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.421 seconds.[0m
+notifying browser that file changed:  out\cashtime\core.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.405 seconds.[0m
+notifying browser that file changed:  out\cashtime\core.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.381 seconds.[0m
+notifying browser that file changed:  out\cashtime\core.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.389 seconds.[0m
+notifying browser that file changed:  resources/js/out/cljs_deps.js
+notifying browser that file changed:  out\cashtime\core.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.442 seconds.[0m
+notifying browser that file changed:  out\cashtime\core.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.382 seconds.[0m
+notifying browser that file changed:  resources/js/out/cljs_deps.js
+notifying browser that file changed:  out\cashtime\core.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.372 seconds.[0m
+notifying browser that file changed:  resources/js/out/cljs_deps.js
+notifying browser that file changed:  out\cashtime\core.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.4 seconds.[0m
+notifying browser that file changed:  resources/js/out/cljs_deps.js
+notifying browser that file changed:  out\cashtime\core.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.389 seconds.[0m
+notifying browser that file changed:  resources/js/out/cljs_deps.js
+notifying browser that file changed:  out\cashtime\core.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.397 seconds.[0m
+notifying browser that file changed:  resources/js/out/cljs_deps.js
+notifying browser that file changed:  out\cashtime\core.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.384 seconds.[0m
+notifying browser that file changed:  resources/js/out/cljs_deps.js
+notifying browser that file changed:  out\cashtime\core.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.384 seconds.[0m
+notifying browser that file changed:  out\cashtime\core.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.406 seconds.[0m
+notifying browser that file changed:  out\cashtime\core.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.405 seconds.[0m
+notifying browser that file changed:  resources/js/out/cljs_deps.js
+notifying browser that file changed:  out\cashtime\core.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[36m----  Compiler Warning on   src/cashtime/core.cljs   line:587  column:11  ----[0m
+
+  [1mWrong number of args (3) passed to rum.core/with-key[0m
+
+  [36m583[0m  [36m(rum/defc values-row-tr-view[0m
+  [36m584[0m  [36m  [dates date-values flow-type][0m
+  [36m585[0m  [36m  [:tr[0m
+  [36m586[0m  [36m   (map (fn [d][0m
+  [33m587[0m  [1m          (rum/with-key (value-cell-td-view (get date-values d)) d flow-type))[0m
+  [0m   [0m  [33m          ^--- Wrong number of args (3) passed to rum.core/with-key[0m
+  [36m588[0m  [36m        dates)])[0m
+  [36m589[0m  [36m[0m
+  [36m590[0m  [36m[0m
+  [36m591[0m  [36m(rum/defc date-total-td-view[0m
+  [36m592[0m  [36m  "Вьюшка для итого по столбцу (дате)"[0m
+
+[36m----  Compiler Warning : Please see src/cashtime/core.cljs  ----[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.422 seconds.[0m
+notifying browser that file changed:  resources/js/out/cljs_deps.js
+notifying browser that file changed:  out\cashtime\core.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[36m----  Compiler Warning on   src/cashtime/core.cljs   line:587  column:11  ----[0m
+
+  [1mWrong number of args (3) passed to rum.core/with-key[0m
+
+  [36m583[0m  [36m(rum/defc values-row-tr-view[0m
+  [36m584[0m  [36m  [dates date-values flow-type][0m
+  [36m585[0m  [36m  [:tr[0m
+  [36m586[0m  [36m   (map (fn [d][0m
+  [33m587[0m  [1m          (rum/with-key (value-cell-td-view (get date-values d)) d flow-type))[0m
+  [0m   [0m  [33m          ^--- Wrong number of args (3) passed to rum.core/with-key[0m
+  [36m588[0m  [36m        dates)])[0m
+  [36m589[0m  [36m[0m
+  [36m590[0m  [36m[0m
+  [36m591[0m  [36m(rum/defc date-total-td-view[0m
+  [36m592[0m  [36m  "Вьюшка для итого по столбцу (дате)"[0m
+
+[36m----  Compiler Warning : Please see src/cashtime/core.cljs  ----[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.427 seconds.[0m
+notifying browser that file changed:  resources/js/out/cljs_deps.js
+notifying browser that file changed:  out\cashtime\core.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.397 seconds.[0m
+notifying browser that file changed:  resources/js/out/cljs_deps.js
+notifying browser that file changed:  out\cashtime\core.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.373 seconds.[0m
+notifying browser that file changed:  resources/js/out/cljs_deps.js
+notifying browser that file changed:  out\cashtime\core.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.372 seconds.[0m
+notifying browser that file changed:  resources/js/out/cljs_deps.js
+notifying browser that file changed:  out\cashtime\core.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.404 seconds.[0m
+notifying browser that file changed:  out\cashtime\core.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.372 seconds.[0m
+notifying browser that file changed:  resources/js/out/cljs_deps.js
+notifying browser that file changed:  out\cashtime\core.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.374 seconds.[0m
+notifying browser that file changed:  out\cashtime\core.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.362 seconds.[0m
+notifying browser that file changed:  out\cashtime\core.js
+Notifyng browser that CSS file changed: resources/css/basic.css
+Notifyng browser that CSS file changed: resources/css/basic.css
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.372 seconds.[0m
+notifying browser that file changed:  out\cashtime\core.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.339 seconds.[0m
+notifying browser that file changed:  out\cashtime\core.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.358 seconds.[0m
+notifying browser that file changed:  resources/js/out/cljs_deps.js
+notifying browser that file changed:  out\cashtime\core.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.354 seconds.[0m
+notifying browser that file changed:  resources/js/out/cljs_deps.js
+notifying browser that file changed:  out\cashtime\core.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.377 seconds.[0m
+notifying browser that file changed:  out\cashtime\core.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.383 seconds.[0m
+notifying browser that file changed:  resources/js/out/cljs_deps.js
+notifying browser that file changed:  out\cashtime\core.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.389 seconds.[0m
+notifying browser that file changed:  out\cashtime\core.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.357 seconds.[0m
+notifying browser that file changed:  out\cashtime\core.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.403 seconds.[0m
+notifying browser that file changed:  out\cashtime\core.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.366 seconds.[0m
+notifying browser that file changed:  out\cashtime\core.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.373 seconds.[0m
+notifying browser that file changed:  out\cashtime\core.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.384 seconds.[0m
+notifying browser that file changed:  resources/js/out/cljs_deps.js
+notifying browser that file changed:  out\cashtime\core.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.365 seconds.[0m
+notifying browser that file changed:  resources/js/out/cljs_deps.js
+notifying browser that file changed:  out\cashtime\core.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.35 seconds.[0m
+notifying browser that file changed:  out\cashtime\core.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.353 seconds.[0m
+notifying browser that file changed:  out\cashtime\core.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.376 seconds.[0m
+notifying browser that file changed:  resources/js/out/cljs_deps.js
+notifying browser that file changed:  out\cashtime\core.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.382 seconds.[0m
+notifying browser that file changed:  resources/js/out/cljs_deps.js
+notifying browser that file changed:  out\cashtime\core.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.361 seconds.[0m
+notifying browser that file changed:  out\cashtime\core.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.377 seconds.[0m
+notifying browser that file changed:  resources/js/out/cljs_deps.js
+notifying browser that file changed:  out\cashtime\core.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.362 seconds.[0m
+notifying browser that file changed:  resources/js/out/cljs_deps.js
+notifying browser that file changed:  out\cashtime\core.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.352 seconds.[0m
+notifying browser that file changed:  resources/js/out/cljs_deps.js
+notifying browser that file changed:  out\cashtime\core.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.361 seconds.[0m
+notifying browser that file changed:  resources/js/out/cljs_deps.js
+notifying browser that file changed:  out\cashtime\core.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.352 seconds.[0m
+notifying browser that file changed:  resources/js/out/cljs_deps.js
+notifying browser that file changed:  out\cashtime\core.js
+Notifyng browser that CSS file changed: resources/css/basic.css
+Notifyng browser that CSS file changed: resources/css/basic.css
+Notifyng browser that CSS file changed: resources/css/basic.css
+Notifyng browser that CSS file changed: resources/css/basic.css
+Notifyng browser that CSS file changed: resources/css/basic.css
+Notifyng browser that CSS file changed: resources/css/basic.css
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.367 seconds.[0m
+notifying browser that file changed:  resources/js/out/cljs_deps.js
+notifying browser that file changed:  out\cashtime\core.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.347 seconds.[0m
+notifying browser that file changed:  out\cashtime\core.js
+Notifyng browser that CSS file changed: resources/css/basic.css
+Notifyng browser that CSS file changed: resources/css/basic.css
+Notifyng browser that CSS file changed: resources/css/basic.css
+Notifyng browser that CSS file changed: resources/css/basic.css
+Notifyng browser that CSS file changed: resources/css/basic.css
+Notifyng browser that CSS file changed: resources/css/basic.css
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.357 seconds.[0m
+notifying browser that file changed:  out\cashtime\core.js

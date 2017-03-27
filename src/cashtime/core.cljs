@@ -11,7 +11,10 @@
 
 (defonce appstate (atom
                     {:plain-entries [] ;; плоские данные, рандомно
-                     :entries [] ; записи в формат.виде для отображения в таблице
+
+                     :inflow-entries [] ; записи притоков (поступлений)
+                     :outflow-entries [] ; записи оттоков (выплат)
+
                      :avail-dim-groups {1 {:id 1
                                            :order-index 1 ; каким отображать по счету начиная слева
                                            :name "Статьи"
@@ -52,6 +55,7 @@
                      ;; параметры для дат
                      :date-params {:grouping-mode :by-day ; варианты: :by-day :by-month :by-year
                                    }
+
                      }))
 
 (def state-cursor (partial rum/cursor-in appstate))
@@ -62,7 +66,7 @@
                         :max-row-amount 10
                         :max-vals-amount 20
                         :max-entries 200
-                        :min-summ -70000
+                        :min-summ 100
                         :max-summ 100000})
 
 (defn random-plain-entry
@@ -71,6 +75,7 @@
   (-> {:dims (rand-nth dim-group-options)
        :date (rnd/random-iso-date from-d to-d)
        :v-type (rnd/rand-nth-by-percentage {:fact 90 :plan 10})
+       :v-flow (rnd/rand-nth-by-percentage {:inflow 40 :outflow 60})
        :v-summ (rnd/rand-from-to min-summ max-summ)}))
 
 (defn random-plain-entries
@@ -88,29 +93,34 @@
 
 ;;;; ---------------------------------------------------------------------------
 
-;; (def test-plain-entries
-;;   "Записи в негруп.виде"
-;;   [{:dims {1 2, 2 3}
-;;     :date "2017-07-01T00:00:00Z"
-;;     :v-type :fact
-;;     :v-summ 10000}
-;;    {:dims {1 2, 2 3}
-;;     :date "2017-07-01T00:00:00Z"
-;;     :v-type :plan
-;;     :v-summ 5000}
-;;    {:dims {1 2, 2 3}
-;;     :date "2017-07-07T00:00:00Z"
-;;     :v-type :fact
-;;     :v-summ 25000}
-;;    {:dims {1 2, 2 3}
-;;     :date "2017-02-01T00:00:00Z"
-;;     :v-type :plan
-;;     :v-summ 1111}
-;;    {:dims {2 1}
-;;     :date "2017-07-07T00:00:00Z"
-;;     :v-type :fact
-;;     :v-summ 2200}
-;;    ])
+(def test-plain-entries
+  "Записи в негруп.виде"
+  [{:dims {1 2, 2 3}
+    :date "2017-07-01T00:00:00Z"
+    :v-type :fact
+    :v-flow :outflow
+    :v-summ 10000}
+   {:dims {1 2, 2 3}
+    :date "2017-07-01T00:00:00Z"
+    :v-type :plan
+    :v-flow :inflow
+    :v-summ 5000}
+   {:dims {1 2, 2 3}
+    :date "2017-07-07T00:00:00Z"
+    :v-type :fact
+    :v-flow :inflow
+    :v-summ 25000}
+   {:dims {1 2, 2 3}
+    :date "2017-02-01T00:00:00Z"
+    :v-type :plan
+    :v-flow :outflow
+    :v-summ 1111}
+   {:dims {2 1}
+    :date "2017-07-07T00:00:00Z"
+    :v-type :fact
+    :v-flow :outflow
+    :v-summ 2200}
+   ])
 
 
 (def test-entries
@@ -191,37 +201,6 @@
        (reduce-kv (fn [vc tuple d-values]
                   (conj vc {:tuple tuple :date-values d-values}))
                 [])))
-
-
-(def test-dim-groups
-  {1 {:id 1
-      :name "Статьи"
-      :css-class "dim-1"
-      :dims {1 {:id 1 :name "Сайт"}
-             2 {:id 2 :name "Визитки"}
-             3 {:id 3 :name "Маркетинг"}
-             4 {:id 4 :name "Логотип"}
-             5 {:id 5 :name "Фирменный стиль"}
-             6 {:id 6 :name "Лэндинг"}
-             7 {:id 7 :name "Другое"}}
-      ;; доп. для сортировки, группировки
-      ;; :sorted false
-      ;; :grouped false
-      }
-   2 {:id 2
-      :name "Контрагенты"
-      :css-class "dim-2"
-      :dims {1 {:id 1 :name "Nova Med"}
-             2 {:id 2 :name "GCC"}
-             3 {:id 3 :name "Bestprofi.kz"}
-             4 {:id 4 :name "Игорь"}
-             5 {:id 5 :name "Luxor"}}}
-   3 {:id 3
-      :name "Компания"
-      :css-class "dim-3"
-      :dims {1 {:id 1 :name "DIIS"}
-             2 {:id 2 :name "BRK"}}}
-   })
 
 (defn tuple-w-ids->tuple-w-names
   "Таплы с id измерений в таплы с названиями измерений"
@@ -328,14 +307,29 @@
        first))
 
 (defn sort-entries!
-  "Отсортировать строки записей согласно настройкам сортировки групп"
+  "Отсортировать строки записей согласно настройкам сортировки групп
+  (отдельно записи оттоков и притоков)"
   []
   (let [sort-dim-params @(state-cursor [:sort-dim-params])
         avail-dim-groups @(state-cursor [:avail-dim-groups])]
-    (swap! (state-cursor [:entries]) (fn [prev-e]
-                                       (get-sorted-entries prev-e
-                                                           avail-dim-groups
-                                                           (:group-id sort-dim-params) (:desc? sort-dim-params))))))
+    (swap! (state-cursor [:inflow-entries]) (fn [prev-e]
+                                              (get-sorted-entries prev-e
+                                                                  avail-dim-groups
+                                                                  (:group-id sort-dim-params) (:desc? sort-dim-params))))
+    (swap! (state-cursor [:outflow-entries]) (fn [prev-e]
+                                              (get-sorted-entries prev-e
+                                                                  avail-dim-groups
+                                                                  (:group-id sort-dim-params) (:desc? sort-dim-params))))))
+
+
+(defn filter-plain-entries
+  "Отфильтровать (если нужно) плоские данные"
+  [plain-entries search-tuple]
+  (->> plain-entries
+       ;; если нужно фильтровать по поисковой строке
+       ((fn[pe](if search-tuple
+                 (filter #(tuple-in-search-tuple? (:dims %) search-tuple) pe)
+                 pe)))))
 
 (defn update-entries!
   "Обновить записи в формат.виде"
@@ -343,14 +337,15 @@
   (let [plain-entries @(state-cursor [:plain-entries])
         search-str @(state-cursor [:search-dim-str])
         search-tuple (when search-str (get-search-tuple-with-substr @(state-cursor [:avail-dim-groups]) search-str))
-        result-plain-entries (if search-tuple ; если нужно фильтровать
-                               (filter (fn[pe] (tuple-in-search-tuple? (:dims pe) search-tuple))
-                                       plain-entries)
-                               plain-entries)
+        result-plain-entries (filter-plain-entries plain-entries search-tuple)
         sort-dim-params @(state-cursor [:sort-dim-params])]
-    (reset! (state-cursor [:entries])
-            ;; конвертируем в записи
-            (plain-entries->entries result-plain-entries @(state-cursor [:date-params :grouping-mode])))
+    ;; отдельно конвертируем в записи оттоков и притоков
+    (reset! (state-cursor [:inflow-entries])
+            (plain-entries->entries (filter #(= (:v-flow %) :inflow) result-plain-entries)
+                                    @(state-cursor [:date-params :grouping-mode])))
+    (reset! (state-cursor [:outflow-entries])
+            (plain-entries->entries (filter #(= (:v-flow %) :outflow) result-plain-entries)
+                                    @(state-cursor [:date-params :grouping-mode])))
     ;; CONSIDER: если изменилось кол-во измерений, то устанавливать новое значение сортировки по умолчанию
     ;; сортируем
     (sort-entries!)))
@@ -391,16 +386,14 @@
 
 (defn date-totals-from-entries
   "Получить итого по датам (по столбцу т.е.)"
-  [entries]
-  (let [dates (-> entries
-                  distinct-dates-from-entries)]
-    (->> dates
-         (map (fn [d]
-                (reduce (fn [m {:keys [tuple date-values]}]
-                             (-> m
-                                 (update :fact + (or (get-in date-values [d :fact]) 0))
-                                 (update :plan + (or (get-in date-values [d :plan]) 0))))
-                           {:fact 0 :plan 0} entries))))))
+  [dates entries]
+  (->> dates
+       (map (fn [d]
+              (reduce (fn [m {:keys [tuple date-values]}]
+                        (-> m
+                            (update :fact + (or (get-in date-values [d :fact]) 0))
+                            (update :plan + (or (get-in date-values [d :plan]) 0))))
+                      {:fact 0 :plan 0} entries)))))
 
 ;;;
 ;;; Watchers
@@ -423,7 +416,12 @@
   (add-watch (state-cursor [:sort-dim-params]) :sort-dim-params-watch
              (fn [k a old-s new-s]
                (when-not (= old-s new-s)
-                 (sort-entries!)))))
+                 (sort-entries!))))
+  ;; при изменении фильтрации потока (только расходы/доходы)
+  (add-watch (state-cursor [:flow-filter-type]) :flow-filter-type-watch
+             (fn [k a old-s new-s]
+               (when-not (= old-s new-s)
+                 (update-entries!)))))
 
 ;;; ---------------------------------------------------------------------------
 ;;; Методы для вьюшек
@@ -450,6 +448,12 @@
     (if (= (:group-id @sort-params-c) dim-group-id)
       (swap! sort-params-c (fn[p] (assoc p :desc? (not (:desc? p)))))
       (reset! sort-params-c {:group-id dim-group-id :desc? false}))))
+
+(defn set-flow-filter-type
+  "Отфильтровать тип потока (все/только расходы/только доходы)"
+  [flow-type]
+  (println "filter flow type: " flow-type)
+  (reset! (state-cursor [:flow-filter-type]) flow-type))
 
 ;;; ---------------------------------------------------------------------------
 ;;; Вьюшки
@@ -489,7 +493,7 @@
 (rum/defc dimensions-view
   "Вьюшка для измерений (левой части)
   used-dim-groups - используются только видимые справочники измерений"
-  [used-dim-groups tuples sort-params]
+  [used-dim-groups outflow-tuples inflow-tuples sort-params]
   (let [ordered-dim-groups (sort-by :order-index used-dim-groups)]
     [:div
      [:table.ui.very.basic.padded.sortable.table
@@ -499,11 +503,27 @@
                             (:id %))
              ordered-dim-groups)]]
       [:tbody
-       (map #(rum/with-key (tuple-tr-view ordered-dim-groups %)
-                           %) tuples)
+       ;; заголовок оттоков
        [:tr
-        [:td {:colSpan (count ordered-dim-groups)
-              :style {:font-weight "bold"}} "Итого"]]]]]))
+        [:td.accented-td {:colSpan (count ordered-dim-groups)} "Выплаты"]]
+       ;; измерения оттоков
+       (map #(rum/with-key (tuple-tr-view ordered-dim-groups %)
+                           %) outflow-tuples)
+       ;; итого оттоков
+       [:tr
+        [:td.total-cell {:colSpan (count ordered-dim-groups)
+                         :style {:font-weight "bold"}} "Итого выплат"]]
+       ;; заголовок притоков
+       [:tr
+        [:td.accented-td {:colSpan (count ordered-dim-groups)} "Поступления"]]
+       ;; измерения притоков
+       (map #(rum/with-key (tuple-tr-view ordered-dim-groups %)
+                           %) inflow-tuples)
+       ;; итого притоков
+       [:tr
+        [:td.total-cell {:colSpan (count ordered-dim-groups)
+                         :style {:font-weight "bold"}} "Итого поступлений"]]
+       ]]]))
 
 ;;;
 ;;; Записи с датами (центральная часть)
@@ -520,42 +540,44 @@
 
 (rum/defc entry-value-view
   "Вьюшка для вывода суммы записи"
-  [value]
-  [:div.value-cell
-   (when (and (:fact value) (not= 0 (:fact value))) [:span.fact-value
-                                                     {:class (if (pos? (:fact value)) "positive" "negative")}
-                                                     (u/money-str-with-zero (:fact value))])
-   (when (and (:plan value) (not= 0 (:plan value))) [:span.plan-value
-                                                     (u/money-str-with-zero (:plan value))])
-
-   ])
+  [value flow-type]
+  (if (not (nil? value))
+    [:div.value-cell
+     (when (:fact value) [:span.fact-value
+                          {:class (case flow-type
+                                    :inflow "positive"
+                                    :outflow "negative"
+                                    "")}
+                          (u/money-str-with-zero (:fact value))])
+     (when (and (:plan value) (not= 0 (:plan value))) [:span.plan-value
+                                                       (u/money-str-with-zero (:plan value))])]
+     [:div.value-cell " "]))
 
 
 (rum/defc value-cell-td-view
-  [value]
+  [value flow-type]
   [:td
-   (when value
-     (entry-value-view value))])
+   (entry-value-view value flow-type)])
 
 
 (rum/defc values-row-tr-view
-  [dates date-values]
+  [dates date-values flow-type]
   [:tr
    (map (fn [d]
-          (rum/with-key (value-cell-td-view (get date-values d)) d))
+          (rum/with-key (value-cell-td-view (get date-values d) flow-type) d))
         dates)])
 
 
 (rum/defc date-total-td-view
   "Вьюшка для итого по столбцу (дате)"
-  [date-total]
-  [:td.total-cell (entry-value-view date-total)])
+  [date-total flow-type]
+  [:td.total-cell (entry-value-view date-total flow-type)])
 
 
 (rum/defc entries-view
   "Вьюшка для записей и дат (основная часть)"
-  [entries d-params]
-  (let [dates (distinct-dates-from-entries entries)
+  [outflow-entries inflow-entries d-params]
+  (let [dates (distinct-dates-from-entries (concat outflow-entries inflow-entries))
         d-group-mode (:grouping-mode d-params)]
     [:table.ui.very.basic.padded.celled.single.line.table
 ;;      {:style {:width "1200px"}}
@@ -563,41 +585,72 @@
       ;; заголовки с датами
       (date-headers-tr-view dates d-group-mode)]
      [:tbody
-      ;; сами строки
-      (map (fn[{:keys [tuple date-values]}]
-             (rum/with-key (values-row-tr-view dates date-values) tuple))
-           entries)
-      ;; итого
+      ;; строка заголовка оттоков
       [:tr
-       (map #(rum/with-key (date-total-td-view %)%)
-            (date-totals-from-entries entries))]]]))
+       [:td {:colSpan (count dates)} " "]]
+      ;; строки оттоков
+      (map (fn[{:keys [tuple date-values]}]
+             (rum/with-key (values-row-tr-view dates date-values :outflow) tuple))
+           outflow-entries)
+      ;; строка итого оттоков
+      [:tr
+       (map #(date-total-td-view % :outflow)
+            (date-totals-from-entries dates outflow-entries))]
+      ;; строка заголовка притоков
+      [:tr
+       [:td {:colSpan (count dates)} " "]]
+      ;; строки притоков
+      (map (fn[{:keys [tuple date-values]}]
+             (rum/with-key (values-row-tr-view dates date-values :inflow) tuple))
+           inflow-entries)
+      ;; строка итого притоков
+      [:tr
+       (map #(date-total-td-view % :inflow)
+            (date-totals-from-entries dates inflow-entries))]
+      ]]))
 
 ;;;
 ;;; Остальные вьюшки
 ;;;
 (rum/defc row-total-tr-view
   "Вьюшка для итого по строке"
-  [total]
-  [:tr [:td.total-cell (entry-value-view total)]])
+  [total flow-type]
+  [:tr [:td.total-cell (entry-value-view total flow-type)]])
 
 (rum/defc row-totals-view
   "Вьюшка для Итого по строкам"
-  [totals]
+  [outflow-totals inflow-totals]
   [:table.ui.very.basic.padded.table
    [:thead
     [:tr
      [:th "Итого за месяц"]]]
    [:tbody
+    ;; строка заголовка оттоков
+    [:tr [:td " "]]
     ;; сами строки
-    (map #(rum/with-key (row-total-tr-view %) %)
-         totals)
+    (map #(rum/with-key (row-total-tr-view % :outflow) %)
+         outflow-totals)
     ;; итого
     [:tr
      [:td.total-cell (entry-value-view (reduce (fn [m v]
                                                  (-> m
                                                      (update :fact + (:fact v))
                                                      (update :plan + (:plan v))))
-                                               {:fact 0 :plan 0} totals))]]
+                                               {:fact 0 :plan 0} outflow-totals)
+                                       :outflow)]]
+    ;; строка заголовка притоков
+    [:tr [:td " "]]
+    ;; сами строки
+    (map #(rum/with-key (row-total-tr-view % :inflow) %)
+         inflow-totals)
+    ;; итого
+    [:tr
+     [:td.total-cell (entry-value-view (reduce (fn [m v]
+                                                 (-> m
+                                                     (update :fact + (:fact v))
+                                                     (update :plan + (:plan v))))
+                                               {:fact 0 :plan 0} inflow-totals)
+                                       :inflow)]]
     ]])
 
 
@@ -605,8 +658,9 @@
   "Вьюшка для управления временем"
   [date-params]
   (let [d-group-mode (:grouping-mode date-params)
-        get-group-params (fn[gm] (-> {:class (when (= d-group-mode gm) "active")
-                                      :on-click #(set-dates-group-mode gm)}))]
+        get-group-params (fn[gm] (dom/menu-item-props (= d-group-mode gm)
+                                                      set-dates-group-mode
+                                                      gm))]
     [:div
      [:a.ui.labeled.icon.tiny.button
       [:i.left.arrow.icon]
@@ -619,17 +673,31 @@
      ]))
 
 
+(rum/defc bottom-menu-view
+  "Нижняя часть фильтров "
+  [flow-filter-type]
+  (let [get-filter-props (fn [k] (dom/menu-item-props (= flow-filter-type k)
+                                                      set-flow-filter-type
+                                                      k))]
+    [:div.ui.text.right.floated.compact.menu
+     [:a.item (get-filter-props :all) "Все"]
+     [:a.item (get-filter-props :only-outflows) "расходы"]
+     [:a.item (get-filter-props :only-inflows) "доходы"]]))
+
 ;;;
 ;;; Главная вьюшка
 ;;;
 (rum/defc main-view < rum/reactive
   []
-  (let [entries (rum/react (state-cursor [:entries]))
+  (let [inflow-entries (rum/react (state-cursor [:inflow-entries]))
+        outflow-entries (rum/react (state-cursor [:outflow-entries]))
         avail-dim-groups (rum/react (state-cursor [:avail-dim-groups]))
-        used-dim-groups (select-keys avail-dim-groups (get-used-dims-ids entries))
-        row-totals (row-totals-from-entries entries)
+        used-dim-groups (select-keys avail-dim-groups (get-used-dims-ids (concat outflow-entries inflow-entries)))
+        row-outflow-totals (row-totals-from-entries outflow-entries)
+        row-inflow-totals (row-totals-from-entries inflow-entries)
         d-params (rum/react (state-cursor [:date-params]))
-        sort-dim-params (rum/react (state-cursor [:sort-dim-params]))]
+        sort-dim-params (rum/react (state-cursor [:sort-dim-params]))
+        flow-filter-type (rum/react (state-cursor [:flow-filter-type]))]
     [:div.ui.padded.grid
      [:div.row
       [:div.column
@@ -652,18 +720,25 @@
        [:div.dimensions-div
         ;; измерения
         (dimensions-view (vals used-dim-groups)
-                         (tuples-from-entries entries)
+                         (tuples-from-entries outflow-entries)
+                         (tuples-from-entries inflow-entries)
                          sort-dim-params)]]
       [:div.ten.wide.column
        [:div.values-div
         ;; записи
-        (entries-view entries d-params)]]
+        (entries-view outflow-entries
+                      inflow-entries
+                      d-params)]]
+      ;; столбец итого по строкам
       [:div.two.wide.column
        [:div.row-totals-div
         ;; итого по строкам
-        (row-totals-view row-totals)]]
-      ]]
-    ))
+        (row-totals-view row-outflow-totals row-inflow-totals)]]]
+     ;; нижняя строка под таблицей
+;;      [:div.row
+;;       [:div.column
+;;        (bottom-menu-view flow-filter-type)]]
+     ]))
 
 (rum/mount (main-view) (.getElementById js/document "main"))
 

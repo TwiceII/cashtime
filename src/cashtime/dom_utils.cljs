@@ -51,3 +51,23 @@
       (.hasClass class)))
 
 (defn ^:export greet [] (.log js/console "Hello world!"))
+
+
+(defn menu-item-props
+  "Получить типичные для пункта меню настройки
+  (признак, что пункт активен и событие при щелчке на нем)"
+  [active? on-click-fn item-key]
+  {:class (when active? "active")
+   :on-click #(on-click-fn item-key)})
+
+
+
+
+
+
+
+
+
+
+
+
