@@ -17,34 +17,47 @@
 
                      :avail-dim-groups {1 {:id 1
                                            :order-index 1 ; каким отображать по счету начиная слева
-                                           :name "Статьи"
+                                           :name "Контрагенты"
                                            :css-class "dim-1"
-                                           :dims {1 {:id 1 :name "Сайт"}
-                                                  2 {:id 2 :name "Визитки"}
-                                                  3 {:id 3 :name "Маркетинг"}
-                                                  4 {:id 4 :name "Логотип"}
-                                                  5 {:id 5 :name "Фирменный стиль"}
-                                                  6 {:id 6 :name "Лэндинг"}
-                                                  7 {:id 7 :name "Другое"}}
+                                           :dims {1 {:id 1 :name "Халык Банк"}
+                                                  2 {:id 2 :name "Реклама.кз"}
+                                                  3 {:id 3 :name "TOO Вектор"}
+                                                  4 {:id 4 :name "ИП Иванов"}
+                                                  5 {:id 5 :name "Асылханов М.А."}
+                                                  6 {:id 6 :name "ТОО Декор"}
+                                                  7 {:id 7 :name "Landing Ltd."}}
                                            ;; доп. для сортировки, группировки
                                            ;; :sorted false
                                            ;; :grouped false
                                            }
                                         2 {:id 2
                                            :order-index 2
-                                           :name "Контрагенты"
+                                           :name "Договоры"
                                            :css-class "dim-2"
-                                           :dims {1 {:id 1 :name "Nova Med"}
-                                                  2 {:id 2 :name "GCC"}
-                                                  3 {:id 3 :name "Bestprofi.kz"}
-                                                  4 {:id 4 :name "Игорь"}
-                                                  5 {:id 5 :name "Luxor"}}}
+                                           :dims {1 {:id 1 :name "договор 1"}
+                                                  2 {:id 2 :name "договор 2"}
+                                                  3 {:id 3 :name "дог. от 20.03.17"}
+                                                  4 {:id 4 :name "11042015 дог."}
+                                                  5 {:id 5 :name "договор №4342"}}}
                                         3 {:id 3
                                            :order-index 3
-                                           :name "Компания"
+                                           :name "Счета"
                                            :css-class "dim-3"
-                                           :dims {1 {:id 1 :name "DIIS"}
-                                                  2 {:id 2 :name "BRK"}}}}
+                                           :dims {1 {:id 1 :name "Qazkom"}
+                                                  2 {:id 2 :name "Основной счет"}
+                                                  3 {:id 3 :name "Валютный счет"}}}
+
+                                         4 {:id 4
+                                            :order-index 4
+                                            :name "Статьи"
+                                            :css-class "dim-4"
+                                            :dims {1 {:id 1 :name "Статья 1"}
+                                                   2 {:id 2 :name "Статья 2"}}}
+
+                                        }
+                     ;; активные (отображаемые) id групп измерений
+                     :active-dim-group-ids #{2 3}
+
                      ;; значение поисковой строки
                      :search-dim-str nil
 
@@ -55,7 +68,6 @@
                      ;; параметры для дат
                      :date-params {:grouping-mode :by-day ; варианты: :by-day :by-month :by-year
                                    }
-
                      }))
 
 (def state-cursor (partial rum/cursor-in appstate))
@@ -74,7 +86,7 @@
   [dim-group-options from-d to-d min-summ max-summ]
   (-> {:dims (rand-nth dim-group-options)
        :date (rnd/random-iso-date from-d to-d)
-       :v-type (rnd/rand-nth-by-percentage {:fact 90 :plan 10})
+       :v-type (rnd/rand-nth-by-percentage {:fact 95 :plan 5})
        :v-flow (rnd/rand-nth-by-percentage {:inflow 40 :outflow 60})
        :v-summ (rnd/rand-from-to min-summ max-summ)}))
 
@@ -95,12 +107,12 @@
 
 (def test-plain-entries
   "Записи в негруп.виде"
-  [{:dims {1 2, 2 3}
+  [{:dims {1 2}
     :date "2017-07-01T00:00:00Z"
     :v-type :fact
     :v-flow :outflow
     :v-summ 10000}
-   {:dims {1 2, 2 3}
+   {:dims {1 2, 2 1}
     :date "2017-07-01T00:00:00Z"
     :v-type :plan
     :v-flow :inflow
@@ -115,12 +127,19 @@
     :v-type :plan
     :v-flow :outflow
     :v-summ 1111}
+   {:dims {1 3, 2 3}
+    :date "2017-02-03T00:00:00Z"
+    :v-type :fact
+    :v-flow :outflow
+    :v-summ 3333}
    {:dims {2 1}
     :date "2017-07-07T00:00:00Z"
     :v-type :fact
     :v-flow :outflow
     :v-summ 2200}
    ])
+
+
 
 
 (def test-entries
@@ -131,37 +150,6 @@
    {:tuple {1 3, 3 1}
     :date-values {"2017-06-05T00:00:00Z" {:fact 4000 :plan -15000}}}])
 
-(def test-avail-dim-groups
-  {1 {:id 1
-      :order-index 1 ; каким отображать по счету начиная слева
-      :name "Статьи"
-      :css-class "dim-1"
-      :dims {1 {:id 1 :name "Сайт"}
-             2 {:id 2 :name "Визитки"}
-             3 {:id 3 :name "Маркетинг"}
-             4 {:id 4 :name "Логотип"}
-             5 {:id 5 :name "Фирменный стиль"}
-             6 {:id 6 :name "Лэндинг"}
-             7 {:id 7 :name "Другое"}}
-      ;; доп. для сортировки, группировки
-      ;; :sorted false
-      ;; :grouped false
-      }
-   2 {:id 2
-      :order-index 2
-      :name "Контрагенты"
-      :css-class "dim-2"
-      :dims {1 {:id 1 :name "Nova Med"}
-             2 {:id 2 :name "GCC"}
-             3 {:id 3 :name "Bestprofi.kz"}
-             4 {:id 4 :name "Игорь"}
-             5 {:id 5 :name "Luxor"}}}
-   3 {:id 3
-      :order-index 3
-      :name "Компания"
-      :css-class "dim-3"
-      :dims {1 {:id 1 :name "DIIS"}
-             2 {:id 2 :name "BRK"}}}})
 
 (defn tuples-from-entries
   "Получить список всех таплов измерений внутри записей"
@@ -182,6 +170,7 @@
 
 
 (defn update-plain-entry-date-for-group
+  "Обновить дату внутри плоских данных чтобы сгруппировать по дням/месяцам/годам и т.д."
   [plain-entry d-group-mode]
   (case d-group-mode
     :by-month (assoc plain-entry :date (mu/iso-date-by-month (:date plain-entry)))
@@ -189,18 +178,30 @@
     :by-day plain-entry
     plain-entry))
 
+(defn update-plain-entry-dims-for-avails
+  "Обновить измерения внутри плоских данных чтобы сгруппировать по доступным измерениям"
+  [plain-entry active-dim-group-ids]
+  (update plain-entry :dims (fn[t](select-keys t active-dim-group-ids))))
+
 (defn plain-entries->entries
   "Конвертировать плоские данные по записям в форматированные"
-  [plain-entries d-group-mode]
+  [plain-entries d-group-mode active-dim-group-ids]
   (->> plain-entries
-       (map #(update-plain-entry-date-for-group % d-group-mode))
+       (map #(-> %
+                 (update-plain-entry-date-for-group d-group-mode)
+                 (update-plain-entry-dims-for-avails active-dim-group-ids)))
        (reduce (fn [m e]
-                 (update-in m [(:dims e) (:date e) (:v-type e)]
-                            + (or (:v-summ e) 0)))
+                 (if-not (u/nil-or-empty? (:dims e))
+                   (update-in m [(:dims e) (:date e) (:v-type e)]
+                              + (or (:v-summ e) 0))
+                   m))
                {})
        (reduce-kv (fn [vc tuple d-values]
                   (conj vc {:tuple tuple :date-values d-values}))
                 [])))
+
+;; (plain-entries->entries test-plain-entries :by-month [2])
+
 
 (defn tuple-w-ids->tuple-w-names
   "Таплы с id измерений в таплы с названиями измерений"
@@ -297,14 +298,14 @@
        (mapcat keys)
        distinct))
 
-(defn get-first-group-id-sorted-by-index
-  "Получить первый доступный самый левый (по order-index)
-  id группы измерений (из существующих)"
-  [used-group-ids]
-  (->> used-group-ids
-       (sort #(< (get-in test-avail-dim-groups [%1 :order-index])
-                 (get-in test-avail-dim-groups [%2 :order-index])))
-       first))
+;; (defn get-first-group-id-sorted-by-index
+;;   "Получить первый доступный самый левый (по order-index)
+;;   id группы измерений (из существующих)"
+;;   [used-group-ids]
+;;   (->> used-group-ids
+;;        (sort #(< (get-in test-avail-dim-groups [%1 :order-index])
+;;                  (get-in test-avail-dim-groups [%2 :order-index])))
+;;        first))
 
 (defn sort-entries!
   "Отсортировать строки записей согласно настройкам сортировки групп
@@ -335,6 +336,7 @@
   "Обновить записи в формат.виде"
   []
   (let [plain-entries @(state-cursor [:plain-entries])
+        active-dim-group-ids @(state-cursor [:active-dim-group-ids])
         search-str @(state-cursor [:search-dim-str])
         search-tuple (when search-str (get-search-tuple-with-substr @(state-cursor [:avail-dim-groups]) search-str))
         result-plain-entries (filter-plain-entries plain-entries search-tuple)
@@ -342,10 +344,12 @@
     ;; отдельно конвертируем в записи оттоков и притоков
     (reset! (state-cursor [:inflow-entries])
             (plain-entries->entries (filter #(= (:v-flow %) :inflow) result-plain-entries)
-                                    @(state-cursor [:date-params :grouping-mode])))
+                                    @(state-cursor [:date-params :grouping-mode])
+                                    active-dim-group-ids))
     (reset! (state-cursor [:outflow-entries])
             (plain-entries->entries (filter #(= (:v-flow %) :outflow) result-plain-entries)
-                                    @(state-cursor [:date-params :grouping-mode])))
+                                    @(state-cursor [:date-params :grouping-mode])
+                                    active-dim-group-ids))
     ;; CONSIDER: если изменилось кол-во измерений, то устанавливать новое значение сортировки по умолчанию
     ;; сортируем
     (sort-entries!)))
@@ -421,6 +425,11 @@
   (add-watch (state-cursor [:flow-filter-type]) :flow-filter-type-watch
              (fn [k a old-s new-s]
                (when-not (= old-s new-s)
+                 (update-entries!))))
+  ;; при изменении переключателя активных групп измерений
+  (add-watch (state-cursor [:active-dim-group-ids]) :active-dim-group-ids-watch
+             (fn [k a old-s new-s]
+               (when-not (= old-s new-s)
                  (update-entries!)))))
 
 ;;; ---------------------------------------------------------------------------
@@ -454,6 +463,19 @@
   [flow-type]
   (println "filter flow type: " flow-type)
   (reset! (state-cursor [:flow-filter-type]) flow-type))
+
+(disj #{4 5 3} 4)
+(conj #{4 5 3} 6)
+
+(defn toggle-dimension-group
+  "Переключить группу измерений (вкл/откл)"
+  [dim-group]
+  (println "toggle-dimension-group: " (:id dim-group))
+  (swap! (state-cursor [:active-dim-group-ids])
+         (fn [active-dims]
+           (if (contains? active-dims (:id dim-group))
+             (disj active-dims (:id dim-group))
+             (conj active-dims (:id dim-group))))))
 
 ;;; ---------------------------------------------------------------------------
 ;;; Вьюшки
@@ -503,9 +525,6 @@
                             (:id %))
              ordered-dim-groups)]]
       [:tbody
-       ;; заголовок оттоков
-       [:tr
-        [:td.accented-td {:colSpan (count ordered-dim-groups)} "Выплаты"]]
        ;; измерения оттоков
        (map #(rum/with-key (tuple-tr-view ordered-dim-groups %)
                            %) outflow-tuples)
@@ -513,9 +532,6 @@
        [:tr
         [:td.total-cell {:colSpan (count ordered-dim-groups)
                          :style {:font-weight "bold"}} "Итого выплат"]]
-       ;; заголовок притоков
-       [:tr
-        [:td.accented-td {:colSpan (count ordered-dim-groups)} "Поступления"]]
        ;; измерения притоков
        (map #(rum/with-key (tuple-tr-view ordered-dim-groups %)
                            %) inflow-tuples)
@@ -585,9 +601,6 @@
       ;; заголовки с датами
       (date-headers-tr-view dates d-group-mode)]
      [:tbody
-      ;; строка заголовка оттоков
-      [:tr
-       [:td {:colSpan (count dates)} " "]]
       ;; строки оттоков
       (map (fn[{:keys [tuple date-values]}]
              (rum/with-key (values-row-tr-view dates date-values :outflow) tuple))
@@ -596,9 +609,6 @@
       [:tr
        (map #(date-total-td-view % :outflow)
             (date-totals-from-entries dates outflow-entries))]
-      ;; строка заголовка притоков
-      [:tr
-       [:td {:colSpan (count dates)} " "]]
       ;; строки притоков
       (map (fn[{:keys [tuple date-values]}]
              (rum/with-key (values-row-tr-view dates date-values :inflow) tuple))
@@ -623,10 +633,8 @@
   [:table.ui.very.basic.padded.table
    [:thead
     [:tr
-     [:th "Итого за месяц"]]]
+     [:th "Итого"]]]
    [:tbody
-    ;; строка заголовка оттоков
-    [:tr [:td " "]]
     ;; сами строки
     (map #(rum/with-key (row-total-tr-view % :outflow) %)
          outflow-totals)
@@ -638,8 +646,6 @@
                                                      (update :plan + (:plan v))))
                                                {:fact 0 :plan 0} outflow-totals)
                                        :outflow)]]
-    ;; строка заголовка притоков
-    [:tr [:td " "]]
     ;; сами строки
     (map #(rum/with-key (row-total-tr-view % :inflow) %)
          inflow-totals)
@@ -684,6 +690,32 @@
      [:a.item (get-filter-props :only-outflows) "расходы"]
      [:a.item (get-filter-props :only-inflows) "доходы"]]))
 
+
+(rum/defc dimension-toggler-item-view < {:did-update (fn[state]
+                                                       (.checkbox (.find (dom/rcomp->js$ (:rum/react-component state))
+                                                                         ".ui.checkbox"))
+                                                       state)}
+  [dim-group active?]
+  [:div.item
+   [:div.ui.checkbox {:class (when active? "checked")
+                      :on-click #(toggle-dimension-group dim-group)
+;;                       :style {:margin-right "10px" :margin-bottom "5px"}
+                      }
+    [:input {:type "checkbox"
+             :checked active?}]
+    [:label (:name dim-group)]]])
+
+
+(rum/defc dimensions-toggler-view
+  "Вьюшка переключателя измерений"
+  [avail-dim-groups active-dim-group-ids]
+  [:div.ui.horizontal.list
+   (map #(rum/with-key (let[dim-group (second %)]
+                         (dimension-toggler-item-view dim-group
+                                                      (contains? active-dim-group-ids
+                                                                 (:id dim-group)))) %)
+        avail-dim-groups)])
+
 ;;;
 ;;; Главная вьюшка
 ;;;
@@ -692,6 +724,7 @@
   (let [inflow-entries (rum/react (state-cursor [:inflow-entries]))
         outflow-entries (rum/react (state-cursor [:outflow-entries]))
         avail-dim-groups (rum/react (state-cursor [:avail-dim-groups]))
+        active-dim-group-ids (rum/react (state-cursor [:active-dim-group-ids]))
         used-dim-groups (select-keys avail-dim-groups (get-used-dims-ids (concat outflow-entries inflow-entries)))
         row-outflow-totals (row-totals-from-entries outflow-entries)
         row-inflow-totals (row-totals-from-entries inflow-entries)
@@ -702,7 +735,8 @@
      [:div.row
       [:div.column
        [:div.ui.button {:on-click #(refresh-random-data)} "Обновить данные"]
-       [:div.ui.button {:on-click #(print-appstate)} "Распечатать"]]]
+       [:div.ui.button {:on-click #(print-appstate)} "Распечатать"]
+       ]]
      ;; панель управления временем c поиском
      [:div.row {:style {:padding-bottom "0"}}
       [:div.four.wide.column
@@ -714,6 +748,12 @@
       [:div.ten.wide.column
        (timeline-panel-view d-params)]
       [:div.two.wide.column]]
+     ;; переключатель измерений
+     [:div.row {:style {:padding-bottom "0"}}
+      [:div.four.wide.column
+       (dimensions-toggler-view avail-dim-groups
+                                active-dim-group-ids)]
+      [:div.twelve.wide.column]]
      ;; сама таблица
      [:div.stretched.bottom.aligned.row
       [:div.four.wide.column

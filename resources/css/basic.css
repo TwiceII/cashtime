@@ -120,15 +120,17 @@
 }
 
 .ui.basic.table td.dim-1 {
-  background: rgb(255, 244, 185);
+  background: #ecfcfe;
+
 }
 
 .ui.basic.table td.dim-2 {
-  background: #ecfcfe;
+  background: #fbedfb;
+
 }
 
 .ui.basic.table td.dim-3 {
-  background: #fbedfb;
+  background: rgb(220, 255, 248);
 }
 
 td.accented-td {

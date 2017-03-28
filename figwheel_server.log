@@ -8583,3 +8583,768 @@ Notifyng browser that CSS file changed: resources/css/basic.css
 [0mCompiling "resources/js/main.js" from ["src"]...[0m
 [32mSuccessfully compiled "resources/js/main.js" in 0.357 seconds.[0m
 notifying browser that file changed:  out\cashtime\core.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.356 seconds.[0m
+notifying browser that file changed:  out\cashtime\core.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.376 seconds.[0m
+notifying browser that file changed:  out\cashtime\core.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.366 seconds.[0m
+notifying browser that file changed:  resources/js/out/cljs_deps.js
+notifying browser that file changed:  out\cashtime\core.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.39 seconds.[0m
+notifying browser that file changed:  resources/js/out/cljs_deps.js
+notifying browser that file changed:  out\cashtime\core.js
+Notifyng browser that CSS file changed: resources/css/basic.css
+Notifyng browser that CSS file changed: resources/css/basic.css
+Notifyng browser that CSS file changed: resources/css/basic.css
+Notifyng browser that CSS file changed: resources/css/basic.css
+Notifyng browser that CSS file changed: resources/css/basic.css
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 11.537 seconds.[0m
+notifying browser that file changed:  resources/js/out/cljs_deps.js
+notifying browser that file changed:  out\cashtime\core.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 1.427 seconds.[0m
+notifying browser that file changed:  resources/js/out/cljs_deps.js
+notifying browser that file changed:  out\cashtime\core.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.416 seconds.[0m
+notifying browser that file changed:  resources/js/out/cljs_deps.js
+notifying browser that file changed:  out\cashtime\core.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.412 seconds.[0m
+notifying browser that file changed:  resources/js/out/cljs_deps.js
+notifying browser that file changed:  out\cashtime\core.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.68 seconds.[0m
+notifying browser that file changed:  out\cashtime\core.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.364 seconds.[0m
+notifying browser that file changed:  resources/js/out/cljs_deps.js
+notifying browser that file changed:  out\cashtime\core.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.389 seconds.[0m
+notifying browser that file changed:  resources/js/out/cljs_deps.js
+notifying browser that file changed:  out\cashtime\core.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.338 seconds.[0m
+notifying browser that file changed:  resources/js/out/cljs_deps.js
+notifying browser that file changed:  out\cashtime\core.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.607 seconds.[0m
+notifying browser that file changed:  resources/js/out/goog/deps.js
+notifying browser that file changed:  resources/js/out/cljs_deps.js
+notifying browser that file changed:  out\cashtime\core.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.614 seconds.[0m
+notifying browser that file changed:  out\cashtime\core.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[36m----  Compiler Warning on   src/cashtime/core.cljs   line:288  column:26  ----[0m
+
+  [1mUse of undeclared Var cashtime.core/test-avail-dim-groups[0m
+
+  [36m284[0m  [36m  "Получить первый доступный самый левый (по order-index)[0m
+  [36m285[0m  [36m  id группы измерений (из существующих)"[0m
+  [36m286[0m  [36m  [used-group-ids][0m
+  [36m287[0m  [36m  (->> used-group-ids[0m
+  [33m288[0m  [1m       (sort #(< (get-in test-avail-dim-groups [%1 :order-index])[0m
+  [0m   [0m  [33m                         ^--- Use of undeclared Var cashtime.core/test-avail-dim-groups[0m
+  [36m289[0m  [36m                 (get-in test-avail-dim-groups [%2 :order-index])))[0m
+  [36m290[0m  [36m       first))[0m
+  [36m291[0m  [36m[0m
+  [36m292[0m  [36m(defn sort-entries![0m
+  [36m293[0m  [36m  "Отсортировать строки записей согласно настройкам сортировки групп[0m
+
+[36m----  Compiler Warning : Please see src/cashtime/core.cljs  ----[0m
+[36m----  Compiler Warning on   src/cashtime/core.cljs   line:289  column:26  ----[0m
+
+  [1mUse of undeclared Var cashtime.core/test-avail-dim-groups[0m
+
+  [36m285[0m  [36m  id группы измерений (из существующих)"[0m
+  [36m286[0m  [36m  [used-group-ids][0m
+  [36m287[0m  [36m  (->> used-group-ids[0m
+  [36m288[0m  [36m       (sort #(< (get-in test-avail-dim-groups [%1 :order-index])[0m
+  [33m289[0m  [1m                 (get-in test-avail-dim-groups [%2 :order-index])))[0m
+  [0m   [0m  [33m                         ^--- Use of undeclared Var cashtime.core/test-avail-dim-groups[0m
+  [36m290[0m  [36m       first))[0m
+  [36m291[0m  [36m[0m
+  [36m292[0m  [36m(defn sort-entries![0m
+  [36m293[0m  [36m  "Отсортировать строки записей согласно настройкам сортировки групп[0m
+  [36m294[0m  [36m  (отдельно записи оттоков и притоков)"[0m
+
+[36m----  Compiler Warning : Please see src/cashtime/core.cljs  ----[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.902 seconds.[0m
+notifying browser that file changed:  out\cashtime\core.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[36m----  Compiler Warning on   src/cashtime/core.cljs   line:305  column:26  ----[0m
+
+  [1mUse of undeclared Var cashtime.core/test-avail-dim-groups[0m
+
+  [36m301[0m  [36m  "Получить первый доступный самый левый (по order-index)[0m
+  [36m302[0m  [36m  id группы измерений (из существующих)"[0m
+  [36m303[0m  [36m  [used-group-ids][0m
+  [36m304[0m  [36m  (->> used-group-ids[0m
+  [33m305[0m  [1m       (sort #(< (get-in test-avail-dim-groups [%1 :order-index])[0m
+  [0m   [0m  [33m                         ^--- Use of undeclared Var cashtime.core/test-avail-dim-groups[0m
+  [36m306[0m  [36m                 (get-in test-avail-dim-groups [%2 :order-index])))[0m
+  [36m307[0m  [36m       first))[0m
+  [36m308[0m  [36m[0m
+  [36m309[0m  [36m(defn sort-entries![0m
+  [36m310[0m  [36m  "Отсортировать строки записей согласно настройкам сортировки групп[0m
+
+[36m----  Compiler Warning : Please see src/cashtime/core.cljs  ----[0m
+[36m----  Compiler Warning on   src/cashtime/core.cljs   line:306  column:26  ----[0m
+
+  [1mUse of undeclared Var cashtime.core/test-avail-dim-groups[0m
+
+  [36m302[0m  [36m  id группы измерений (из существующих)"[0m
+  [36m303[0m  [36m  [used-group-ids][0m
+  [36m304[0m  [36m  (->> used-group-ids[0m
+  [36m305[0m  [36m       (sort #(< (get-in test-avail-dim-groups [%1 :order-index])[0m
+  [33m306[0m  [1m                 (get-in test-avail-dim-groups [%2 :order-index])))[0m
+  [0m   [0m  [33m                         ^--- Use of undeclared Var cashtime.core/test-avail-dim-groups[0m
+  [36m307[0m  [36m       first))[0m
+  [36m308[0m  [36m[0m
+  [36m309[0m  [36m(defn sort-entries![0m
+  [36m310[0m  [36m  "Отсортировать строки записей согласно настройкам сортировки групп[0m
+  [36m311[0m  [36m  (отдельно записи оттоков и притоков)"[0m
+
+[36m----  Compiler Warning : Please see src/cashtime/core.cljs  ----[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.579 seconds.[0m
+notifying browser that file changed:  out\cashtime\core.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[36m----  Compiler Warning on   src/cashtime/core.cljs   line:310  column:26  ----[0m
+
+  [1mUse of undeclared Var cashtime.core/test-avail-dim-groups[0m
+
+  [36m306[0m  [36m  "Получить первый доступный самый левый (по order-index)[0m
+  [36m307[0m  [36m  id группы измерений (из существующих)"[0m
+  [36m308[0m  [36m  [used-group-ids][0m
+  [36m309[0m  [36m  (->> used-group-ids[0m
+  [33m310[0m  [1m       (sort #(< (get-in test-avail-dim-groups [%1 :order-index])[0m
+  [0m   [0m  [33m                         ^--- Use of undeclared Var cashtime.core/test-avail-dim-groups[0m
+  [36m311[0m  [36m                 (get-in test-avail-dim-groups [%2 :order-index])))[0m
+  [36m312[0m  [36m       first))[0m
+  [36m313[0m  [36m[0m
+  [36m314[0m  [36m(defn sort-entries![0m
+  [36m315[0m  [36m  "Отсортировать строки записей согласно настройкам сортировки групп[0m
+
+[36m----  Compiler Warning : Please see src/cashtime/core.cljs  ----[0m
+[36m----  Compiler Warning on   src/cashtime/core.cljs   line:311  column:26  ----[0m
+
+  [1mUse of undeclared Var cashtime.core/test-avail-dim-groups[0m
+
+  [36m307[0m  [36m  id группы измерений (из существующих)"[0m
+  [36m308[0m  [36m  [used-group-ids][0m
+  [36m309[0m  [36m  (->> used-group-ids[0m
+  [36m310[0m  [36m       (sort #(< (get-in test-avail-dim-groups [%1 :order-index])[0m
+  [33m311[0m  [1m                 (get-in test-avail-dim-groups [%2 :order-index])))[0m
+  [0m   [0m  [33m                         ^--- Use of undeclared Var cashtime.core/test-avail-dim-groups[0m
+  [36m312[0m  [36m       first))[0m
+  [36m313[0m  [36m[0m
+  [36m314[0m  [36m(defn sort-entries![0m
+  [36m315[0m  [36m  "Отсортировать строки записей согласно настройкам сортировки групп[0m
+  [36m316[0m  [36m  (отдельно записи оттоков и притоков)"[0m
+
+[36m----  Compiler Warning : Please see src/cashtime/core.cljs  ----[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.551 seconds.[0m
+notifying browser that file changed:  out\cashtime\core.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[36m----  Compiler Warning on   src/cashtime/core.cljs   line:310  column:26  ----[0m
+
+  [1mUse of undeclared Var cashtime.core/test-avail-dim-groups[0m
+
+  [36m306[0m  [36m  "Получить первый доступный самый левый (по order-index)[0m
+  [36m307[0m  [36m  id группы измерений (из существующих)"[0m
+  [36m308[0m  [36m  [used-group-ids][0m
+  [36m309[0m  [36m  (->> used-group-ids[0m
+  [33m310[0m  [1m       (sort #(< (get-in test-avail-dim-groups [%1 :order-index])[0m
+  [0m   [0m  [33m                         ^--- Use of undeclared Var cashtime.core/test-avail-dim-groups[0m
+  [36m311[0m  [36m                 (get-in test-avail-dim-groups [%2 :order-index])))[0m
+  [36m312[0m  [36m       first))[0m
+  [36m313[0m  [36m[0m
+  [36m314[0m  [36m(defn sort-entries![0m
+  [36m315[0m  [36m  "Отсортировать строки записей согласно настройкам сортировки групп[0m
+
+[36m----  Compiler Warning : Please see src/cashtime/core.cljs  ----[0m
+[36m----  Compiler Warning on   src/cashtime/core.cljs   line:311  column:26  ----[0m
+
+  [1mUse of undeclared Var cashtime.core/test-avail-dim-groups[0m
+
+  [36m307[0m  [36m  id группы измерений (из существующих)"[0m
+  [36m308[0m  [36m  [used-group-ids][0m
+  [36m309[0m  [36m  (->> used-group-ids[0m
+  [36m310[0m  [36m       (sort #(< (get-in test-avail-dim-groups [%1 :order-index])[0m
+  [33m311[0m  [1m                 (get-in test-avail-dim-groups [%2 :order-index])))[0m
+  [0m   [0m  [33m                         ^--- Use of undeclared Var cashtime.core/test-avail-dim-groups[0m
+  [36m312[0m  [36m       first))[0m
+  [36m313[0m  [36m[0m
+  [36m314[0m  [36m(defn sort-entries![0m
+  [36m315[0m  [36m  "Отсортировать строки записей согласно настройкам сортировки групп[0m
+  [36m316[0m  [36m  (отдельно записи оттоков и притоков)"[0m
+
+[36m----  Compiler Warning : Please see src/cashtime/core.cljs  ----[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.499 seconds.[0m
+notifying browser that file changed:  resources/js/out/cljs_deps.js
+notifying browser that file changed:  out\cashtime\core.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[36m----  Compiler Warning on   src/cashtime/core.cljs   line:310  column:26  ----[0m
+
+  [1mUse of undeclared Var cashtime.core/test-avail-dim-groups[0m
+
+  [36m306[0m  [36m  "Получить первый доступный самый левый (по order-index)[0m
+  [36m307[0m  [36m  id группы измерений (из существующих)"[0m
+  [36m308[0m  [36m  [used-group-ids][0m
+  [36m309[0m  [36m  (->> used-group-ids[0m
+  [33m310[0m  [1m       (sort #(< (get-in test-avail-dim-groups [%1 :order-index])[0m
+  [0m   [0m  [33m                         ^--- Use of undeclared Var cashtime.core/test-avail-dim-groups[0m
+  [36m311[0m  [36m                 (get-in test-avail-dim-groups [%2 :order-index])))[0m
+  [36m312[0m  [36m       first))[0m
+  [36m313[0m  [36m[0m
+  [36m314[0m  [36m(defn sort-entries![0m
+  [36m315[0m  [36m  "Отсортировать строки записей согласно настройкам сортировки групп[0m
+
+[36m----  Compiler Warning : Please see src/cashtime/core.cljs  ----[0m
+[36m----  Compiler Warning on   src/cashtime/core.cljs   line:311  column:26  ----[0m
+
+  [1mUse of undeclared Var cashtime.core/test-avail-dim-groups[0m
+
+  [36m307[0m  [36m  id группы измерений (из существующих)"[0m
+  [36m308[0m  [36m  [used-group-ids][0m
+  [36m309[0m  [36m  (->> used-group-ids[0m
+  [36m310[0m  [36m       (sort #(< (get-in test-avail-dim-groups [%1 :order-index])[0m
+  [33m311[0m  [1m                 (get-in test-avail-dim-groups [%2 :order-index])))[0m
+  [0m   [0m  [33m                         ^--- Use of undeclared Var cashtime.core/test-avail-dim-groups[0m
+  [36m312[0m  [36m       first))[0m
+  [36m313[0m  [36m[0m
+  [36m314[0m  [36m(defn sort-entries![0m
+  [36m315[0m  [36m  "Отсортировать строки записей согласно настройкам сортировки групп[0m
+  [36m316[0m  [36m  (отдельно записи оттоков и притоков)"[0m
+
+[36m----  Compiler Warning : Please see src/cashtime/core.cljs  ----[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.547 seconds.[0m
+notifying browser that file changed:  resources/js/out/cljs_deps.js
+notifying browser that file changed:  out\cashtime\core.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[36m----  Compiler Warning on   src/cashtime/core.cljs   line:316  column:26  ----[0m
+
+  [1mUse of undeclared Var cashtime.core/test-avail-dim-groups[0m
+
+  [36m312[0m  [36m  "Получить первый доступный самый левый (по order-index)[0m
+  [36m313[0m  [36m  id группы измерений (из существующих)"[0m
+  [36m314[0m  [36m  [used-group-ids][0m
+  [36m315[0m  [36m  (->> used-group-ids[0m
+  [33m316[0m  [1m       (sort #(< (get-in test-avail-dim-groups [%1 :order-index])[0m
+  [0m   [0m  [33m                         ^--- Use of undeclared Var cashtime.core/test-avail-dim-groups[0m
+  [36m317[0m  [36m                 (get-in test-avail-dim-groups [%2 :order-index])))[0m
+  [36m318[0m  [36m       first))[0m
+  [36m319[0m  [36m[0m
+  [36m320[0m  [36m(defn sort-entries![0m
+  [36m321[0m  [36m  "Отсортировать строки записей согласно настройкам сортировки групп[0m
+
+[36m----  Compiler Warning : Please see src/cashtime/core.cljs  ----[0m
+[36m----  Compiler Warning on   src/cashtime/core.cljs   line:317  column:26  ----[0m
+
+  [1mUse of undeclared Var cashtime.core/test-avail-dim-groups[0m
+
+  [36m313[0m  [36m  id группы измерений (из существующих)"[0m
+  [36m314[0m  [36m  [used-group-ids][0m
+  [36m315[0m  [36m  (->> used-group-ids[0m
+  [36m316[0m  [36m       (sort #(< (get-in test-avail-dim-groups [%1 :order-index])[0m
+  [33m317[0m  [1m                 (get-in test-avail-dim-groups [%2 :order-index])))[0m
+  [0m   [0m  [33m                         ^--- Use of undeclared Var cashtime.core/test-avail-dim-groups[0m
+  [36m318[0m  [36m       first))[0m
+  [36m319[0m  [36m[0m
+  [36m320[0m  [36m(defn sort-entries![0m
+  [36m321[0m  [36m  "Отсортировать строки записей согласно настройкам сортировки групп[0m
+  [36m322[0m  [36m  (отдельно записи оттоков и притоков)"[0m
+
+[36m----  Compiler Warning : Please see src/cashtime/core.cljs  ----[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.507 seconds.[0m
+notifying browser that file changed:  resources/js/out/cljs_deps.js
+notifying browser that file changed:  out\cashtime\core.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[36m----  Compiler Warning on   src/cashtime/core.cljs   line:316  column:26  ----[0m
+
+  [1mUse of undeclared Var cashtime.core/test-avail-dim-groups[0m
+
+  [36m312[0m  [36m  "Получить первый доступный самый левый (по order-index)[0m
+  [36m313[0m  [36m  id группы измерений (из существующих)"[0m
+  [36m314[0m  [36m  [used-group-ids][0m
+  [36m315[0m  [36m  (->> used-group-ids[0m
+  [33m316[0m  [1m       (sort #(< (get-in test-avail-dim-groups [%1 :order-index])[0m
+  [0m   [0m  [33m                         ^--- Use of undeclared Var cashtime.core/test-avail-dim-groups[0m
+  [36m317[0m  [36m                 (get-in test-avail-dim-groups [%2 :order-index])))[0m
+  [36m318[0m  [36m       first))[0m
+  [36m319[0m  [36m[0m
+  [36m320[0m  [36m(defn sort-entries![0m
+  [36m321[0m  [36m  "Отсортировать строки записей согласно настройкам сортировки групп[0m
+
+[36m----  Compiler Warning : Please see src/cashtime/core.cljs  ----[0m
+[36m----  Compiler Warning on   src/cashtime/core.cljs   line:317  column:26  ----[0m
+
+  [1mUse of undeclared Var cashtime.core/test-avail-dim-groups[0m
+
+  [36m313[0m  [36m  id группы измерений (из существующих)"[0m
+  [36m314[0m  [36m  [used-group-ids][0m
+  [36m315[0m  [36m  (->> used-group-ids[0m
+  [36m316[0m  [36m       (sort #(< (get-in test-avail-dim-groups [%1 :order-index])[0m
+  [33m317[0m  [1m                 (get-in test-avail-dim-groups [%2 :order-index])))[0m
+  [0m   [0m  [33m                         ^--- Use of undeclared Var cashtime.core/test-avail-dim-groups[0m
+  [36m318[0m  [36m       first))[0m
+  [36m319[0m  [36m[0m
+  [36m320[0m  [36m(defn sort-entries![0m
+  [36m321[0m  [36m  "Отсортировать строки записей согласно настройкам сортировки групп[0m
+  [36m322[0m  [36m  (отдельно записи оттоков и притоков)"[0m
+
+[36m----  Compiler Warning : Please see src/cashtime/core.cljs  ----[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.504 seconds.[0m
+notifying browser that file changed:  out\cashtime\core.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[36m----  Compiler Warning on   src/cashtime/core.cljs   line:202  column:38  ----[0m
+
+  [1mUse of undeclared Var cashtime.core/remove-redundants-from-tuple[0m
+
+  [36m198[0m  [36m"Конвертировать плоские данные по записям в форматированные"[0m
+  [36m199[0m  [36m[plain-entries d-group-mode avail-dims][0m
+  [36m200[0m  [36m(->> plain-entries[0m
+  [36m201[0m  [36m     (map #(update-plain-entry-date-for-group % d-group-mode))[0m
+  [33m202[0m  [1m     (map #(update % :tuple (fn[t](remove-redundants-from-tuple t avail-dims))))[0m
+  [0m   [0m  [33m                                   ^--- Use of undeclared Var cashtime.core/remove-redundants-from-tuple[0m
+  [36m203[0m  [36m     (reduce (fn [m e][0m
+  [36m204[0m  [36m               (update-in m [(:dims e) (:date e) (:v-type e)][0m
+  [36m205[0m  [36m                          + (or (:v-summ e) 0)))[0m
+  [36m206[0m  [36m             {})[0m
+  [36m207[0m  [36m     (reduce-kv (fn [vc tuple d-values][0m
+
+[36m----  Compiler Warning : Please see src/cashtime/core.cljs  ----[0m
+[36m----  Compiler Warning on   src/cashtime/core.cljs   line:213  column:2  ----[0m
+
+  [1mUse of undeclared Var cashtime.core/remove-redundants-from-tuple[0m
+
+  [36m209[0m  [36m                [])))[0m
+  [36m210[0m  [36m[0m
+  [36m211[0m  [36m(plain-entries->entries-w-dims test-plain-entries :by-day [1])[0m
+  [36m212[0m  [36m[0m
+  [33m213[0m  [1m(remove-redundants-from-tuple {1 2 2 1} [1])[0m
+  [0m   [0m  [33m ^--- Use of undeclared Var cashtime.core/remove-redundants-from-tuple[0m
+  [36m214[0m  [36m[0m
+  [36m215[0m  [36m[0m
+  [36m216[0m  [36m(defn tuple-w-ids->tuple-w-names[0m
+  [36m217[0m  [36m  "Таплы с id измерений в таплы с названиями измерений"[0m
+  [36m218[0m  [36m  [all-dim-groups tuple-w-ids][0m
+
+[36m----  Compiler Warning : Please see src/cashtime/core.cljs  ----[0m
+[36m----  Compiler Warning on   src/cashtime/core.cljs   line:316  column:26  ----[0m
+
+  [1mUse of undeclared Var cashtime.core/test-avail-dim-groups[0m
+
+  [36m312[0m  [36m  "Получить первый доступный самый левый (по order-index)[0m
+  [36m313[0m  [36m  id группы измерений (из существующих)"[0m
+  [36m314[0m  [36m  [used-group-ids][0m
+  [36m315[0m  [36m  (->> used-group-ids[0m
+  [33m316[0m  [1m       (sort #(< (get-in test-avail-dim-groups [%1 :order-index])[0m
+  [0m   [0m  [33m                         ^--- Use of undeclared Var cashtime.core/test-avail-dim-groups[0m
+  [36m317[0m  [36m                 (get-in test-avail-dim-groups [%2 :order-index])))[0m
+  [36m318[0m  [36m       first))[0m
+  [36m319[0m  [36m[0m
+  [36m320[0m  [36m(defn sort-entries![0m
+  [36m321[0m  [36m  "Отсортировать строки записей согласно настройкам сортировки групп[0m
+
+[36m----  Compiler Warning : Please see src/cashtime/core.cljs  ----[0m
+[36m----  Compiler Warning on   src/cashtime/core.cljs   line:317  column:26  ----[0m
+
+  [1mUse of undeclared Var cashtime.core/test-avail-dim-groups[0m
+
+  [36m313[0m  [36m  id группы измерений (из существующих)"[0m
+  [36m314[0m  [36m  [used-group-ids][0m
+  [36m315[0m  [36m  (->> used-group-ids[0m
+  [36m316[0m  [36m       (sort #(< (get-in test-avail-dim-groups [%1 :order-index])[0m
+  [33m317[0m  [1m                 (get-in test-avail-dim-groups [%2 :order-index])))[0m
+  [0m   [0m  [33m                         ^--- Use of undeclared Var cashtime.core/test-avail-dim-groups[0m
+  [36m318[0m  [36m       first))[0m
+  [36m319[0m  [36m[0m
+  [36m320[0m  [36m(defn sort-entries![0m
+  [36m321[0m  [36m  "Отсортировать строки записей согласно настройкам сортировки групп[0m
+  [36m322[0m  [36m  (отдельно записи оттоков и притоков)"[0m
+
+[36m----  Compiler Warning : Please see src/cashtime/core.cljs  ----[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.518 seconds.[0m
+notifying browser that file changed:  resources/js/out/cljs_deps.js
+notifying browser that file changed:  out\cashtime\core.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[36m----  Compiler Warning on   src/cashtime/core.cljs   line:316  column:26  ----[0m
+
+  [1mUse of undeclared Var cashtime.core/test-avail-dim-groups[0m
+
+  [36m312[0m  [36m  "Получить первый доступный самый левый (по order-index)[0m
+  [36m313[0m  [36m  id группы измерений (из существующих)"[0m
+  [36m314[0m  [36m  [used-group-ids][0m
+  [36m315[0m  [36m  (->> used-group-ids[0m
+  [33m316[0m  [1m       (sort #(< (get-in test-avail-dim-groups [%1 :order-index])[0m
+  [0m   [0m  [33m                         ^--- Use of undeclared Var cashtime.core/test-avail-dim-groups[0m
+  [36m317[0m  [36m                 (get-in test-avail-dim-groups [%2 :order-index])))[0m
+  [36m318[0m  [36m       first))[0m
+  [36m319[0m  [36m[0m
+  [36m320[0m  [36m(defn sort-entries![0m
+  [36m321[0m  [36m  "Отсортировать строки записей согласно настройкам сортировки групп[0m
+
+[36m----  Compiler Warning : Please see src/cashtime/core.cljs  ----[0m
+[36m----  Compiler Warning on   src/cashtime/core.cljs   line:317  column:26  ----[0m
+
+  [1mUse of undeclared Var cashtime.core/test-avail-dim-groups[0m
+
+  [36m313[0m  [36m  id группы измерений (из существующих)"[0m
+  [36m314[0m  [36m  [used-group-ids][0m
+  [36m315[0m  [36m  (->> used-group-ids[0m
+  [36m316[0m  [36m       (sort #(< (get-in test-avail-dim-groups [%1 :order-index])[0m
+  [33m317[0m  [1m                 (get-in test-avail-dim-groups [%2 :order-index])))[0m
+  [0m   [0m  [33m                         ^--- Use of undeclared Var cashtime.core/test-avail-dim-groups[0m
+  [36m318[0m  [36m       first))[0m
+  [36m319[0m  [36m[0m
+  [36m320[0m  [36m(defn sort-entries![0m
+  [36m321[0m  [36m  "Отсортировать строки записей согласно настройкам сортировки групп[0m
+  [36m322[0m  [36m  (отдельно записи оттоков и притоков)"[0m
+
+[36m----  Compiler Warning : Please see src/cashtime/core.cljs  ----[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.47 seconds.[0m
+notifying browser that file changed:  resources/js/out/cljs_deps.js
+notifying browser that file changed:  out\cashtime\core.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[36m----  Compiler Warning on   src/cashtime/core.cljs   line:318  column:26  ----[0m
+
+  [1mUse of undeclared Var cashtime.core/test-avail-dim-groups[0m
+
+  [36m314[0m  [36m  "Получить первый доступный самый левый (по order-index)[0m
+  [36m315[0m  [36m  id группы измерений (из существующих)"[0m
+  [36m316[0m  [36m  [used-group-ids][0m
+  [36m317[0m  [36m  (->> used-group-ids[0m
+  [33m318[0m  [1m       (sort #(< (get-in test-avail-dim-groups [%1 :order-index])[0m
+  [0m   [0m  [33m                         ^--- Use of undeclared Var cashtime.core/test-avail-dim-groups[0m
+  [36m319[0m  [36m                 (get-in test-avail-dim-groups [%2 :order-index])))[0m
+  [36m320[0m  [36m       first))[0m
+  [36m321[0m  [36m[0m
+  [36m322[0m  [36m(defn sort-entries![0m
+  [36m323[0m  [36m  "Отсортировать строки записей согласно настройкам сортировки групп[0m
+
+[36m----  Compiler Warning : Please see src/cashtime/core.cljs  ----[0m
+[36m----  Compiler Warning on   src/cashtime/core.cljs   line:319  column:26  ----[0m
+
+  [1mUse of undeclared Var cashtime.core/test-avail-dim-groups[0m
+
+  [36m315[0m  [36m  id группы измерений (из существующих)"[0m
+  [36m316[0m  [36m  [used-group-ids][0m
+  [36m317[0m  [36m  (->> used-group-ids[0m
+  [36m318[0m  [36m       (sort #(< (get-in test-avail-dim-groups [%1 :order-index])[0m
+  [33m319[0m  [1m                 (get-in test-avail-dim-groups [%2 :order-index])))[0m
+  [0m   [0m  [33m                         ^--- Use of undeclared Var cashtime.core/test-avail-dim-groups[0m
+  [36m320[0m  [36m       first))[0m
+  [36m321[0m  [36m[0m
+  [36m322[0m  [36m(defn sort-entries![0m
+  [36m323[0m  [36m  "Отсортировать строки записей согласно настройкам сортировки групп[0m
+  [36m324[0m  [36m  (отдельно записи оттоков и притоков)"[0m
+
+[36m----  Compiler Warning : Please see src/cashtime/core.cljs  ----[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.49 seconds.[0m
+notifying browser that file changed:  resources/js/out/cljs_deps.js
+notifying browser that file changed:  out\cashtime\core.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[36m----  Compiler Warning on   src/cashtime/core.cljs   line:304  column:26  ----[0m
+
+  [1mUse of undeclared Var cashtime.core/test-avail-dim-groups[0m
+
+  [36m300[0m  [36m  "Получить первый доступный самый левый (по order-index)[0m
+  [36m301[0m  [36m  id группы измерений (из существующих)"[0m
+  [36m302[0m  [36m  [used-group-ids][0m
+  [36m303[0m  [36m  (->> used-group-ids[0m
+  [33m304[0m  [1m       (sort #(< (get-in test-avail-dim-groups [%1 :order-index])[0m
+  [0m   [0m  [33m                         ^--- Use of undeclared Var cashtime.core/test-avail-dim-groups[0m
+  [36m305[0m  [36m                 (get-in test-avail-dim-groups [%2 :order-index])))[0m
+  [36m306[0m  [36m       first))[0m
+  [36m307[0m  [36m[0m
+  [36m308[0m  [36m(defn sort-entries![0m
+  [36m309[0m  [36m  "Отсортировать строки записей согласно настройкам сортировки групп[0m
+
+[36m----  Compiler Warning : Please see src/cashtime/core.cljs  ----[0m
+[36m----  Compiler Warning on   src/cashtime/core.cljs   line:305  column:26  ----[0m
+
+  [1mUse of undeclared Var cashtime.core/test-avail-dim-groups[0m
+
+  [36m301[0m  [36m  id группы измерений (из существующих)"[0m
+  [36m302[0m  [36m  [used-group-ids][0m
+  [36m303[0m  [36m  (->> used-group-ids[0m
+  [36m304[0m  [36m       (sort #(< (get-in test-avail-dim-groups [%1 :order-index])[0m
+  [33m305[0m  [1m                 (get-in test-avail-dim-groups [%2 :order-index])))[0m
+  [0m   [0m  [33m                         ^--- Use of undeclared Var cashtime.core/test-avail-dim-groups[0m
+  [36m306[0m  [36m       first))[0m
+  [36m307[0m  [36m[0m
+  [36m308[0m  [36m(defn sort-entries![0m
+  [36m309[0m  [36m  "Отсортировать строки записей согласно настройкам сортировки групп[0m
+  [36m310[0m  [36m  (отдельно записи оттоков и притоков)"[0m
+
+[36m----  Compiler Warning : Please see src/cashtime/core.cljs  ----[0m
+[36m----  Compiler Warning on   src/cashtime/core.cljs   line:343  column:13  ----[0m
+
+  [1mWrong number of args (2) passed to cashtime.core/plain-entries->entries[0m
+
+  [36m339[0m  [36m    result-plain-entries (filter-plain-entries plain-entries search-tuple)[0m
+  [36m340[0m  [36m    sort-dim-params @(state-cursor [:sort-dim-params])][0m
+  [36m341[0m  [36m;; отдельно конвертируем в записи оттоков и притоков[0m
+  [36m342[0m  [36m(reset! (state-cursor [:inflow-entries])[0m
+  [33m343[0m  [1m        (plain-entries->entries (filter #(= (:v-flow %) :inflow) result-plain-entries)[0m
+  [0m   [0m  [33m        ^--- Wrong number of args (2) passed to cashtime.core/plain-entries->entries[0m
+  [36m344[0m  [36m                                @(state-cursor [:date-params :grouping-mode])))[0m
+  [36m345[0m  [36m(reset! (state-cursor [:outflow-entries])[0m
+  [36m346[0m  [36m        (plain-entries->entries (filter #(= (:v-flow %) :outflow) result-plain-entries)[0m
+  [36m347[0m  [36m                                @(state-cursor [:date-params :grouping-mode])))[0m
+  [36m348[0m  [36m;; CONSIDER: если изменилось кол-во измерений, то устанавливать новое значение сортировки по умолчанию[0m
+
+[36m----  Compiler Warning : Please see src/cashtime/core.cljs  ----[0m
+[36m----  Compiler Warning on   src/cashtime/core.cljs   line:346  column:13  ----[0m
+
+  [1mWrong number of args (2) passed to cashtime.core/plain-entries->entries[0m
+
+  [36m342[0m  [36m(reset! (state-cursor [:inflow-entries])[0m
+  [36m343[0m  [36m        (plain-entries->entries (filter #(= (:v-flow %) :inflow) result-plain-entries)[0m
+  [36m344[0m  [36m                                @(state-cursor [:date-params :grouping-mode])))[0m
+  [36m345[0m  [36m(reset! (state-cursor [:outflow-entries])[0m
+  [33m346[0m  [1m        (plain-entries->entries (filter #(= (:v-flow %) :outflow) result-plain-entries)[0m
+  [0m   [0m  [33m        ^--- Wrong number of args (2) passed to cashtime.core/plain-entries->entries[0m
+  [36m347[0m  [36m                                @(state-cursor [:date-params :grouping-mode])))[0m
+  [36m348[0m  [36m;; CONSIDER: если изменилось кол-во измерений, то устанавливать новое значение сортировки по умолчанию[0m
+  [36m349[0m  [36m;; сортируем[0m
+  [36m350[0m  [36m(sort-entries!)))[0m
+
+[36m----  Compiler Warning : Please see src/cashtime/core.cljs  ----[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.548 seconds.[0m
+notifying browser that file changed:  resources/js/out/cljs_deps.js
+notifying browser that file changed:  out\cashtime\core.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[36m----  Compiler Warning on   src/cashtime/core.cljs   line:304  column:26  ----[0m
+
+  [1mUse of undeclared Var cashtime.core/test-avail-dim-groups[0m
+
+  [36m300[0m  [36m  "Получить первый доступный самый левый (по order-index)[0m
+  [36m301[0m  [36m  id группы измерений (из существующих)"[0m
+  [36m302[0m  [36m  [used-group-ids][0m
+  [36m303[0m  [36m  (->> used-group-ids[0m
+  [33m304[0m  [1m       (sort #(< (get-in test-avail-dim-groups [%1 :order-index])[0m
+  [0m   [0m  [33m                         ^--- Use of undeclared Var cashtime.core/test-avail-dim-groups[0m
+  [36m305[0m  [36m                 (get-in test-avail-dim-groups [%2 :order-index])))[0m
+  [36m306[0m  [36m       first))[0m
+  [36m307[0m  [36m[0m
+  [36m308[0m  [36m(defn sort-entries![0m
+  [36m309[0m  [36m  "Отсортировать строки записей согласно настройкам сортировки групп[0m
+
+[36m----  Compiler Warning : Please see src/cashtime/core.cljs  ----[0m
+[36m----  Compiler Warning on   src/cashtime/core.cljs   line:305  column:26  ----[0m
+
+  [1mUse of undeclared Var cashtime.core/test-avail-dim-groups[0m
+
+  [36m301[0m  [36m  id группы измерений (из существующих)"[0m
+  [36m302[0m  [36m  [used-group-ids][0m
+  [36m303[0m  [36m  (->> used-group-ids[0m
+  [36m304[0m  [36m       (sort #(< (get-in test-avail-dim-groups [%1 :order-index])[0m
+  [33m305[0m  [1m                 (get-in test-avail-dim-groups [%2 :order-index])))[0m
+  [0m   [0m  [33m                         ^--- Use of undeclared Var cashtime.core/test-avail-dim-groups[0m
+  [36m306[0m  [36m       first))[0m
+  [36m307[0m  [36m[0m
+  [36m308[0m  [36m(defn sort-entries![0m
+  [36m309[0m  [36m  "Отсортировать строки записей согласно настройкам сортировки групп[0m
+  [36m310[0m  [36m  (отдельно записи оттоков и притоков)"[0m
+
+[36m----  Compiler Warning : Please see src/cashtime/core.cljs  ----[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.456 seconds.[0m
+notifying browser that file changed:  resources/js/out/cljs_deps.js
+notifying browser that file changed:  out\cashtime\core.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[36m----  Compiler Warning on   src/cashtime/core.cljs   line:304  column:26  ----[0m
+
+  [1mUse of undeclared Var cashtime.core/test-avail-dim-groups[0m
+
+  [36m300[0m  [36m  "Получить первый доступный самый левый (по order-index)[0m
+  [36m301[0m  [36m  id группы измерений (из существующих)"[0m
+  [36m302[0m  [36m  [used-group-ids][0m
+  [36m303[0m  [36m  (->> used-group-ids[0m
+  [33m304[0m  [1m       (sort #(< (get-in test-avail-dim-groups [%1 :order-index])[0m
+  [0m   [0m  [33m                         ^--- Use of undeclared Var cashtime.core/test-avail-dim-groups[0m
+  [36m305[0m  [36m                 (get-in test-avail-dim-groups [%2 :order-index])))[0m
+  [36m306[0m  [36m       first))[0m
+  [36m307[0m  [36m[0m
+  [36m308[0m  [36m(defn sort-entries![0m
+  [36m309[0m  [36m  "Отсортировать строки записей согласно настройкам сортировки групп[0m
+
+[36m----  Compiler Warning : Please see src/cashtime/core.cljs  ----[0m
+[36m----  Compiler Warning on   src/cashtime/core.cljs   line:305  column:26  ----[0m
+
+  [1mUse of undeclared Var cashtime.core/test-avail-dim-groups[0m
+
+  [36m301[0m  [36m  id группы измерений (из существующих)"[0m
+  [36m302[0m  [36m  [used-group-ids][0m
+  [36m303[0m  [36m  (->> used-group-ids[0m
+  [36m304[0m  [36m       (sort #(< (get-in test-avail-dim-groups [%1 :order-index])[0m
+  [33m305[0m  [1m                 (get-in test-avail-dim-groups [%2 :order-index])))[0m
+  [0m   [0m  [33m                         ^--- Use of undeclared Var cashtime.core/test-avail-dim-groups[0m
+  [36m306[0m  [36m       first))[0m
+  [36m307[0m  [36m[0m
+  [36m308[0m  [36m(defn sort-entries![0m
+  [36m309[0m  [36m  "Отсортировать строки записей согласно настройкам сортировки групп[0m
+  [36m310[0m  [36m  (отдельно записи оттоков и притоков)"[0m
+
+[36m----  Compiler Warning : Please see src/cashtime/core.cljs  ----[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.455 seconds.[0m
+notifying browser that file changed:  out\cashtime\core.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[36m----  Compiler Warning on   src/cashtime/core.cljs   line:306  column:26  ----[0m
+
+  [1mUse of undeclared Var cashtime.core/test-avail-dim-groups[0m
+
+  [36m302[0m  [36m  "Получить первый доступный самый левый (по order-index)[0m
+  [36m303[0m  [36m  id группы измерений (из существующих)"[0m
+  [36m304[0m  [36m  [used-group-ids][0m
+  [36m305[0m  [36m  (->> used-group-ids[0m
+  [33m306[0m  [1m       (sort #(< (get-in test-avail-dim-groups [%1 :order-index])[0m
+  [0m   [0m  [33m                         ^--- Use of undeclared Var cashtime.core/test-avail-dim-groups[0m
+  [36m307[0m  [36m                 (get-in test-avail-dim-groups [%2 :order-index])))[0m
+  [36m308[0m  [36m       first))[0m
+  [36m309[0m  [36m[0m
+  [36m310[0m  [36m(defn sort-entries![0m
+  [36m311[0m  [36m  "Отсортировать строки записей согласно настройкам сортировки групп[0m
+
+[36m----  Compiler Warning : Please see src/cashtime/core.cljs  ----[0m
+[36m----  Compiler Warning on   src/cashtime/core.cljs   line:307  column:26  ----[0m
+
+  [1mUse of undeclared Var cashtime.core/test-avail-dim-groups[0m
+
+  [36m303[0m  [36m  id группы измерений (из существующих)"[0m
+  [36m304[0m  [36m  [used-group-ids][0m
+  [36m305[0m  [36m  (->> used-group-ids[0m
+  [36m306[0m  [36m       (sort #(< (get-in test-avail-dim-groups [%1 :order-index])[0m
+  [33m307[0m  [1m                 (get-in test-avail-dim-groups [%2 :order-index])))[0m
+  [0m   [0m  [33m                         ^--- Use of undeclared Var cashtime.core/test-avail-dim-groups[0m
+  [36m308[0m  [36m       first))[0m
+  [36m309[0m  [36m[0m
+  [36m310[0m  [36m(defn sort-entries![0m
+  [36m311[0m  [36m  "Отсортировать строки записей согласно настройкам сортировки групп[0m
+  [36m312[0m  [36m  (отдельно записи оттоков и притоков)"[0m
+
+[36m----  Compiler Warning : Please see src/cashtime/core.cljs  ----[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.467 seconds.[0m
+notifying browser that file changed:  out\cashtime\core.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[36m----  Compiler Warning on   src/cashtime/core.cljs   line:306  column:26  ----[0m
+
+  [1mUse of undeclared Var cashtime.core/test-avail-dim-groups[0m
+
+  [36m302[0m  [36m  "Получить первый доступный самый левый (по order-index)[0m
+  [36m303[0m  [36m  id группы измерений (из существующих)"[0m
+  [36m304[0m  [36m  [used-group-ids][0m
+  [36m305[0m  [36m  (->> used-group-ids[0m
+  [33m306[0m  [1m       (sort #(< (get-in test-avail-dim-groups [%1 :order-index])[0m
+  [0m   [0m  [33m                         ^--- Use of undeclared Var cashtime.core/test-avail-dim-groups[0m
+  [36m307[0m  [36m                 (get-in test-avail-dim-groups [%2 :order-index])))[0m
+  [36m308[0m  [36m       first))[0m
+  [36m309[0m  [36m[0m
+  [36m310[0m  [36m(defn sort-entries![0m
+  [36m311[0m  [36m  "Отсортировать строки записей согласно настройкам сортировки групп[0m
+
+[36m----  Compiler Warning : Please see src/cashtime/core.cljs  ----[0m
+[36m----  Compiler Warning on   src/cashtime/core.cljs   line:307  column:26  ----[0m
+
+  [1mUse of undeclared Var cashtime.core/test-avail-dim-groups[0m
+
+  [36m303[0m  [36m  id группы измерений (из существующих)"[0m
+  [36m304[0m  [36m  [used-group-ids][0m
+  [36m305[0m  [36m  (->> used-group-ids[0m
+  [36m306[0m  [36m       (sort #(< (get-in test-avail-dim-groups [%1 :order-index])[0m
+  [33m307[0m  [1m                 (get-in test-avail-dim-groups [%2 :order-index])))[0m
+  [0m   [0m  [33m                         ^--- Use of undeclared Var cashtime.core/test-avail-dim-groups[0m
+  [36m308[0m  [36m       first))[0m
+  [36m309[0m  [36m[0m
+  [36m310[0m  [36m(defn sort-entries![0m
+  [36m311[0m  [36m  "Отсортировать строки записей согласно настройкам сортировки групп[0m
+  [36m312[0m  [36m  (отдельно записи оттоков и притоков)"[0m
+
+[36m----  Compiler Warning : Please see src/cashtime/core.cljs  ----[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.488 seconds.[0m
+notifying browser that file changed:  resources/js/out/cljs_deps.js
+notifying browser that file changed:  out\cashtime\core.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.405 seconds.[0m
+notifying browser that file changed:  resources/js/out/cljs_deps.js
+notifying browser that file changed:  out\cashtime\core.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.437 seconds.[0m
+notifying browser that file changed:  out\cashtime\core.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.415 seconds.[0m
+notifying browser that file changed:  out\cashtime\core.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.435 seconds.[0m
+notifying browser that file changed:  resources/js/out/cljs_deps.js
+notifying browser that file changed:  out\cashtime\core.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.402 seconds.[0m
+notifying browser that file changed:  out\cashtime\core.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.454 seconds.[0m
+notifying browser that file changed:  out\cashtime\core.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.426 seconds.[0m
+notifying browser that file changed:  out\cashtime\core.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.432 seconds.[0m
+notifying browser that file changed:  out\cashtime\core.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.412 seconds.[0m
+notifying browser that file changed:  resources/js/out/cljs_deps.js
+notifying browser that file changed:  out\cashtime\core.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.427 seconds.[0m
+notifying browser that file changed:  resources/js/out/cljs_deps.js
+notifying browser that file changed:  out\cashtime\core.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.463 seconds.[0m
+notifying browser that file changed:  resources/js/out/cljs_deps.js
+notifying browser that file changed:  out\cashtime\core.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.494 seconds.[0m
+notifying browser that file changed:  resources/js/out/cljs_deps.js
+notifying browser that file changed:  out\cashtime\core.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.442 seconds.[0m
+notifying browser that file changed:  resources/js/out/cljs_deps.js
+notifying browser that file changed:  out\cashtime\core.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[31mFailed to compile "resources/js/main.js" in 0.219 seconds.[0m
+[36m----  Could not Read  src/cashtime/core.cljs   line:467  column:12  ----[0m
+
+  [1mEOF while reading, starting at line 467 and column 12[0m
+
+  [36m465[0m  [36m  (swap! (state-cursor [:active-dim-group-ids])[0m
+  [36m466[0m  [36m         (fn [active-dims][0m
+  [33m467[0m  [1m           (if (u/in? active-dims (:id dim-group))[0m
+  [0m   [0m  [33m           ^--- EOF while reading, starting at line 467 and column 12[0m
+  [36m468[0m  [36m             (remove #(= (:id %) (:id dim-group)) active-dims)[0m
+  [36m469[0m  [36m[0m
+  [36m470[0m  [36m;;; ---------------------------------------------------------------------------[0m
+
+[36m----  Reader Error : Please see src/cashtime/core.cljs  ----[0m
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.47 seconds.[0m
+notifying browser that file changed:  resources/js/out/cljs_deps.js
+notifying browser that file changed:  out\cashtime\core.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.446 seconds.[0m
+notifying browser that file changed:  out\cashtime\core.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.437 seconds.[0m
+notifying browser that file changed:  resources/js/out/cljs_deps.js
+notifying browser that file changed:  out\cashtime\core.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.429 seconds.[0m
+notifying browser that file changed:  resources/js/out/cljs_deps.js
+notifying browser that file changed:  out\cashtime\core.js
