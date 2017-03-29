@@ -144,4 +144,12 @@
       (#(js/moment. #js [(.year %)]))
       moment->iso-str))
 
+(defn after-today?
+  "Проверка, что js дата позже сегодняшней"
+  [js-date]
+  (-> js-date
+      js/moment.
+      (#(.isAfter % (js/moment.)))))
+
+
 

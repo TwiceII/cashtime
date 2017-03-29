@@ -72,9 +72,11 @@
 
 (def state-cursor (partial rum/cursor-in appstate))
 
+
 ;; параметры для рандомизации данных
 (def randomizer-params {:from-d (js/Date. 2016 2 1)
-                        :to-d (js/Date.)
+                        ; добавляем 2 месяца от текущей
+                        :to-d (-> (js/moment.) (.add 2 "M") .toDate)
                         :max-row-amount 10
                         :max-vals-amount 20
                         :max-entries 200
@@ -84,11 +86,17 @@
 (defn random-plain-entry
   "Получить случайную плоскую запись"
   [dim-group-options from-d to-d min-summ max-summ]
-  (-> {:dims (rand-nth dim-group-options)
-       :date (rnd/random-iso-date from-d to-d)
-       :v-type (rnd/rand-nth-by-percentage {:fact 95 :plan 5})
-       :v-flow (rnd/rand-nth-by-percentage {:inflow 40 :outflow 60})
-       :v-summ (rnd/rand-from-to min-summ max-summ)}))
+  (let [date (rnd/random-iso-date from-d to-d)]
+    (-> {:dims (rand-nth dim-group-options)
+         :date date
+         ;:v-type (rnd/rand-nth-by-percentage {:fact 95 :plan 5})
+         :v-flow (rnd/rand-nth-by-percentage {:inflow 40 :outflow 60})
+         :v-summ (rnd/rand-from-to min-summ max-summ)}
+        ;; если дата позже текущей
+        (#(if (mu/after-today? date)
+            (assoc % :v-type :plan)
+            (assoc % :v-type (rnd/rand-nth-by-percentage {:fact 97 :plan 3}))))
+        )))
 
 (defn random-plain-entries
   "Получить случайные плоские данные по записям"

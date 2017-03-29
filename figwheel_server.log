@@ -9348,3 +9348,53 @@ notifying browser that file changed:  out\cashtime\core.js
 [32mSuccessfully compiled "resources/js/main.js" in 0.429 seconds.[0m
 notifying browser that file changed:  resources/js/out/cljs_deps.js
 notifying browser that file changed:  out\cashtime\core.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.471 seconds.[0m
+notifying browser that file changed:  resources/js/out/cljs_deps.js
+notifying browser that file changed:  out\cashtime\core.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.46 seconds.[0m
+notifying browser that file changed:  resources/js/out/cljs_deps.js
+notifying browser that file changed:  out\cashtime\core.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.423 seconds.[0m
+notifying browser that file changed:  resources/js/out/cljs_deps.js
+notifying browser that file changed:  out\cashtime\core.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[31mFailed to compile "resources/js/main.js" in 0.171 seconds.[0m
+[36m----  Could not Read  src/cashtime/core.cljs   line:99  column:5  ----[0m
+
+  [1mEOF while reading, starting at line 99 and column 5[0m
+
+  [36m 97[0m  [36m[dim-group-options from-d to-d min-summ max-summ][0m
+  [36m 98[0m  [36m(let [date (rnd/random-iso-date from-d to-d)][0m
+  [33m 99[0m  [1m  (-> {:dims (rand-nth dim-group-options)[0m
+  [0m   [0m  [33m  ^--- EOF while reading, starting at line 99 and column 5[0m
+  [36m100[0m  [36m       :date (rnd/random-iso-date from-d to-d)[0m
+  [36m101[0m  [36m       :v-flow (rnd/rand-nth-by-percentage {:inflow 40 :outflow 60})[0m
+  [36m102[0m  [36m       :v-summ (rnd/rand-from-to min-summ max-summ)}[0m
+
+[36m----  Reader Error : Please see src/cashtime/core.cljs  ----[0m
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[31mFailed to compile "resources/js/main.js" in 0.206 seconds.[0m
+[36m----  Could not Read  src/cashtime/core.cljs   line:99  column:5  ----[0m
+
+  [1mEOF while reading, starting at line 99 and column 5[0m
+
+  [36m 97[0m  [36m[dim-group-options from-d to-d min-summ max-summ][0m
+  [36m 98[0m  [36m(let [date (rnd/random-iso-date from-d to-d)][0m
+  [33m 99[0m  [1m  (-> {:dims (rand-nth dim-group-options)[0m
+  [0m   [0m  [33m  ^--- EOF while reading, starting at line 99 and column 5[0m
+  [36m100[0m  [36m       :date (rnd/random-iso-date from-d to-d)[0m
+  [36m101[0m  [36m       :v-flow (rnd/rand-nth-by-percentage {:inflow 40 :outflow 60})[0m
+  [36m102[0m  [36m       :v-summ (rnd/rand-from-to min-summ max-summ)}[0m
+
+[36m----  Reader Error : Please see src/cashtime/core.cljs  ----[0m
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.425 seconds.[0m
+notifying browser that file changed:  resources/js/out/cljs_deps.js
+notifying browser that file changed:  out\cashtime\core.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.442 seconds.[0m
+notifying browser that file changed:  resources/js/out/cljs_deps.js
+notifying browser that file changed:  out\cashtime\core.js

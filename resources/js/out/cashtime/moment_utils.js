@@ -56,8 +56,8 @@ cashtime.moment_utils.diff_in_days = (function cashtime$moment_utils$diff_in_day
 return moment1.diff(moment2,"days");
 });
 cashtime.moment_utils.moment_comparison = (function cashtime$moment_utils$moment_comparison(cond_fn_str,moment_date1,moment_date2){
-var G__37407 = cond_fn_str;
-switch (G__37407) {
+var G__37598 = cond_fn_str;
+switch (G__37598) {
 case "isSame":
 return moment_date1.isSame(moment_date2);
 
@@ -88,23 +88,23 @@ cashtime.moment_utils.str_moment_same_QMARK_ = cljs.core.partial.call(null,casht
  * Сортировать список дат (к-ые в ISO формате)
  */
 cashtime.moment_utils.sort_dates = (function cashtime$moment_utils$sort_dates(var_args){
-var args37409 = [];
-var len__25835__auto___37412 = arguments.length;
-var i__25836__auto___37413 = (0);
+var args37600 = [];
+var len__25837__auto___37603 = arguments.length;
+var i__25838__auto___37604 = (0);
 while(true){
-if((i__25836__auto___37413 < len__25835__auto___37412)){
-args37409.push((arguments[i__25836__auto___37413]));
+if((i__25838__auto___37604 < len__25837__auto___37603)){
+args37600.push((arguments[i__25838__auto___37604]));
 
-var G__37414 = (i__25836__auto___37413 + (1));
-i__25836__auto___37413 = G__37414;
+var G__37605 = (i__25838__auto___37604 + (1));
+i__25838__auto___37604 = G__37605;
 continue;
 } else {
 }
 break;
 }
 
-var G__37411 = args37409.length;
-switch (G__37411) {
+var G__37602 = args37600.length;
+switch (G__37602) {
 case 1:
 return cashtime.moment_utils.sort_dates.cljs$core$IFn$_invoke$arity$1((arguments[(0)]));
 
@@ -114,7 +114,7 @@ return cashtime.moment_utils.sort_dates.cljs$core$IFn$_invoke$arity$2((arguments
 
 break;
 default:
-throw (new Error([cljs.core.str("Invalid arity: "),cljs.core.str(args37409.length)].join('')));
+throw (new Error([cljs.core.str("Invalid arity: "),cljs.core.str(args37600.length)].join('')));
 
 }
 });
@@ -139,8 +139,8 @@ cashtime.moment_utils.print_date_in_needed_format = (function cashtime$moment_ut
 if(clojure.string.blank_QMARK_.call(null,date)){
 return null;
 } else {
-return (new moment(date)).format((function (){var G__37417 = (((d_group_mode instanceof cljs.core.Keyword))?d_group_mode.fqn:null);
-switch (G__37417) {
+return (new moment(date)).format((function (){var G__37608 = (((d_group_mode instanceof cljs.core.Keyword))?d_group_mode.fqn:null);
+switch (G__37608) {
 case "by-month":
 return "MMMM, YYYY";
 
@@ -160,17 +160,25 @@ return "DD.MM.YYYY";
  * Получить iso-str по месяцу (т.е 1-число месяца)
  */
 cashtime.moment_utils.iso_date_by_month = (function cashtime$moment_utils$iso_date_by_month(iso_str){
-return cashtime.moment_utils.moment__GT_iso_str.call(null,(function (p1__37419_SHARP_){
-return (new moment([p1__37419_SHARP_.year(),p1__37419_SHARP_.month()]));
+return cashtime.moment_utils.moment__GT_iso_str.call(null,(function (p1__37610_SHARP_){
+return (new moment([p1__37610_SHARP_.year(),p1__37610_SHARP_.month()]));
 }).call(null,cashtime.moment_utils.iso_str__GT_moment.call(null,iso_str)));
 });
 /**
  * Получить iso-str по году (т.е 1 января этого года)
  */
 cashtime.moment_utils.iso_date_by_year = (function cashtime$moment_utils$iso_date_by_year(iso_str){
-return cashtime.moment_utils.moment__GT_iso_str.call(null,(function (p1__37420_SHARP_){
-return (new moment([p1__37420_SHARP_.year()]));
+return cashtime.moment_utils.moment__GT_iso_str.call(null,(function (p1__37611_SHARP_){
+return (new moment([p1__37611_SHARP_.year()]));
 }).call(null,cashtime.moment_utils.iso_str__GT_moment.call(null,iso_str)));
 });
+/**
+ * Проверка, что js дата позже сегодняшней
+ */
+cashtime.moment_utils.after_today_QMARK_ = (function cashtime$moment_utils$after_today_QMARK_(js_date){
+return (function (p1__37612_SHARP_){
+return p1__37612_SHARP_.isAfter((new moment()));
+}).call(null,(new moment(js_date)));
+});
 
-//# sourceMappingURL=moment_utils.js.map?rel=1489828634159
+//# sourceMappingURL=moment_utils.js.map?rel=1490781494635
