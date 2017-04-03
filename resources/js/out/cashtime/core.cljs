@@ -1,5 +1,6 @@
 (ns cashtime.core
-  (:require [cashtime.moment-utils :as mu]
+  (:require [cashtime.tuples :as tp]
+            [cashtime.moment-utils :as mu]
             [cashtime.random-utils :as rnd]
             [cashtime.dom-utils :as dom]
             [clojure.string :as cs]
@@ -9,52 +10,17 @@
 (enable-console-print!)
 (println "hey there, cash time!")
 
+(def default-entry-params
+  {:v-type :plan :v-flow :inflow :v-summ 0
+   :dims [] :date (js/Date.)})
+
 (defonce appstate (atom
                     {:plain-entries [] ;; плоские данные, рандомно
 
                      :inflow-entries [] ; записи притоков (поступлений)
                      :outflow-entries [] ; записи оттоков (выплат)
 
-                     :avail-dim-groups {1 {:id 1
-                                           :order-index 1 ; каким отображать по счету начиная слева
-                                           :name "Контрагенты"
-                                           :css-class "dim-1"
-                                           :dims {1 {:id 1 :name "Халык Банк"}
-                                                  2 {:id 2 :name "Реклама.кз"}
-                                                  3 {:id 3 :name "TOO Вектор"}
-                                                  4 {:id 4 :name "ИП Иванов"}
-                                                  5 {:id 5 :name "Асылханов М.А."}
-                                                  6 {:id 6 :name "ТОО Декор"}
-                                                  7 {:id 7 :name "Landing Ltd."}}
-                                           ;; доп. для сортировки, группировки
-                                           ;; :sorted false
-                                           ;; :grouped false
-                                           }
-                                        2 {:id 2
-                                           :order-index 2
-                                           :name "Договоры"
-                                           :css-class "dim-2"
-                                           :dims {1 {:id 1 :name "договор 1"}
-                                                  2 {:id 2 :name "договор 2"}
-                                                  3 {:id 3 :name "дог. от 20.03.17"}
-                                                  4 {:id 4 :name "11042015 дог."}
-                                                  5 {:id 5 :name "договор №4342"}}}
-                                        3 {:id 3
-                                           :order-index 3
-                                           :name "Счета"
-                                           :css-class "dim-3"
-                                           :dims {1 {:id 1 :name "Qazkom"}
-                                                  2 {:id 2 :name "Основной счет"}
-                                                  3 {:id 3 :name "Валютный счет"}}}
-
-                                         4 {:id 4
-                                            :order-index 4
-                                            :name "Статьи"
-                                            :css-class "dim-4"
-                                            :dims {1 {:id 1 :name "Статья 1"}
-                                                   2 {:id 2 :name "Статья 2"}}}
-
-                                        }
+                     :avail-dim-groups tp/test-avail-dim-groups
                      ;; активные (отображаемые) id групп измерений
                      :active-dim-group-ids #{2 3}
 
@@ -68,6 +34,9 @@
                      ;; параметры для дат
                      :date-params {:grouping-mode :by-day ; варианты: :by-day :by-month :by-year
                                    }
+
+                     :current-entry-params default-entry-params
+
                      }))
 
 (def state-cursor (partial rum/cursor-in appstate))
@@ -148,8 +117,6 @@
    ])
 
 
-
-
 (def test-entries
   [{:tuple {1 2, 2 3}
     :date-values {"2017-07-01T00:00:00Z" {:fact 10000 :plan 5000}
@@ -170,133 +137,6 @@
         dim-id (second pair)]
     (get-in @(state-cursor [:avail-dim-groups]) [group-id :dims dim-id])))
 
-(defn pair-from-tuple
-  [tuple group-id]
-  (when (and group-id tuple)
-    (if-let [dim-id (get tuple group-id)]
-      [group-id dim-id])))
-
-
-(defn update-plain-entry-date-for-group
-  "Обновить дату внутри плоских данных чтобы сгруппировать по дням/месяцам/годам и т.д."
-  [plain-entry d-group-mode]
-  (case d-group-mode
-    :by-month (assoc plain-entry :date (mu/iso-date-by-month (:date plain-entry)))
-    :by-year (assoc plain-entry :date (mu/iso-date-by-year (:date plain-entry)))
-    :by-day plain-entry
-    plain-entry))
-
-(defn update-plain-entry-dims-for-avails
-  "Обновить измерения внутри плоских данных чтобы сгруппировать по доступным измерениям"
-  [plain-entry active-dim-group-ids]
-  (update plain-entry :dims (fn[t](select-keys t active-dim-group-ids))))
-
-(defn plain-entries->entries
-  "Конвертировать плоские данные по записям в форматированные"
-  [plain-entries d-group-mode active-dim-group-ids]
-  (->> plain-entries
-       (map #(-> %
-                 (update-plain-entry-date-for-group d-group-mode)
-                 (update-plain-entry-dims-for-avails active-dim-group-ids)))
-       (reduce (fn [m e]
-                 (if-not (u/nil-or-empty? (:dims e))
-                   (update-in m [(:dims e) (:date e) (:v-type e)]
-                              + (or (:v-summ e) 0))
-                   m))
-               {})
-       (reduce-kv (fn [vc tuple d-values]
-                  (conj vc {:tuple tuple :date-values d-values}))
-                [])))
-
-;; (plain-entries->entries test-plain-entries :by-month [2])
-
-
-(defn tuple-w-ids->tuple-w-names
-  "Таплы с id измерений в таплы с названиями измерений"
-  [all-dim-groups tuple-w-ids]
-  (->> tuple-w-ids
-     (reduce-kv (fn [m k v]
-                  (assoc m k (-> (get-in all-dim-groups [k :dims v])
-                                 :name)))
-                {})))
-
-;; (tuple-w-ids->tuple-w-names test-dim-groups {1 2, 2 3})
-;; => {1 "Визитки", 2 "Bestprofi.kz"}
-
-(defn sort-tuples
-  "Сортировать список таплов по названиям в измерении"
-  [tuples dim-groups sort-gr-id desc?]
-  (-> {}
-      (assoc :tuples-w-ids tuples)
-      (#(assoc % :tuples-w-names-map (reduce (fn[m tuple]
-                                           (assoc m tuple (tuple-w-ids->tuple-w-names dim-groups tuple)))
-                                         {} (:tuples-w-ids %))))
-      (#(assoc % :sorted-tuples-w-names (->> (:tuples-w-names-map %)
-                                             vals
-                                             (sort (fn[t1 t2]
-                                                     ((if desc? > <)
-                                                      (or (get t1 sort-gr-id) "")
-                                                      (or (get t2 sort-gr-id) "")))))))
-      (#(assoc % :sorted-tuples-w-ids (->> (:sorted-tuples-w-names %)
-                                           (map (fn[t](u/k-of-v (:tuples-w-names-map %) t))))))
-      :sorted-tuples-w-ids))
-
-
-(defn get-sorted-entries
-  "Получить отсортированные записи по названиям измерений в нужной группе"
-  [entries dim-groups sort-gr-id desc?]
-  (if sort-gr-id
-    (-> entries
-        tuples-from-entries
-        (sort-tuples dim-groups sort-gr-id desc?)
-        u/indexed-hashmap-of-coll
-        ((fn[ind-hm] (sort-by :tuple (fn[t1 t2]
-                                       (< (get ind-hm t1) (get ind-hm t2)))
-                              entries))))
-    entries))
-
-;; (get-sorted-entries [{:tuple {1 4, 3 1}
-;;                 :date-values {"2017-07-01T00:00:00Z" {:fact 10000 :plan 5000}
-;;                               "2017-06-08T00:00:00Z" {:fact 8000 :plan nil}
-;;                               "2017-07-03T00:00:00Z" {:fact 18000 :plan 2000}}}
-;;                {:tuple {1 2, 2 3}
-;;                 :date-values {"2017-06-05T00:00:00Z" {:fact 4000 :plan -15000}}}]
-;;               test-dim-groups
-;;               1 false)
-
-(defn get-search-tuple-with-substr
-  "Получить хмэп вида {id-группы [id-измерений]}, у которых есть в названиях подстрока"
-  [dim-groups ss]
-  ;; (get-search-tuple-with-substr test-dim-groups "го")
-  ;; => {1 (4 7), 2 (4)}
-  (->> dim-groups
-       vals
-       (reduce (fn [m dg]
-                 (let [ids (->> dg
-                                :dims
-                                vals
-                                (filter #(u/has-substr? (:name %) ss))
-                                (map :id))]
-                   (if-not (u/nil-or-empty? ids) (assoc m (:id dg) ids)
-                     m)))
-               {})))
-
-
-(defn pair-in-search-tuple?
-  "Находится ли пара в тапле для поиска
-  пример: (pair-in-search-tuples? [1 7] {1 [4 7], 2 [4]}) - true"
-  [pair search-tuples]
-  (when pair
-    (boolean (u/in? (get search-tuples (first pair))
-                    (second pair)))))
-
-(defn tuple-in-search-tuple?
-  "Содержится ли в тапле хоть одна пара удовл. таплу поиска"
-  [tuple search-tuple]
-  (->> tuple
-       vec
-       (some #(pair-in-search-tuple? % search-tuple))
-       boolean))
 
 (defn get-used-dims-ids
   "Получить из всех записей id используемых измерений"
@@ -306,15 +146,6 @@
        (mapcat keys)
        distinct))
 
-;; (defn get-first-group-id-sorted-by-index
-;;   "Получить первый доступный самый левый (по order-index)
-;;   id группы измерений (из существующих)"
-;;   [used-group-ids]
-;;   (->> used-group-ids
-;;        (sort #(< (get-in test-avail-dim-groups [%1 :order-index])
-;;                  (get-in test-avail-dim-groups [%2 :order-index])))
-;;        first))
-
 (defn sort-entries!
   "Отсортировать строки записей согласно настройкам сортировки групп
   (отдельно записи оттоков и притоков)"
@@ -322,23 +153,16 @@
   (let [sort-dim-params @(state-cursor [:sort-dim-params])
         avail-dim-groups @(state-cursor [:avail-dim-groups])]
     (swap! (state-cursor [:inflow-entries]) (fn [prev-e]
-                                              (get-sorted-entries prev-e
-                                                                  avail-dim-groups
-                                                                  (:group-id sort-dim-params) (:desc? sort-dim-params))))
+                                              (tp/get-sorted-entries prev-e
+                                                                     avail-dim-groups
+                                                                     (:group-id sort-dim-params) (:desc? sort-dim-params))))
     (swap! (state-cursor [:outflow-entries]) (fn [prev-e]
-                                              (get-sorted-entries prev-e
-                                                                  avail-dim-groups
-                                                                  (:group-id sort-dim-params) (:desc? sort-dim-params))))))
+                                               (tp/get-sorted-entries prev-e
+                                                                      avail-dim-groups
+                                                                      (:group-id sort-dim-params) (:desc? sort-dim-params))))))
 
 
-(defn filter-plain-entries
-  "Отфильтровать (если нужно) плоские данные"
-  [plain-entries search-tuple]
-  (->> plain-entries
-       ;; если нужно фильтровать по поисковой строке
-       ((fn[pe](if search-tuple
-                 (filter #(tuple-in-search-tuple? (:dims %) search-tuple) pe)
-                 pe)))))
+
 
 (defn update-entries!
   "Обновить записи в формат.виде"
@@ -346,18 +170,18 @@
   (let [plain-entries @(state-cursor [:plain-entries])
         active-dim-group-ids @(state-cursor [:active-dim-group-ids])
         search-str @(state-cursor [:search-dim-str])
-        search-tuple (when search-str (get-search-tuple-with-substr @(state-cursor [:avail-dim-groups]) search-str))
-        result-plain-entries (filter-plain-entries plain-entries search-tuple)
+        search-tuple (when search-str (tp/get-search-tuple-with-substr @(state-cursor [:avail-dim-groups]) search-str))
+        result-plain-entries (tp/filter-plain-entries plain-entries search-tuple)
         sort-dim-params @(state-cursor [:sort-dim-params])]
     ;; отдельно конвертируем в записи оттоков и притоков
     (reset! (state-cursor [:inflow-entries])
-            (plain-entries->entries (filter #(= (:v-flow %) :inflow) result-plain-entries)
-                                    @(state-cursor [:date-params :grouping-mode])
-                                    active-dim-group-ids))
+            (tp/plain-entries->entries (filter #(= (:v-flow %) :inflow) result-plain-entries)
+                                       @(state-cursor [:date-params :grouping-mode])
+                                       active-dim-group-ids))
     (reset! (state-cursor [:outflow-entries])
-            (plain-entries->entries (filter #(= (:v-flow %) :outflow) result-plain-entries)
-                                    @(state-cursor [:date-params :grouping-mode])
-                                    active-dim-group-ids))
+            (tp/plain-entries->entries (filter #(= (:v-flow %) :outflow) result-plain-entries)
+                                       @(state-cursor [:date-params :grouping-mode])
+                                       active-dim-group-ids))
     ;; CONSIDER: если изменилось кол-во измерений, то устанавливать новое значение сортировки по умолчанию
     ;; сортируем
     (sort-entries!)))
@@ -472,9 +296,6 @@
   (println "filter flow type: " flow-type)
   (reset! (state-cursor [:flow-filter-type]) flow-type))
 
-(disj #{4 5 3} 4)
-(conj #{4 5 3} 6)
-
 (defn toggle-dimension-group
   "Переключить группу измерений (вкл/откл)"
   [dim-group]
@@ -484,6 +305,13 @@
            (if (contains? active-dims (:id dim-group))
              (disj active-dims (:id dim-group))
              (conj active-dims (:id dim-group))))))
+
+(defn add-new-item
+  []
+  (println "add-new-item")
+  (.modal (-> "#entry-modal"
+              js/$
+              (.modal)) "show"))
 
 ;;; ---------------------------------------------------------------------------
 ;;; Вьюшки
@@ -504,7 +332,7 @@
   [:tr
    (map (fn [dim-group]
           (let [dim-group-id (:id dim-group)
-                pair (pair-from-tuple tuple dim-group-id)]
+                pair (tp/pair-from-tuple tuple dim-group-id)]
             (rum/with-key (dim-td-view dim-group (pair->dim pair))
                           [dim-group-id (second pair)])))
         dim-groups)])
@@ -677,8 +505,9 @@
                                                       gm))]
     [:div
      [:a.ui.labeled.icon.tiny.button
-      [:i.left.arrow.icon]
-      "загрузить старее"]
+      {:on-click #(add-new-item)}
+      [:i.add.icon]
+      "добавить запись"]
      [:div.ui.text.right.floated.compact.menu
       [:div.header.item "Показать по "]
       [:a.item (get-group-params :by-day) "дням"]
@@ -724,6 +553,77 @@
                                                                  (:id dim-group)))) %)
         avail-dim-groups)])
 
+
+(rum/defcc dimension-chooser-view < {:did-update (fn[st]
+                                                   (.dropdown
+                                                     (-> st
+                                                         (:rum/react-component)
+                                                         (dom/find-in-rcomp ".ui.dropdown")
+                                                         js/$))
+                                                   st)}
+  "Вьюшка для выбора измерения в группе"
+  [rcomp dim-group]
+  [:div.ui.fluid.input
+   [:div.ui.fluid.search.selection.dropdown
+    [:input {:type "hidden"}]
+    [:i.dropdown.icon]
+    [:div.default.text (:name dim-group)]
+    [:div.menu
+     (map #(-> [:div.item (:name %)])
+          (-> dim-group
+              :dims
+              vals))]]
+   ; иконка для очищения поля
+   [:i.remove.icon.link.icon-near-dropdown
+      {:title "Очистить поле"
+       :on-click #(.dropdown (js/$ (.find (js/$ (.findDOMNode js/ReactDOM rcomp)) ".dropdown"))
+                             "clear")}]
+   ])
+
+(rum/defc entry-modal-view < {:after-render (fn[st]
+                                              (do
+                                                (let [rcomp (:rum/react-component st)
+                                                      pickmeup-config #js {:format "d.m.Y"
+                                                                           :default_date false
+                                                                           :hide_on_select true}]
+                                                  (.pickmeup (js/$ (dom/find-in-rcomp rcomp ".date-input")) pickmeup-config))
+                                                st))}
+  "Модальное окно для добавления/редактирования записи"
+  [title entry-params dim-groups]
+  (let [{:keys [dims date v-type v-flow v-summ]} entry-params]
+    [:div.ui.modal {:id "entry-modal"}
+     [:i.close.icon]
+     [:div.header title]
+     [:div.content
+      [:div.ui.horizontal.list
+       [:div.item
+        [:div.ui.small.secondary.compact.menu
+         [:a.item {:class (when (= v-flow :inflow) "active")} "Поступление"]
+         [:a.item {:class (when (= v-flow :outflow) "active")} "Выплата"]]]
+       [:div.item
+        [:div.ui.small.secondary.compact.menu
+         [:a.item {:class (when (= v-type :plan) "active")} "План"]
+         [:a.item {:class (when (= v-flow :fact) "active")} "Факт"]]]]
+      [:div.ui.form
+       [:div.two.fields
+        [:div.field
+         [:label "Сумма"]
+         [:input {:type "number"
+                  :default-value v-summ}]]
+        [:div.field
+         [:label "Дата"]
+         [:input.date-input {:type "text"
+                             :read-only "readonly"
+                             :default-value (when-let [v date]
+                                              (mu/to-print-date date))}]]]]
+      [:div.ui.three.stackable.cards.dim-chooser-list
+       (map #(-> [:div.card (dimension-chooser-view %)])
+            dim-groups)]
+      [:div.actions
+       [:div.ui.deny.button "Отмена"]
+       [:div.ui.positive.button "Добавить"]]]]))
+
+
 ;;;
 ;;; Главная вьюшка
 ;;;
@@ -738,7 +638,8 @@
         row-inflow-totals (row-totals-from-entries inflow-entries)
         d-params (rum/react (state-cursor [:date-params]))
         sort-dim-params (rum/react (state-cursor [:sort-dim-params]))
-        flow-filter-type (rum/react (state-cursor [:flow-filter-type]))]
+        flow-filter-type (rum/react (state-cursor [:flow-filter-type]))
+        current-entry-params (rum/react (state-cursor [:current-entry-params]))]
     [:div.ui.padded.grid
      [:div.row
       [:div.column
@@ -786,6 +687,10 @@
 ;;      [:div.row
 ;;       [:div.column
 ;;        (bottom-menu-view flow-filter-type)]]
+     ;; модальное окно для записи (добавления/редактирования)
+     (entry-modal-view "Добавление записи"
+                       current-entry-params
+                       (vals avail-dim-groups))
      ]))
 
 (rum/mount (main-view) (.getElementById js/document "main"))

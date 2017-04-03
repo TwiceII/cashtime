@@ -8,7 +8,7 @@
     :builds [{:id "dev"
               :source-paths ["src"]
               :figwheel true
-              :compiler {:main "cashtime.core"
+              :compiler {:main "cashtime.calendar.main"
                          :asset-path "js/out"
                          :output-to  "resources/js/main.js"
                          :output-dir "resources/js/out"}
