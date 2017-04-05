@@ -106,6 +106,13 @@
   font-weight: bold;
 }
 
+.ui.very.basic.table th.today-cell,
+.ui.very.basic.table td.today-cell
+{
+  background: #fcffd6;
+  font-weight: bold;
+}
+
 /**
 * Итого
 **/

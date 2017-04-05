@@ -12,9 +12,9 @@ cljs.core.println.call(null,"hey there, cash time!");
 cashtime.calendar.main.init = (function cashtime$calendar$main$init(){
 cljs.core.println.call(null,"init core");
 
-cashtime.calendar.logic.refresh_random_data.call(null);
-
 cashtime.calendar.logic.init_watchers.call(null);
+
+cashtime.calendar.logic.refresh_random_data.call(null);
 
 moment.locale("ru");
 
@@ -22,4 +22,4 @@ return rum.core.mount.call(null,cashtime.calendar.view.main_view.call(null),docu
 });
 cashtime.calendar.main.init.call(null);
 
-//# sourceMappingURL=main.js.map?rel=1491223906869
+//# sourceMappingURL=main.js.map?rel=1491387774012

@@ -17043,3 +17043,1484 @@ notifying browser that file changed:  out\cashtime\calendar\logic.js
 [0mCompiling "resources/js/main.js" from ["src"]...[0m
 [32mSuccessfully compiled "resources/js/main.js" in 0.343 seconds.[0m
 notifying browser that file changed:  out\cashtime\calendar\view.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.442 seconds.[0m
+notifying browser that file changed:  out\cashtime\calendar\view.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.385 seconds.[0m
+notifying browser that file changed:  out\cashtime\calendar\view.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.377 seconds.[0m
+notifying browser that file changed:  out\cashtime\calendar\view.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.347 seconds.[0m
+notifying browser that file changed:  out\cashtime\calendar\view.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.376 seconds.[0m
+notifying browser that file changed:  out\cashtime\calendar\view.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.412 seconds.[0m
+notifying browser that file changed:  out\cashtime\calendar\logic.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.436 seconds.[0m
+notifying browser that file changed:  out\cashtime\calendar\logic.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.363 seconds.[0m
+notifying browser that file changed:  out\cashtime\calendar\view.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.374 seconds.[0m
+notifying browser that file changed:  out\cashtime\calendar\view.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.41 seconds.[0m
+notifying browser that file changed:  out\cashtime\calendar\logic.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.351 seconds.[0m
+notifying browser that file changed:  out\cashtime\calendar\view.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[36m----  Compiler Warning on   src/cashtime/calendar/view.cljs   line:305  column:32  ----[0m
+
+  [1mUse of undeclared Var cashtime.calendar.logic/toggle-current-v-flow[0m
+
+  [36m301[0m  [36m[:div.ui.horizontal.list[0m
+  [36m302[0m  [36m [:div.item[0m
+  [36m303[0m  [36m  [:div.ui.small.secondary.compact.menu[0m
+  [36m304[0m  [36m   [:a.item {:class (when (= v-flow :inflow) "active")[0m
+  [33m305[0m  [1m             :on-click #(l/toggle-current-v-flow :inflow)} "Поступление"][0m
+  [0m   [0m  [33m                         ^--- Use of undeclared Var cashtime.calendar.logic/toggle-current-v-flow[0m
+  [36m306[0m  [36m   [:a.item {:class (when (= v-flow :outflow) "active")[0m
+  [36m307[0m  [36m             :on-click #(l/toggle-current-v-flow :outflow)} "Выплата"]]][0m
+  [36m308[0m  [36m [:div.item[0m
+  [36m309[0m  [36m  [:div.ui.small.secondary.compact.menu[0m
+  [36m310[0m  [36m   [:a.item {:class (when (= v-type :plan) "active")[0m
+
+[36m----  Compiler Warning : Please see src/cashtime/calendar/view.cljs  ----[0m
+[36m----  Compiler Warning on   src/cashtime/calendar/view.cljs   line:307  column:32  ----[0m
+
+  [1mUse of undeclared Var cashtime.calendar.logic/toggle-current-v-flow[0m
+
+  [36m303[0m  [36m [:div.ui.small.secondary.compact.menu[0m
+  [36m304[0m  [36m  [:a.item {:class (when (= v-flow :inflow) "active")[0m
+  [36m305[0m  [36m            :on-click #(l/toggle-current-v-flow :inflow)} "Поступление"][0m
+  [36m306[0m  [36m  [:a.item {:class (when (= v-flow :outflow) "active")[0m
+  [33m307[0m  [1m            :on-click #(l/toggle-current-v-flow :outflow)} "Выплата"]]][0m
+  [0m   [0m  [33m                        ^--- Use of undeclared Var cashtime.calendar.logic/toggle-current-v-flow[0m
+  [36m308[0m  [36m[:div.item[0m
+  [36m309[0m  [36m [:div.ui.small.secondary.compact.menu[0m
+  [36m310[0m  [36m  [:a.item {:class (when (= v-type :plan) "active")[0m
+  [36m311[0m  [36m            :on-click #(l/toggle-current-v-type :plan)} "План"][0m
+  [36m312[0m  [36m  [:a.item {:class (when (= v-type :fact) "active")[0m
+
+[36m----  Compiler Warning : Please see src/cashtime/calendar/view.cljs  ----[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.401 seconds.[0m
+notifying browser that file changed:  out\cashtime\calendar\view.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.434 seconds.[0m
+notifying browser that file changed:  resources/js/out/cljs_deps.js
+notifying browser that file changed:  out\cashtime\calendar\logic.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.381 seconds.[0m
+notifying browser that file changed:  out\cashtime\calendar\view.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.512 seconds.[0m
+notifying browser that file changed:  resources/js/out/cljs_deps.js
+notifying browser that file changed:  out\cashtime\calendar\logic.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.366 seconds.[0m
+notifying browser that file changed:  out\cashtime\calendar\view.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.407 seconds.[0m
+notifying browser that file changed:  resources/js/out/cljs_deps.js
+notifying browser that file changed:  out\cashtime\calendar\view.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.387 seconds.[0m
+notifying browser that file changed:  resources/js/out/cljs_deps.js
+notifying browser that file changed:  out\cashtime\calendar\view.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.332 seconds.[0m
+notifying browser that file changed:  out\cashtime\calendar\view.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.353 seconds.[0m
+notifying browser that file changed:  resources/js/out/cljs_deps.js
+notifying browser that file changed:  out\cashtime\calendar\view.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.366 seconds.[0m
+notifying browser that file changed:  resources/js/out/cljs_deps.js
+notifying browser that file changed:  out\cashtime\calendar\view.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.415 seconds.[0m
+notifying browser that file changed:  out\cashtime\calendar\view.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[36m----  Compiler Warning on   src/cashtime/calendar/view.cljs   line:254  column:4  ----[0m
+
+  [1mUse of undeclared Var cashtime.calendar.view/pritnln[0m
+
+  [36m250[0m  [36m;;; Модальное окно добавления/редактирования записи[0m
+  [36m251[0m  [36m;;;[0m
+  [36m252[0m  [36m(defn on-update-dim-chooser[0m
+  [36m253[0m  [36m  [st][0m
+  [33m254[0m  [1m  (pritnln "on-update-dim-chooser")[0m
+  [0m   [0m  [33m   ^--- Use of undeclared Var cashtime.calendar.view/pritnln[0m
+  [36m255[0m  [36m  (let [dropdown-el (-> st[0m
+  [36m256[0m  [36m                        (:rum/react-component)[0m
+  [36m257[0m  [36m                        (dom/find-in-rcomp ".ui.dropdown")[0m
+  [36m258[0m  [36m                        js/$)][0m
+  [36m259[0m  [36m    (.dropdown dropdown-el))[0m
+
+[36m----  Compiler Warning : Please see src/cashtime/calendar/view.cljs  ----[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.38 seconds.[0m
+notifying browser that file changed:  out\cashtime\calendar\view.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[36m----  Compiler Warning on   src/cashtime/calendar/view.cljs   line:254  column:4  ----[0m
+
+  [1mUse of undeclared Var cashtime.calendar.view/pritnln[0m
+
+  [36m250[0m  [36m;;; Модальное окно добавления/редактирования записи[0m
+  [36m251[0m  [36m;;;[0m
+  [36m252[0m  [36m(defn on-update-dim-chooser[0m
+  [36m253[0m  [36m  [st][0m
+  [33m254[0m  [1m  (pritnln "on-update-dim-chooser")[0m
+  [0m   [0m  [33m   ^--- Use of undeclared Var cashtime.calendar.view/pritnln[0m
+  [36m255[0m  [36m  (let [dropdown-el (-> st[0m
+  [36m256[0m  [36m                        (:rum/react-component)[0m
+  [36m257[0m  [36m                        (dom/find-in-rcomp ".ui.dropdown")[0m
+  [36m258[0m  [36m                        js/$)][0m
+  [36m259[0m  [36m    (.dropdown dropdown-el))[0m
+
+[36m----  Compiler Warning : Please see src/cashtime/calendar/view.cljs  ----[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.446 seconds.[0m
+notifying browser that file changed:  out\cashtime\calendar\logic.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.389 seconds.[0m
+notifying browser that file changed:  out\cashtime\calendar\view.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.363 seconds.[0m
+notifying browser that file changed:  out\cashtime\calendar\view.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.323 seconds.[0m
+notifying browser that file changed:  resources/js/out/cljs_deps.js
+notifying browser that file changed:  out\cashtime\calendar\view.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.335 seconds.[0m
+notifying browser that file changed:  resources/js/out/cljs_deps.js
+notifying browser that file changed:  out\cashtime\calendar\view.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.353 seconds.[0m
+notifying browser that file changed:  out\cashtime\calendar\view.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.372 seconds.[0m
+notifying browser that file changed:  out\cashtime\calendar\view.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.358 seconds.[0m
+notifying browser that file changed:  out\cashtime\calendar\view.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.416 seconds.[0m
+notifying browser that file changed:  resources/js/out/cljs_deps.js
+notifying browser that file changed:  out\cashtime\calendar\logic.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.345 seconds.[0m
+notifying browser that file changed:  resources/js/out/cljs_deps.js
+notifying browser that file changed:  out\cashtime\calendar\view.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.366 seconds.[0m
+notifying browser that file changed:  out\cashtime\calendar\view.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.434 seconds.[0m
+notifying browser that file changed:  out\cashtime\calendar\logic.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.332 seconds.[0m
+notifying browser that file changed:  out\cashtime\calendar\view.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.361 seconds.[0m
+notifying browser that file changed:  out\cashtime\calendar\view.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.335 seconds.[0m
+notifying browser that file changed:  out\cashtime\calendar\view.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.356 seconds.[0m
+notifying browser that file changed:  out\cashtime\calendar\view.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.406 seconds.[0m
+notifying browser that file changed:  out\cashtime\calendar\logic.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.359 seconds.[0m
+notifying browser that file changed:  out\cashtime\calendar\view.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.419 seconds.[0m
+notifying browser that file changed:  out\cashtime\calendar\logic.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.384 seconds.[0m
+notifying browser that file changed:  out\cashtime\calendar\view.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.336 seconds.[0m
+notifying browser that file changed:  out\cashtime\calendar\view.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.402 seconds.[0m
+notifying browser that file changed:  out\cashtime\calendar\logic.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.343 seconds.[0m
+notifying browser that file changed:  out\cashtime\calendar\view.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.411 seconds.[0m
+notifying browser that file changed:  out\cashtime\calendar\logic.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.364 seconds.[0m
+notifying browser that file changed:  resources/js/out/cljs_deps.js
+notifying browser that file changed:  out\cashtime\calendar\view.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.341 seconds.[0m
+notifying browser that file changed:  resources/js/out/cljs_deps.js
+notifying browser that file changed:  out\cashtime\calendar\view.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.402 seconds.[0m
+notifying browser that file changed:  out\cashtime\calendar\logic.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.394 seconds.[0m
+notifying browser that file changed:  out\cashtime\calendar\logic.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.344 seconds.[0m
+notifying browser that file changed:  out\cashtime\calendar\view.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.437 seconds.[0m
+notifying browser that file changed:  resources/js/out/cljs_deps.js
+notifying browser that file changed:  out\cashtime\calendar\logic.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.352 seconds.[0m
+notifying browser that file changed:  resources/js/out/cljs_deps.js
+notifying browser that file changed:  out\cashtime\calendar\view.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.333 seconds.[0m
+notifying browser that file changed:  out\cashtime\calendar\view.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.358 seconds.[0m
+notifying browser that file changed:  out\cashtime\calendar\view.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.348 seconds.[0m
+notifying browser that file changed:  resources/js/out/cljs_deps.js
+notifying browser that file changed:  out\cashtime\calendar\view.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.367 seconds.[0m
+notifying browser that file changed:  resources/js/out/cljs_deps.js
+notifying browser that file changed:  out\cashtime\calendar\view.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.332 seconds.[0m
+notifying browser that file changed:  out\cashtime\calendar\view.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.406 seconds.[0m
+notifying browser that file changed:  out\cashtime\calendar\view.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.354 seconds.[0m
+notifying browser that file changed:  out\cashtime\calendar\view.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.378 seconds.[0m
+notifying browser that file changed:  out\cashtime\calendar\view.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.394 seconds.[0m
+notifying browser that file changed:  out\cashtime\calendar\view.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.333 seconds.[0m
+notifying browser that file changed:  out\cashtime\calendar\view.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.378 seconds.[0m
+notifying browser that file changed:  out\cashtime\calendar\view.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.373 seconds.[0m
+notifying browser that file changed:  out\cashtime\calendar\view.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.358 seconds.[0m
+notifying browser that file changed:  out\cashtime\calendar\view.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.341 seconds.[0m
+notifying browser that file changed:  out\cashtime\calendar\view.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[36m----  Compiler Warning on   src/cashtime/calendar/view.cljs   line:293  column:16  ----[0m
+
+  [1mUse of undeclared Var cashtime.calendar.view/getElementById[0m
+
+  [36m289[0m  [36m[st][0m
+  [36m290[0m  [36m(do[0m
+  [36m291[0m  [36m  (let [rcomp (:rum/react-component st)[0m
+  [36m292[0m  [36m        el (js/$ (dom/find-in-rcomp rcomp ".date-input"))[0m
+  [33m293[0m  [1m        el2 (getElementById js/document "dateinput")[0m
+  [0m   [0m  [33m             ^--- Use of undeclared Var cashtime.calendar.view/getElementById[0m
+  [36m294[0m  [36m        pickmeup-config #js {:format "d.m.Y"[0m
+  [36m295[0m  [36m                             :default_date false[0m
+  [36m296[0m  [36m                             :hide_on_select true}][0m
+  [36m297[0m  [36m    (.pickmeup el2 pickmeup-config)[0m
+  [36m298[0m  [36m    (.on el "pickmeup-show"[0m
+
+[36m----  Compiler Warning : Please see src/cashtime/calendar/view.cljs  ----[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.386 seconds.[0m
+notifying browser that file changed:  out\cashtime\calendar\view.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.38 seconds.[0m
+notifying browser that file changed:  out\cashtime\calendar\view.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.358 seconds.[0m
+notifying browser that file changed:  out\cashtime\calendar\view.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.351 seconds.[0m
+notifying browser that file changed:  out\cashtime\calendar\view.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.364 seconds.[0m
+notifying browser that file changed:  out\cashtime\calendar\view.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.336 seconds.[0m
+notifying browser that file changed:  out\cashtime\calendar\view.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.335 seconds.[0m
+notifying browser that file changed:  out\cashtime\calendar\view.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.339 seconds.[0m
+notifying browser that file changed:  out\cashtime\calendar\view.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.351 seconds.[0m
+notifying browser that file changed:  resources/js/out/cljs_deps.js
+notifying browser that file changed:  out\cashtime\calendar\view.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.354 seconds.[0m
+notifying browser that file changed:  resources/js/out/cljs_deps.js
+notifying browser that file changed:  out\cashtime\calendar\view.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.344 seconds.[0m
+notifying browser that file changed:  out\cashtime\calendar\view.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.325 seconds.[0m
+notifying browser that file changed:  out\cashtime\calendar\view.js
+Notifyng browser that CSS file changed: resources/css/pikaday.min.css
+Notifyng browser that CSS file changed: resources/css/pikaday.min.css
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.347 seconds.[0m
+notifying browser that file changed:  out\cashtime\calendar\view.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[31mFailed to compile "resources/js/main.js" in 0.225 seconds.[0m
+[36m----  Could not Analyze  src/cashtime/calendar/view.cljs   line:288  column:1  ----[0m
+
+  [1mParameter declaration missing[0m
+
+  [36m286[0m  [36m   ])[0m
+  [36m287[0m  [36m[0m
+  [33m288[0m  [1m(defn i18n-params[0m
+  [0m   [0m  [33m^--- Parameter declaration missing[0m
+  [36m289[0m  [36m  {:previousMonth "Предыдущий месяц"[0m
+  [36m290[0m  [36m   :nextMonth "Следующий месяц"[0m
+  [36m291[0m  [36m   :months ["Январь" "Февраль" "Март" "Апрель" "Май" "Июнь" "Июль" "Август" "Сентябрь" "Октябрь" "Ноябрь" "Декабрь"][0m
+
+[36m----  Analysis Error : Please see src/cashtime/calendar/view.cljs  ----[0m
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[31mFailed to compile "resources/js/main.js" in 0.218 seconds.[0m
+[36m----  Could not Analyze  src/cashtime/calendar/view.cljs   line:288  column:1  ----[0m
+
+  [1mParameter declaration missing[0m
+
+  [36m286[0m  [36m   ])[0m
+  [36m287[0m  [36m[0m
+  [33m288[0m  [1m(defn i18n-params[0m
+  [0m   [0m  [33m^--- Parameter declaration missing[0m
+  [36m289[0m  [36m  {:previousMonth "Предыдущий месяц"[0m
+  [36m290[0m  [36m   :nextMonth "Следующий месяц"[0m
+  [36m291[0m  [36m   :months ["Январь" "Февраль" "Март" "Апрель" "Май" "Июнь" "Июль" "Август" "Сентябрь" "Октябрь" "Ноябрь" "Декабрь"][0m
+
+[36m----  Analysis Error : Please see src/cashtime/calendar/view.cljs  ----[0m
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[31mFailed to compile "resources/js/main.js" in 0.199 seconds.[0m
+[36m----  Could not Analyze  src/cashtime/calendar/view.cljs   line:288  column:1  ----[0m
+
+  [1mParameter declaration missing[0m
+
+  [36m286[0m  [36m   ])[0m
+  [36m287[0m  [36m[0m
+  [33m288[0m  [1m(defn i18n-params[0m
+  [0m   [0m  [33m^--- Parameter declaration missing[0m
+  [36m289[0m  [36m  {:previousMonth "Предыдущий месяц"[0m
+  [36m290[0m  [36m   :nextMonth "Следующий месяц"[0m
+  [36m291[0m  [36m   :months ["Январь" "Февраль" "Март" "Апрель" "Май" "Июнь" "Июль" "Август" "Сентябрь" "Октябрь" "Ноябрь" "Декабрь"][0m
+
+[36m----  Analysis Error : Please see src/cashtime/calendar/view.cljs  ----[0m
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[31mFailed to compile "resources/js/main.js" in 0.233 seconds.[0m
+[36m----  Could not Analyze  src/cashtime/calendar/view.cljs   line:288  column:1  ----[0m
+
+  [1mParameter declaration missing[0m
+
+  [36m286[0m  [36m   ])[0m
+  [36m287[0m  [36m[0m
+  [33m288[0m  [1m(defn i18n-params[0m
+  [0m   [0m  [33m^--- Parameter declaration missing[0m
+  [36m289[0m  [36m  {:previousMonth "Предыдущий месяц"[0m
+  [36m290[0m  [36m   :nextMonth "Следующий месяц"[0m
+  [36m291[0m  [36m   :months ["Январь" "Февраль" "Март" "Апрель" "Май" "Июнь" "Июль" "Август" "Сентябрь" "Октябрь" "Ноябрь" "Декабрь"][0m
+
+[36m----  Analysis Error : Please see src/cashtime/calendar/view.cljs  ----[0m
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.343 seconds.[0m
+notifying browser that file changed:  out\cashtime\calendar\view.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.347 seconds.[0m
+notifying browser that file changed:  out\cashtime\calendar\view.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.316 seconds.[0m
+notifying browser that file changed:  out\cashtime\calendar\view.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.324 seconds.[0m
+notifying browser that file changed:  out\cashtime\calendar\view.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.356 seconds.[0m
+notifying browser that file changed:  out\cashtime\calendar\view.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.355 seconds.[0m
+notifying browser that file changed:  out\cashtime\calendar\view.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.336 seconds.[0m
+notifying browser that file changed:  out\cashtime\calendar\view.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.347 seconds.[0m
+notifying browser that file changed:  out\cashtime\calendar\view.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.351 seconds.[0m
+notifying browser that file changed:  resources/js/out/cljs_deps.js
+notifying browser that file changed:  out\cashtime\calendar\view.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.345 seconds.[0m
+notifying browser that file changed:  resources/js/out/cljs_deps.js
+notifying browser that file changed:  out\cashtime\calendar\view.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.385 seconds.[0m
+notifying browser that file changed:  out\cashtime\calendar\view.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.44 seconds.[0m
+notifying browser that file changed:  out\cashtime\calendar\view.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.405 seconds.[0m
+notifying browser that file changed:  out\cashtime\calendar\view.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.452 seconds.[0m
+notifying browser that file changed:  out\cashtime\calendar\logic.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.328 seconds.[0m
+notifying browser that file changed:  out\cashtime\calendar\view.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.491 seconds.[0m
+notifying browser that file changed:  out\cashtime\calendar\logic.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.518 seconds.[0m
+notifying browser that file changed:  out\cashtime\calendar\view.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.457 seconds.[0m
+notifying browser that file changed:  out\cashtime\calendar\view.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.578 seconds.[0m
+notifying browser that file changed:  out\cashtime\calendar\logic.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.358 seconds.[0m
+notifying browser that file changed:  out\cashtime\calendar\view.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.379 seconds.[0m
+notifying browser that file changed:  out\cashtime\calendar\view.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.41 seconds.[0m
+notifying browser that file changed:  out\cashtime\calendar\view.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.377 seconds.[0m
+notifying browser that file changed:  out\cashtime\calendar\view.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.448 seconds.[0m
+notifying browser that file changed:  out\cashtime\calendar\view.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[36m----  Compiler Warning on   src/cashtime/calendar/view.cljs   line:338  column:36  ----[0m
+
+  [1mUse of undeclared Var cashtime.calendar.view/v-flow[0m
+
+  [36m334[0m  [36m[:div.content[0m
+  [36m335[0m  [36m [:div.ui.horizontal.list[0m
+  [36m336[0m  [36m  [:div.item[0m
+  [36m337[0m  [36m   [:div.ui.small.secondary.compact.menu[0m
+  [33m338[0m  [1m    [:a.item {:class (when (= v-flow :inflow) "active")[0m
+  [0m   [0m  [33m                              ^--- Use of undeclared Var cashtime.calendar.view/v-flow[0m
+  [36m339[0m  [36m              :on-click #(l/toggle-current-v-flow :inflow)} "Поступление"][0m
+  [36m340[0m  [36m    [:a.item {:class (when (= v-flow :outflow) "active")[0m
+  [36m341[0m  [36m              :on-click #(l/toggle-current-v-flow :outflow)} "Выплата"]]][0m
+  [36m342[0m  [36m  [:div.item[0m
+  [36m343[0m  [36m   [:div.ui.small.secondary.compact.menu[0m
+
+[36m----  Compiler Warning : Please see src/cashtime/calendar/view.cljs  ----[0m
+[36m----  Compiler Warning on   src/cashtime/calendar/view.cljs   line:340  column:36  ----[0m
+
+  [1mUse of undeclared Var cashtime.calendar.view/v-flow[0m
+
+  [36m336[0m  [36m[:div.item[0m
+  [36m337[0m  [36m [:div.ui.small.secondary.compact.menu[0m
+  [36m338[0m  [36m  [:a.item {:class (when (= v-flow :inflow) "active")[0m
+  [36m339[0m  [36m            :on-click #(l/toggle-current-v-flow :inflow)} "Поступление"][0m
+  [33m340[0m  [1m  [:a.item {:class (when (= v-flow :outflow) "active")[0m
+  [0m   [0m  [33m                            ^--- Use of undeclared Var cashtime.calendar.view/v-flow[0m
+  [36m341[0m  [36m            :on-click #(l/toggle-current-v-flow :outflow)} "Выплата"]]][0m
+  [36m342[0m  [36m[:div.item[0m
+  [36m343[0m  [36m [:div.ui.small.secondary.compact.menu[0m
+  [36m344[0m  [36m  [:a.item {:class (when (= v-type :plan) "active")[0m
+  [36m345[0m  [36m            :on-click #(l/toggle-current-v-type :plan)} "План"][0m
+
+[36m----  Compiler Warning : Please see src/cashtime/calendar/view.cljs  ----[0m
+[36m----  Compiler Warning on   src/cashtime/calendar/view.cljs   line:344  column:36  ----[0m
+
+  [1mUse of undeclared Var cashtime.calendar.view/v-type[0m
+
+  [36m340[0m  [36m   [:a.item {:class (when (= v-flow :outflow) "active")[0m
+  [36m341[0m  [36m             :on-click #(l/toggle-current-v-flow :outflow)} "Выплата"]]][0m
+  [36m342[0m  [36m [:div.item[0m
+  [36m343[0m  [36m  [:div.ui.small.secondary.compact.menu[0m
+  [33m344[0m  [1m   [:a.item {:class (when (= v-type :plan) "active")[0m
+  [0m   [0m  [33m                             ^--- Use of undeclared Var cashtime.calendar.view/v-type[0m
+  [36m345[0m  [36m             :on-click #(l/toggle-current-v-type :plan)} "План"][0m
+  [36m346[0m  [36m   [:a.item {:class (when (= v-type :fact) "active")[0m
+  [36m347[0m  [36m             :on-click #(l/toggle-current-v-type :fact)} "Факт"]]]][0m
+  [36m348[0m  [36m[:div.ui.form[0m
+  [36m349[0m  [36m [:div.two.fields[0m
+
+[36m----  Compiler Warning : Please see src/cashtime/calendar/view.cljs  ----[0m
+[36m----  Compiler Warning on   src/cashtime/calendar/view.cljs   line:346  column:36  ----[0m
+
+  [1mUse of undeclared Var cashtime.calendar.view/v-type[0m
+
+  [36m342[0m  [36m [:div.item[0m
+  [36m343[0m  [36m  [:div.ui.small.secondary.compact.menu[0m
+  [36m344[0m  [36m   [:a.item {:class (when (= v-type :plan) "active")[0m
+  [36m345[0m  [36m             :on-click #(l/toggle-current-v-type :plan)} "План"][0m
+  [33m346[0m  [1m   [:a.item {:class (when (= v-type :fact) "active")[0m
+  [0m   [0m  [33m                             ^--- Use of undeclared Var cashtime.calendar.view/v-type[0m
+  [36m347[0m  [36m             :on-click #(l/toggle-current-v-type :fact)} "Факт"]]]][0m
+  [36m348[0m  [36m[:div.ui.form[0m
+  [36m349[0m  [36m [:div.two.fields[0m
+  [36m350[0m  [36m  [:div.field[0m
+  [36m351[0m  [36m   [:label "Сумма"][0m
+
+[36m----  Compiler Warning : Please see src/cashtime/calendar/view.cljs  ----[0m
+[36m----  Compiler Warning on   src/cashtime/calendar/view.cljs   line:355  column:34  ----[0m
+
+  [1mUse of undeclared Var cashtime.calendar.view/v-summ[0m
+
+  [36m351[0m  [36m   [:label "Сумма"][0m
+  [36m352[0m  [36m   [:input {:type "number"[0m
+  [36m353[0m  [36m            :style {:text-align "right"}[0m
+  [36m354[0m  [36m            :on-change #(l/set-current-v-summ (dom/value-of-input %))[0m
+  [33m355[0m  [1m            :default-value v-summ}]][0m
+  [0m   [0m  [33m                           ^--- Use of undeclared Var cashtime.calendar.view/v-summ[0m
+  [36m356[0m  [36m  [:div.field[0m
+  [36m357[0m  [36m   [:label "Дата"][0m
+  [36m358[0m  [36m   (modal-date-input-view)]]][0m
+  [36m359[0m  [36m[:div.ui.three.stackable.cards.dim-chooser-list[0m
+  [36m360[0m  [36m (map #(-> [:div.card (dimension-chooser-view dims %)])[0m
+
+[36m----  Compiler Warning : Please see src/cashtime/calendar/view.cljs  ----[0m
+[36m----  Compiler Warning on   src/cashtime/calendar/view.cljs   line:360  column:53  ----[0m
+
+  [1mUse of undeclared Var cashtime.calendar.view/dims[0m
+
+  [36m356[0m  [36m        [:div.field[0m
+  [36m357[0m  [36m         [:label "Дата"][0m
+  [36m358[0m  [36m         (modal-date-input-view)]]][0m
+  [36m359[0m  [36m      [:div.ui.three.stackable.cards.dim-chooser-list[0m
+  [33m360[0m  [1m       (map #(-> [:div.card (dimension-chooser-view dims %)])[0m
+  [0m   [0m  [33m                                                    ^--- Use of undeclared Var cashtime.calendar.view/dims[0m
+  [36m361[0m  [36m            all-dim-groups)][0m
+  [36m362[0m  [36m;;       (all-dimensions-chooser-view)[0m
+  [36m363[0m  [36m      [:div.actions[0m
+  [36m364[0m  [36m       [:div.ui.deny.button "Отмена"][0m
+  [36m365[0m  [36m       [:div.ui.positive.button "Добавить"]]]]))[0m
+
+[36m----  Compiler Warning : Please see src/cashtime/calendar/view.cljs  ----[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.524 seconds.[0m
+notifying browser that file changed:  out\cashtime\calendar\view.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[36m----  Compiler Warning on   src/cashtime/calendar/view.cljs   line:338  column:36  ----[0m
+
+  [1mUse of undeclared Var cashtime.calendar.view/v-flow[0m
+
+  [36m334[0m  [36m[:div.content[0m
+  [36m335[0m  [36m [:div.ui.horizontal.list[0m
+  [36m336[0m  [36m  [:div.item[0m
+  [36m337[0m  [36m   [:div.ui.small.secondary.compact.menu[0m
+  [33m338[0m  [1m    [:a.item {:class (when (= v-flow :inflow) "active")[0m
+  [0m   [0m  [33m                              ^--- Use of undeclared Var cashtime.calendar.view/v-flow[0m
+  [36m339[0m  [36m              :on-click #(l/toggle-current-v-flow :inflow)} "Поступление"][0m
+  [36m340[0m  [36m    [:a.item {:class (when (= v-flow :outflow) "active")[0m
+  [36m341[0m  [36m              :on-click #(l/toggle-current-v-flow :outflow)} "Выплата"]]][0m
+  [36m342[0m  [36m  [:div.item[0m
+  [36m343[0m  [36m   [:div.ui.small.secondary.compact.menu[0m
+
+[36m----  Compiler Warning : Please see src/cashtime/calendar/view.cljs  ----[0m
+[36m----  Compiler Warning on   src/cashtime/calendar/view.cljs   line:340  column:36  ----[0m
+
+  [1mUse of undeclared Var cashtime.calendar.view/v-flow[0m
+
+  [36m336[0m  [36m[:div.item[0m
+  [36m337[0m  [36m [:div.ui.small.secondary.compact.menu[0m
+  [36m338[0m  [36m  [:a.item {:class (when (= v-flow :inflow) "active")[0m
+  [36m339[0m  [36m            :on-click #(l/toggle-current-v-flow :inflow)} "Поступление"][0m
+  [33m340[0m  [1m  [:a.item {:class (when (= v-flow :outflow) "active")[0m
+  [0m   [0m  [33m                            ^--- Use of undeclared Var cashtime.calendar.view/v-flow[0m
+  [36m341[0m  [36m            :on-click #(l/toggle-current-v-flow :outflow)} "Выплата"]]][0m
+  [36m342[0m  [36m[:div.item[0m
+  [36m343[0m  [36m [:div.ui.small.secondary.compact.menu[0m
+  [36m344[0m  [36m  [:a.item {:class (when (= v-type :plan) "active")[0m
+  [36m345[0m  [36m            :on-click #(l/toggle-current-v-type :plan)} "План"][0m
+
+[36m----  Compiler Warning : Please see src/cashtime/calendar/view.cljs  ----[0m
+[36m----  Compiler Warning on   src/cashtime/calendar/view.cljs   line:344  column:36  ----[0m
+
+  [1mUse of undeclared Var cashtime.calendar.view/v-type[0m
+
+  [36m340[0m  [36m   [:a.item {:class (when (= v-flow :outflow) "active")[0m
+  [36m341[0m  [36m             :on-click #(l/toggle-current-v-flow :outflow)} "Выплата"]]][0m
+  [36m342[0m  [36m [:div.item[0m
+  [36m343[0m  [36m  [:div.ui.small.secondary.compact.menu[0m
+  [33m344[0m  [1m   [:a.item {:class (when (= v-type :plan) "active")[0m
+  [0m   [0m  [33m                             ^--- Use of undeclared Var cashtime.calendar.view/v-type[0m
+  [36m345[0m  [36m             :on-click #(l/toggle-current-v-type :plan)} "План"][0m
+  [36m346[0m  [36m   [:a.item {:class (when (= v-type :fact) "active")[0m
+  [36m347[0m  [36m             :on-click #(l/toggle-current-v-type :fact)} "Факт"]]]][0m
+  [36m348[0m  [36m[:div.ui.form[0m
+  [36m349[0m  [36m [:div.two.fields[0m
+
+[36m----  Compiler Warning : Please see src/cashtime/calendar/view.cljs  ----[0m
+[36m----  Compiler Warning on   src/cashtime/calendar/view.cljs   line:346  column:36  ----[0m
+
+  [1mUse of undeclared Var cashtime.calendar.view/v-type[0m
+
+  [36m342[0m  [36m [:div.item[0m
+  [36m343[0m  [36m  [:div.ui.small.secondary.compact.menu[0m
+  [36m344[0m  [36m   [:a.item {:class (when (= v-type :plan) "active")[0m
+  [36m345[0m  [36m             :on-click #(l/toggle-current-v-type :plan)} "План"][0m
+  [33m346[0m  [1m   [:a.item {:class (when (= v-type :fact) "active")[0m
+  [0m   [0m  [33m                             ^--- Use of undeclared Var cashtime.calendar.view/v-type[0m
+  [36m347[0m  [36m             :on-click #(l/toggle-current-v-type :fact)} "Факт"]]]][0m
+  [36m348[0m  [36m[:div.ui.form[0m
+  [36m349[0m  [36m [:div.two.fields[0m
+  [36m350[0m  [36m  [:div.field[0m
+  [36m351[0m  [36m   [:label "Сумма"][0m
+
+[36m----  Compiler Warning : Please see src/cashtime/calendar/view.cljs  ----[0m
+[36m----  Compiler Warning on   src/cashtime/calendar/view.cljs   line:355  column:34  ----[0m
+
+  [1mUse of undeclared Var cashtime.calendar.view/v-summ[0m
+
+  [36m351[0m  [36m   [:label "Сумма"][0m
+  [36m352[0m  [36m   [:input {:type "number"[0m
+  [36m353[0m  [36m            :style {:text-align "right"}[0m
+  [36m354[0m  [36m            :on-change #(l/set-current-v-summ (dom/value-of-input %))[0m
+  [33m355[0m  [1m            :default-value v-summ}]][0m
+  [0m   [0m  [33m                           ^--- Use of undeclared Var cashtime.calendar.view/v-summ[0m
+  [36m356[0m  [36m  [:div.field[0m
+  [36m357[0m  [36m   [:label "Дата"][0m
+  [36m358[0m  [36m   (modal-date-input-view)]]][0m
+  [36m359[0m  [36m[:div.ui.three.stackable.cards.dim-chooser-list[0m
+  [36m360[0m  [36m (map #(-> [:div.card (dimension-chooser-view dims %)])[0m
+
+[36m----  Compiler Warning : Please see src/cashtime/calendar/view.cljs  ----[0m
+[36m----  Compiler Warning on   src/cashtime/calendar/view.cljs   line:360  column:53  ----[0m
+
+  [1mUse of undeclared Var cashtime.calendar.view/dims[0m
+
+  [36m356[0m  [36m        [:div.field[0m
+  [36m357[0m  [36m         [:label "Дата"][0m
+  [36m358[0m  [36m         (modal-date-input-view)]]][0m
+  [36m359[0m  [36m      [:div.ui.three.stackable.cards.dim-chooser-list[0m
+  [33m360[0m  [1m       (map #(-> [:div.card (dimension-chooser-view dims %)])[0m
+  [0m   [0m  [33m                                                    ^--- Use of undeclared Var cashtime.calendar.view/dims[0m
+  [36m361[0m  [36m            all-dim-groups)][0m
+  [36m362[0m  [36m;;       (all-dimensions-chooser-view)[0m
+  [36m363[0m  [36m      [:div.actions[0m
+  [36m364[0m  [36m       [:div.ui.deny.button "Отмена"][0m
+  [36m365[0m  [36m       [:div.ui.positive.button "Добавить"]]]]))[0m
+
+[36m----  Compiler Warning : Please see src/cashtime/calendar/view.cljs  ----[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.472 seconds.[0m
+notifying browser that file changed:  out\cashtime\calendar\view.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[36m----  Compiler Warning on   src/cashtime/calendar/view.cljs   line:339  column:36  ----[0m
+
+  [1mUse of undeclared Var cashtime.calendar.view/v-flow[0m
+
+  [36m335[0m  [36m[:div.content[0m
+  [36m336[0m  [36m [:div.ui.horizontal.list[0m
+  [36m337[0m  [36m  [:div.item[0m
+  [36m338[0m  [36m   [:div.ui.small.secondary.compact.menu[0m
+  [33m339[0m  [1m    [:a.item {:class (when (= v-flow :inflow) "active")[0m
+  [0m   [0m  [33m                              ^--- Use of undeclared Var cashtime.calendar.view/v-flow[0m
+  [36m340[0m  [36m              :on-click #(l/toggle-current-v-flow :inflow)} "Поступление"][0m
+  [36m341[0m  [36m    [:a.item {:class (when (= v-flow :outflow) "active")[0m
+  [36m342[0m  [36m              :on-click #(l/toggle-current-v-flow :outflow)} "Выплата"]]][0m
+  [36m343[0m  [36m  [:div.item[0m
+  [36m344[0m  [36m   [:div.ui.small.secondary.compact.menu[0m
+
+[36m----  Compiler Warning : Please see src/cashtime/calendar/view.cljs  ----[0m
+[36m----  Compiler Warning on   src/cashtime/calendar/view.cljs   line:341  column:36  ----[0m
+
+  [1mUse of undeclared Var cashtime.calendar.view/v-flow[0m
+
+  [36m337[0m  [36m[:div.item[0m
+  [36m338[0m  [36m [:div.ui.small.secondary.compact.menu[0m
+  [36m339[0m  [36m  [:a.item {:class (when (= v-flow :inflow) "active")[0m
+  [36m340[0m  [36m            :on-click #(l/toggle-current-v-flow :inflow)} "Поступление"][0m
+  [33m341[0m  [1m  [:a.item {:class (when (= v-flow :outflow) "active")[0m
+  [0m   [0m  [33m                            ^--- Use of undeclared Var cashtime.calendar.view/v-flow[0m
+  [36m342[0m  [36m            :on-click #(l/toggle-current-v-flow :outflow)} "Выплата"]]][0m
+  [36m343[0m  [36m[:div.item[0m
+  [36m344[0m  [36m [:div.ui.small.secondary.compact.menu[0m
+  [36m345[0m  [36m  [:a.item {:class (when (= v-type :plan) "active")[0m
+  [36m346[0m  [36m            :on-click #(l/toggle-current-v-type :plan)} "План"][0m
+
+[36m----  Compiler Warning : Please see src/cashtime/calendar/view.cljs  ----[0m
+[36m----  Compiler Warning on   src/cashtime/calendar/view.cljs   line:345  column:36  ----[0m
+
+  [1mUse of undeclared Var cashtime.calendar.view/v-type[0m
+
+  [36m341[0m  [36m   [:a.item {:class (when (= v-flow :outflow) "active")[0m
+  [36m342[0m  [36m             :on-click #(l/toggle-current-v-flow :outflow)} "Выплата"]]][0m
+  [36m343[0m  [36m [:div.item[0m
+  [36m344[0m  [36m  [:div.ui.small.secondary.compact.menu[0m
+  [33m345[0m  [1m   [:a.item {:class (when (= v-type :plan) "active")[0m
+  [0m   [0m  [33m                             ^--- Use of undeclared Var cashtime.calendar.view/v-type[0m
+  [36m346[0m  [36m             :on-click #(l/toggle-current-v-type :plan)} "План"][0m
+  [36m347[0m  [36m   [:a.item {:class (when (= v-type :fact) "active")[0m
+  [36m348[0m  [36m             :on-click #(l/toggle-current-v-type :fact)} "Факт"]]]][0m
+  [36m349[0m  [36m[:div.ui.form[0m
+  [36m350[0m  [36m [:div.two.fields[0m
+
+[36m----  Compiler Warning : Please see src/cashtime/calendar/view.cljs  ----[0m
+[36m----  Compiler Warning on   src/cashtime/calendar/view.cljs   line:347  column:36  ----[0m
+
+  [1mUse of undeclared Var cashtime.calendar.view/v-type[0m
+
+  [36m343[0m  [36m [:div.item[0m
+  [36m344[0m  [36m  [:div.ui.small.secondary.compact.menu[0m
+  [36m345[0m  [36m   [:a.item {:class (when (= v-type :plan) "active")[0m
+  [36m346[0m  [36m             :on-click #(l/toggle-current-v-type :plan)} "План"][0m
+  [33m347[0m  [1m   [:a.item {:class (when (= v-type :fact) "active")[0m
+  [0m   [0m  [33m                             ^--- Use of undeclared Var cashtime.calendar.view/v-type[0m
+  [36m348[0m  [36m             :on-click #(l/toggle-current-v-type :fact)} "Факт"]]]][0m
+  [36m349[0m  [36m[:div.ui.form[0m
+  [36m350[0m  [36m [:div.two.fields[0m
+  [36m351[0m  [36m  [:div.field[0m
+  [36m352[0m  [36m   [:label "Сумма"][0m
+
+[36m----  Compiler Warning : Please see src/cashtime/calendar/view.cljs  ----[0m
+[36m----  Compiler Warning on   src/cashtime/calendar/view.cljs   line:356  column:34  ----[0m
+
+  [1mUse of undeclared Var cashtime.calendar.view/v-summ[0m
+
+  [36m352[0m  [36m   [:label "Сумма"][0m
+  [36m353[0m  [36m   [:input {:type "number"[0m
+  [36m354[0m  [36m            :style {:text-align "right"}[0m
+  [36m355[0m  [36m            :on-change #(l/set-current-v-summ (dom/value-of-input %))[0m
+  [33m356[0m  [1m            :default-value v-summ}]][0m
+  [0m   [0m  [33m                           ^--- Use of undeclared Var cashtime.calendar.view/v-summ[0m
+  [36m357[0m  [36m  [:div.field[0m
+  [36m358[0m  [36m   [:label "Дата"][0m
+  [36m359[0m  [36m   (modal-date-input-view)]]][0m
+  [36m360[0m  [36m[:div.ui.three.stackable.cards.dim-chooser-list[0m
+  [36m361[0m  [36m (map #(-> [:div.card (dimension-chooser-view dims %)])[0m
+
+[36m----  Compiler Warning : Please see src/cashtime/calendar/view.cljs  ----[0m
+[36m----  Compiler Warning on   src/cashtime/calendar/view.cljs   line:361  column:53  ----[0m
+
+  [1mUse of undeclared Var cashtime.calendar.view/dims[0m
+
+  [36m357[0m  [36m        [:div.field[0m
+  [36m358[0m  [36m         [:label "Дата"][0m
+  [36m359[0m  [36m         (modal-date-input-view)]]][0m
+  [36m360[0m  [36m      [:div.ui.three.stackable.cards.dim-chooser-list[0m
+  [33m361[0m  [1m       (map #(-> [:div.card (dimension-chooser-view dims %)])[0m
+  [0m   [0m  [33m                                                    ^--- Use of undeclared Var cashtime.calendar.view/dims[0m
+  [36m362[0m  [36m            all-dim-groups)][0m
+  [36m363[0m  [36m;;       (all-dimensions-chooser-view)[0m
+  [36m364[0m  [36m      [:div.actions[0m
+  [36m365[0m  [36m       [:div.ui.deny.button "Отмена"][0m
+  [36m366[0m  [36m       [:div.ui.positive.button "Добавить"]]]]))[0m
+
+[36m----  Compiler Warning : Please see src/cashtime/calendar/view.cljs  ----[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.48 seconds.[0m
+notifying browser that file changed:  out\cashtime\calendar\view.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.325 seconds.[0m
+notifying browser that file changed:  out\cashtime\calendar\view.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.323 seconds.[0m
+notifying browser that file changed:  out\cashtime\calendar\view.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.344 seconds.[0m
+notifying browser that file changed:  out\cashtime\calendar\view.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.342 seconds.[0m
+notifying browser that file changed:  out\cashtime\calendar\view.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.324 seconds.[0m
+notifying browser that file changed:  out\cashtime\calendar\view.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[36m----  Compiler Warning on   src/cashtime/calendar/view.cljs   line:319  column:53  ----[0m
+
+  [1mUse of undeclared Var cashtime.calendar.view/date[0m
+
+  [36m315[0m  [36m  (let [d (rum/react (l/state-cursor [:current-entry-params :date]))][0m
+  [36m316[0m  [36m    [:input.date-input {:type "text"[0m
+  [36m317[0m  [36m                        :id "dateinput"[0m
+  [36m318[0m  [36m                        :read-only "readonly"[0m
+  [33m319[0m  [1m                        :default-value (when-let [v date][0m
+  [0m   [0m  [33m                                                    ^--- Use of undeclared Var cashtime.calendar.view/date[0m
+  [36m320[0m  [36m                                         (mu/to-print-date date))[0m
+  [36m321[0m  [36m                        }]))[0m
+  [36m322[0m  [36m[0m
+  [36m323[0m  [36m[0m
+  [36m324[0m  [36m(rum/defc entry-modal-view < rum/reactive rum/static[0m
+
+[36m----  Compiler Warning : Please see src/cashtime/calendar/view.cljs  ----[0m
+[36m----  Compiler Warning on   src/cashtime/calendar/view.cljs   line:320  column:60  ----[0m
+
+  [1mUse of undeclared Var cashtime.calendar.view/date[0m
+
+  [36m316[0m  [36m    [:input.date-input {:type "text"[0m
+  [36m317[0m  [36m                        :id "dateinput"[0m
+  [36m318[0m  [36m                        :read-only "readonly"[0m
+  [36m319[0m  [36m                        :default-value (when-let [v date][0m
+  [33m320[0m  [1m                                         (mu/to-print-date date))[0m
+  [0m   [0m  [33m                                                           ^--- Use of undeclared Var cashtime.calendar.view/date[0m
+  [36m321[0m  [36m                        }]))[0m
+  [36m322[0m  [36m[0m
+  [36m323[0m  [36m[0m
+  [36m324[0m  [36m(rum/defc entry-modal-view < rum/reactive rum/static[0m
+  [36m325[0m  [36m  "Модальное окно для добавления/редактирования записи"[0m
+
+[36m----  Compiler Warning : Please see src/cashtime/calendar/view.cljs  ----[0m
+[36m----  Compiler Warning on   src/cashtime/calendar/view.cljs   line:340  column:36  ----[0m
+
+  [1mUse of undeclared Var cashtime.calendar.view/v-flow[0m
+
+  [36m336[0m  [36m[:div.content[0m
+  [36m337[0m  [36m [:div.ui.horizontal.list[0m
+  [36m338[0m  [36m  [:div.item[0m
+  [36m339[0m  [36m   [:div.ui.small.secondary.compact.menu[0m
+  [33m340[0m  [1m    [:a.item {:class (when (= v-flow :inflow) "active")[0m
+  [0m   [0m  [33m                              ^--- Use of undeclared Var cashtime.calendar.view/v-flow[0m
+  [36m341[0m  [36m              :on-click #(l/toggle-current-v-flow :inflow)} "Поступление"][0m
+  [36m342[0m  [36m    [:a.item {:class (when (= v-flow :outflow) "active")[0m
+  [36m343[0m  [36m              :on-click #(l/toggle-current-v-flow :outflow)} "Выплата"]]][0m
+  [36m344[0m  [36m  [:div.item[0m
+  [36m345[0m  [36m   [:div.ui.small.secondary.compact.menu[0m
+
+[36m----  Compiler Warning : Please see src/cashtime/calendar/view.cljs  ----[0m
+[36m----  Compiler Warning on   src/cashtime/calendar/view.cljs   line:342  column:36  ----[0m
+
+  [1mUse of undeclared Var cashtime.calendar.view/v-flow[0m
+
+  [36m338[0m  [36m[:div.item[0m
+  [36m339[0m  [36m [:div.ui.small.secondary.compact.menu[0m
+  [36m340[0m  [36m  [:a.item {:class (when (= v-flow :inflow) "active")[0m
+  [36m341[0m  [36m            :on-click #(l/toggle-current-v-flow :inflow)} "Поступление"][0m
+  [33m342[0m  [1m  [:a.item {:class (when (= v-flow :outflow) "active")[0m
+  [0m   [0m  [33m                            ^--- Use of undeclared Var cashtime.calendar.view/v-flow[0m
+  [36m343[0m  [36m            :on-click #(l/toggle-current-v-flow :outflow)} "Выплата"]]][0m
+  [36m344[0m  [36m[:div.item[0m
+  [36m345[0m  [36m [:div.ui.small.secondary.compact.menu[0m
+  [36m346[0m  [36m  [:a.item {:class (when (= v-type :plan) "active")[0m
+  [36m347[0m  [36m            :on-click #(l/toggle-current-v-type :plan)} "План"][0m
+
+[36m----  Compiler Warning : Please see src/cashtime/calendar/view.cljs  ----[0m
+[36m----  Compiler Warning on   src/cashtime/calendar/view.cljs   line:346  column:36  ----[0m
+
+  [1mUse of undeclared Var cashtime.calendar.view/v-type[0m
+
+  [36m342[0m  [36m   [:a.item {:class (when (= v-flow :outflow) "active")[0m
+  [36m343[0m  [36m             :on-click #(l/toggle-current-v-flow :outflow)} "Выплата"]]][0m
+  [36m344[0m  [36m [:div.item[0m
+  [36m345[0m  [36m  [:div.ui.small.secondary.compact.menu[0m
+  [33m346[0m  [1m   [:a.item {:class (when (= v-type :plan) "active")[0m
+  [0m   [0m  [33m                             ^--- Use of undeclared Var cashtime.calendar.view/v-type[0m
+  [36m347[0m  [36m             :on-click #(l/toggle-current-v-type :plan)} "План"][0m
+  [36m348[0m  [36m   [:a.item {:class (when (= v-type :fact) "active")[0m
+  [36m349[0m  [36m             :on-click #(l/toggle-current-v-type :fact)} "Факт"]]]][0m
+  [36m350[0m  [36m[:div.ui.form[0m
+  [36m351[0m  [36m [:div.two.fields[0m
+
+[36m----  Compiler Warning : Please see src/cashtime/calendar/view.cljs  ----[0m
+[36m----  Compiler Warning on   src/cashtime/calendar/view.cljs   line:348  column:36  ----[0m
+
+  [1mUse of undeclared Var cashtime.calendar.view/v-type[0m
+
+  [36m344[0m  [36m [:div.item[0m
+  [36m345[0m  [36m  [:div.ui.small.secondary.compact.menu[0m
+  [36m346[0m  [36m   [:a.item {:class (when (= v-type :plan) "active")[0m
+  [36m347[0m  [36m             :on-click #(l/toggle-current-v-type :plan)} "План"][0m
+  [33m348[0m  [1m   [:a.item {:class (when (= v-type :fact) "active")[0m
+  [0m   [0m  [33m                             ^--- Use of undeclared Var cashtime.calendar.view/v-type[0m
+  [36m349[0m  [36m             :on-click #(l/toggle-current-v-type :fact)} "Факт"]]]][0m
+  [36m350[0m  [36m[:div.ui.form[0m
+  [36m351[0m  [36m [:div.two.fields[0m
+  [36m352[0m  [36m  [:div.field[0m
+  [36m353[0m  [36m   [:label "Сумма"][0m
+
+[36m----  Compiler Warning : Please see src/cashtime/calendar/view.cljs  ----[0m
+[36m----  Compiler Warning on   src/cashtime/calendar/view.cljs   line:357  column:34  ----[0m
+
+  [1mUse of undeclared Var cashtime.calendar.view/v-summ[0m
+
+  [36m353[0m  [36m   [:label "Сумма"][0m
+  [36m354[0m  [36m   [:input {:type "number"[0m
+  [36m355[0m  [36m            :style {:text-align "right"}[0m
+  [36m356[0m  [36m            :on-change #(l/set-current-v-summ (dom/value-of-input %))[0m
+  [33m357[0m  [1m            :default-value v-summ}]][0m
+  [0m   [0m  [33m                           ^--- Use of undeclared Var cashtime.calendar.view/v-summ[0m
+  [36m358[0m  [36m  [:div.field[0m
+  [36m359[0m  [36m   [:label "Дата"][0m
+  [36m360[0m  [36m   (modal-date-input-view)]]][0m
+  [36m361[0m  [36m[:div.ui.three.stackable.cards.dim-chooser-list[0m
+  [36m362[0m  [36m (map #(-> [:div.card (dimension-chooser-view dims %)])[0m
+
+[36m----  Compiler Warning : Please see src/cashtime/calendar/view.cljs  ----[0m
+[36m----  Compiler Warning on   src/cashtime/calendar/view.cljs   line:362  column:53  ----[0m
+
+  [1mUse of undeclared Var cashtime.calendar.view/dims[0m
+
+  [36m358[0m  [36m  [:div.field[0m
+  [36m359[0m  [36m   [:label "Дата"][0m
+  [36m360[0m  [36m   (modal-date-input-view)]]][0m
+  [36m361[0m  [36m[:div.ui.three.stackable.cards.dim-chooser-list[0m
+  [33m362[0m  [1m (map #(-> [:div.card (dimension-chooser-view dims %)])[0m
+  [0m   [0m  [33m                                              ^--- Use of undeclared Var cashtime.calendar.view/dims[0m
+  [36m363[0m  [36m      all-dim-groups)][0m
+  [36m364[0m  [36m(all-dimensions-chooser-view)[0m
+  [36m365[0m  [36m[:div.actions[0m
+  [36m366[0m  [36m [:div.ui.deny.button "Отмена"][0m
+  [36m367[0m  [36m [:div.ui.positive.button "Добавить"]]]]))[0m
+
+[36m----  Compiler Warning : Please see src/cashtime/calendar/view.cljs  ----[0m
+[36m----  Compiler Warning on   src/cashtime/calendar/view.cljs   line:364  column:8  ----[0m
+
+  [1mUse of undeclared Var cashtime.calendar.view/all-dimensions-chooser-view[0m
+
+  [36m360[0m  [36m   (modal-date-input-view)]]][0m
+  [36m361[0m  [36m[:div.ui.three.stackable.cards.dim-chooser-list[0m
+  [36m362[0m  [36m (map #(-> [:div.card (dimension-chooser-view dims %)])[0m
+  [36m363[0m  [36m      all-dim-groups)][0m
+  [33m364[0m  [1m(all-dimensions-chooser-view)[0m
+  [0m   [0m  [33m ^--- Use of undeclared Var cashtime.calendar.view/all-dimensions-chooser-view[0m
+  [36m365[0m  [36m[:div.actions[0m
+  [36m366[0m  [36m [:div.ui.deny.button "Отмена"][0m
+  [36m367[0m  [36m [:div.ui.positive.button "Добавить"]]]]))[0m
+
+[36m----  Compiler Warning : Please see src/cashtime/calendar/view.cljs  ----[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.473 seconds.[0m
+notifying browser that file changed:  out\cashtime\calendar\view.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[36m----  Compiler Warning on   src/cashtime/calendar/view.cljs   line:340  column:36  ----[0m
+
+  [1mUse of undeclared Var cashtime.calendar.view/v-flow[0m
+
+  [36m336[0m  [36m[:div.content[0m
+  [36m337[0m  [36m [:div.ui.horizontal.list[0m
+  [36m338[0m  [36m  [:div.item[0m
+  [36m339[0m  [36m   [:div.ui.small.secondary.compact.menu[0m
+  [33m340[0m  [1m    [:a.item {:class (when (= v-flow :inflow) "active")[0m
+  [0m   [0m  [33m                              ^--- Use of undeclared Var cashtime.calendar.view/v-flow[0m
+  [36m341[0m  [36m              :on-click #(l/toggle-current-v-flow :inflow)} "Поступление"][0m
+  [36m342[0m  [36m    [:a.item {:class (when (= v-flow :outflow) "active")[0m
+  [36m343[0m  [36m              :on-click #(l/toggle-current-v-flow :outflow)} "Выплата"]]][0m
+  [36m344[0m  [36m  [:div.item[0m
+  [36m345[0m  [36m   [:div.ui.small.secondary.compact.menu[0m
+
+[36m----  Compiler Warning : Please see src/cashtime/calendar/view.cljs  ----[0m
+[36m----  Compiler Warning on   src/cashtime/calendar/view.cljs   line:342  column:36  ----[0m
+
+  [1mUse of undeclared Var cashtime.calendar.view/v-flow[0m
+
+  [36m338[0m  [36m[:div.item[0m
+  [36m339[0m  [36m [:div.ui.small.secondary.compact.menu[0m
+  [36m340[0m  [36m  [:a.item {:class (when (= v-flow :inflow) "active")[0m
+  [36m341[0m  [36m            :on-click #(l/toggle-current-v-flow :inflow)} "Поступление"][0m
+  [33m342[0m  [1m  [:a.item {:class (when (= v-flow :outflow) "active")[0m
+  [0m   [0m  [33m                            ^--- Use of undeclared Var cashtime.calendar.view/v-flow[0m
+  [36m343[0m  [36m            :on-click #(l/toggle-current-v-flow :outflow)} "Выплата"]]][0m
+  [36m344[0m  [36m[:div.item[0m
+  [36m345[0m  [36m [:div.ui.small.secondary.compact.menu[0m
+  [36m346[0m  [36m  [:a.item {:class (when (= v-type :plan) "active")[0m
+  [36m347[0m  [36m            :on-click #(l/toggle-current-v-type :plan)} "План"][0m
+
+[36m----  Compiler Warning : Please see src/cashtime/calendar/view.cljs  ----[0m
+[36m----  Compiler Warning on   src/cashtime/calendar/view.cljs   line:346  column:36  ----[0m
+
+  [1mUse of undeclared Var cashtime.calendar.view/v-type[0m
+
+  [36m342[0m  [36m   [:a.item {:class (when (= v-flow :outflow) "active")[0m
+  [36m343[0m  [36m             :on-click #(l/toggle-current-v-flow :outflow)} "Выплата"]]][0m
+  [36m344[0m  [36m [:div.item[0m
+  [36m345[0m  [36m  [:div.ui.small.secondary.compact.menu[0m
+  [33m346[0m  [1m   [:a.item {:class (when (= v-type :plan) "active")[0m
+  [0m   [0m  [33m                             ^--- Use of undeclared Var cashtime.calendar.view/v-type[0m
+  [36m347[0m  [36m             :on-click #(l/toggle-current-v-type :plan)} "План"][0m
+  [36m348[0m  [36m   [:a.item {:class (when (= v-type :fact) "active")[0m
+  [36m349[0m  [36m             :on-click #(l/toggle-current-v-type :fact)} "Факт"]]]][0m
+  [36m350[0m  [36m[:div.ui.form[0m
+  [36m351[0m  [36m [:div.two.fields[0m
+
+[36m----  Compiler Warning : Please see src/cashtime/calendar/view.cljs  ----[0m
+[36m----  Compiler Warning on   src/cashtime/calendar/view.cljs   line:348  column:36  ----[0m
+
+  [1mUse of undeclared Var cashtime.calendar.view/v-type[0m
+
+  [36m344[0m  [36m [:div.item[0m
+  [36m345[0m  [36m  [:div.ui.small.secondary.compact.menu[0m
+  [36m346[0m  [36m   [:a.item {:class (when (= v-type :plan) "active")[0m
+  [36m347[0m  [36m             :on-click #(l/toggle-current-v-type :plan)} "План"][0m
+  [33m348[0m  [1m   [:a.item {:class (when (= v-type :fact) "active")[0m
+  [0m   [0m  [33m                             ^--- Use of undeclared Var cashtime.calendar.view/v-type[0m
+  [36m349[0m  [36m             :on-click #(l/toggle-current-v-type :fact)} "Факт"]]]][0m
+  [36m350[0m  [36m[:div.ui.form[0m
+  [36m351[0m  [36m [:div.two.fields[0m
+  [36m352[0m  [36m  [:div.field[0m
+  [36m353[0m  [36m   [:label "Сумма"][0m
+
+[36m----  Compiler Warning : Please see src/cashtime/calendar/view.cljs  ----[0m
+[36m----  Compiler Warning on   src/cashtime/calendar/view.cljs   line:357  column:34  ----[0m
+
+  [1mUse of undeclared Var cashtime.calendar.view/v-summ[0m
+
+  [36m353[0m  [36m   [:label "Сумма"][0m
+  [36m354[0m  [36m   [:input {:type "number"[0m
+  [36m355[0m  [36m            :style {:text-align "right"}[0m
+  [36m356[0m  [36m            :on-change #(l/set-current-v-summ (dom/value-of-input %))[0m
+  [33m357[0m  [1m            :default-value v-summ}]][0m
+  [0m   [0m  [33m                           ^--- Use of undeclared Var cashtime.calendar.view/v-summ[0m
+  [36m358[0m  [36m  [:div.field[0m
+  [36m359[0m  [36m   [:label "Дата"][0m
+  [36m360[0m  [36m   (modal-date-input-view)]]][0m
+  [36m361[0m  [36m[:div.ui.three.stackable.cards.dim-chooser-list[0m
+  [36m362[0m  [36m (map #(-> [:div.card (dimension-chooser-view dims %)])[0m
+
+[36m----  Compiler Warning : Please see src/cashtime/calendar/view.cljs  ----[0m
+[36m----  Compiler Warning on   src/cashtime/calendar/view.cljs   line:362  column:53  ----[0m
+
+  [1mUse of undeclared Var cashtime.calendar.view/dims[0m
+
+  [36m358[0m  [36m  [:div.field[0m
+  [36m359[0m  [36m   [:label "Дата"][0m
+  [36m360[0m  [36m   (modal-date-input-view)]]][0m
+  [36m361[0m  [36m[:div.ui.three.stackable.cards.dim-chooser-list[0m
+  [33m362[0m  [1m (map #(-> [:div.card (dimension-chooser-view dims %)])[0m
+  [0m   [0m  [33m                                              ^--- Use of undeclared Var cashtime.calendar.view/dims[0m
+  [36m363[0m  [36m      all-dim-groups)][0m
+  [36m364[0m  [36m(all-dimensions-chooser-view)[0m
+  [36m365[0m  [36m[:div.actions[0m
+  [36m366[0m  [36m [:div.ui.deny.button "Отмена"][0m
+  [36m367[0m  [36m [:div.ui.positive.button "Добавить"]]]]))[0m
+
+[36m----  Compiler Warning : Please see src/cashtime/calendar/view.cljs  ----[0m
+[36m----  Compiler Warning on   src/cashtime/calendar/view.cljs   line:364  column:8  ----[0m
+
+  [1mUse of undeclared Var cashtime.calendar.view/all-dimensions-chooser-view[0m
+
+  [36m360[0m  [36m   (modal-date-input-view)]]][0m
+  [36m361[0m  [36m[:div.ui.three.stackable.cards.dim-chooser-list[0m
+  [36m362[0m  [36m (map #(-> [:div.card (dimension-chooser-view dims %)])[0m
+  [36m363[0m  [36m      all-dim-groups)][0m
+  [33m364[0m  [1m(all-dimensions-chooser-view)[0m
+  [0m   [0m  [33m ^--- Use of undeclared Var cashtime.calendar.view/all-dimensions-chooser-view[0m
+  [36m365[0m  [36m[:div.actions[0m
+  [36m366[0m  [36m [:div.ui.deny.button "Отмена"][0m
+  [36m367[0m  [36m [:div.ui.positive.button "Добавить"]]]]))[0m
+
+[36m----  Compiler Warning : Please see src/cashtime/calendar/view.cljs  ----[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.42 seconds.[0m
+notifying browser that file changed:  out\cashtime\calendar\view.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[36m----  Compiler Warning on   src/cashtime/calendar/view.cljs   line:364  column:8  ----[0m
+
+  [1mUse of undeclared Var cashtime.calendar.view/all-dimensions-chooser-view[0m
+
+  [36m360[0m  [36m   (modal-date-input-view)]]][0m
+  [36m361[0m  [36m[:div.ui.three.stackable.cards.dim-chooser-list[0m
+  [36m362[0m  [36m (map #(-> [:div.card (dimension-chooser-view dims %)])[0m
+  [36m363[0m  [36m      all-dim-groups)][0m
+  [33m364[0m  [1m(all-dimensions-chooser-view)[0m
+  [0m   [0m  [33m ^--- Use of undeclared Var cashtime.calendar.view/all-dimensions-chooser-view[0m
+  [36m365[0m  [36m[:div.actions[0m
+  [36m366[0m  [36m [:div.ui.deny.button "Отмена"][0m
+  [36m367[0m  [36m [:div.ui.positive.button "Добавить"]]]]))[0m
+
+[36m----  Compiler Warning : Please see src/cashtime/calendar/view.cljs  ----[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.372 seconds.[0m
+notifying browser that file changed:  out\cashtime\calendar\view.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.323 seconds.[0m
+notifying browser that file changed:  out\cashtime\calendar\view.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[36m----  Compiler Warning on   src/cashtime/calendar/view.cljs   line:363  column:58  ----[0m
+
+  [1mUse of undeclared Var cashtime.calendar.view/d[0m
+
+  [36m359[0m  [36m   [:label "Дата"][0m
+  [36m360[0m  [36m   [:input.date-input {:type "text"[0m
+  [36m361[0m  [36m                       :id "dateinput"[0m
+  [36m362[0m  [36m                       :read-only "readonly"[0m
+  [33m363[0m  [1m                       :default-value (when-let [v d][0m
+  [0m   [0m  [33m                                                   ^--- Use of undeclared Var cashtime.calendar.view/d[0m
+  [36m364[0m  [36m                                        (mu/to-print-date d))[0m
+  [36m365[0m  [36m                       }]]]][0m
+  [36m366[0m  [36m[:div.ui.three.stackable.cards.dim-chooser-list[0m
+  [36m367[0m  [36m (map #(-> [:div.card (dimension-chooser-view dims %)])[0m
+  [36m368[0m  [36m      all-dim-groups)][0m
+
+[36m----  Compiler Warning : Please see src/cashtime/calendar/view.cljs  ----[0m
+[36m----  Compiler Warning on   src/cashtime/calendar/view.cljs   line:364  column:65  ----[0m
+
+  [1mUse of undeclared Var cashtime.calendar.view/d[0m
+
+  [36m360[0m  [36m         [:input.date-input {:type "text"[0m
+  [36m361[0m  [36m                             :id "dateinput"[0m
+  [36m362[0m  [36m                             :read-only "readonly"[0m
+  [36m363[0m  [36m                             :default-value (when-let [v d][0m
+  [33m364[0m  [1m                                              (mu/to-print-date d))[0m
+  [0m   [0m  [33m                                                                ^--- Use of undeclared Var cashtime.calendar.view/d[0m
+  [36m365[0m  [36m                             }]]]][0m
+  [36m366[0m  [36m      [:div.ui.three.stackable.cards.dim-chooser-list[0m
+  [36m367[0m  [36m       (map #(-> [:div.card (dimension-chooser-view dims %)])[0m
+  [36m368[0m  [36m            all-dim-groups)][0m
+  [36m369[0m  [36m;;       (all-dimensions-chooser-view)[0m
+
+[36m----  Compiler Warning : Please see src/cashtime/calendar/view.cljs  ----[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.404 seconds.[0m
+notifying browser that file changed:  out\cashtime\calendar\view.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.335 seconds.[0m
+notifying browser that file changed:  out\cashtime\calendar\view.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.504 seconds.[0m
+notifying browser that file changed:  out\cashtime\moment_utils.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[36m----  Compiler Warning on   src/cashtime/calendar/view.cljs   line:295  column:34  ----[0m
+
+  [1mUse of undeclared Var cashtime.moment-utils/i18n-params[0m
+
+  [36m291[0m  [36m(do[0m
+  [36m292[0m  [36m  (println "on modal render")[0m
+  [36m293[0m  [36m  (js/Pikaday. (clj->js {:field (.getElementById js/document "dateinput")[0m
+  [36m294[0m  [36m                         :format "DD.MM.YYYY"[0m
+  [33m295[0m  [1m                         :i18n mu/i18n-params[0m
+  [0m   [0m  [33m                               ^--- Use of undeclared Var cashtime.moment-utils/i18n-params[0m
+  [36m296[0m  [36m                         :firstDay 1[0m
+  [36m297[0m  [36m                         ;; в дальнейшейм добавить minDate для ограничения[0m
+  [36m298[0m  [36m                         :onSelect (fn [d][0m
+  [36m299[0m  [36m                                     (println "pikaday!")[0m
+  [36m300[0m  [36m                                     (l/set-current-date d)[0m
+
+[36m----  Compiler Warning : Please see src/cashtime/calendar/view.cljs  ----[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.366 seconds.[0m
+notifying browser that file changed:  out\cashtime\calendar\view.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.318 seconds.[0m
+notifying browser that file changed:  out\cashtime\calendar\view.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.335 seconds.[0m
+notifying browser that file changed:  resources/js/out/cljs_deps.js
+notifying browser that file changed:  out\cashtime\calendar\view.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.372 seconds.[0m
+notifying browser that file changed:  resources/js/out/cljs_deps.js
+notifying browser that file changed:  out\cashtime\calendar\view.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.34 seconds.[0m
+notifying browser that file changed:  resources/js/out/cljs_deps.js
+notifying browser that file changed:  out\cashtime\calendar\view.js
+Notifyng browser that CSS file changed: resources/css/semantic.min.css
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.35 seconds.[0m
+notifying browser that file changed:  resources/js/out/cljs_deps.js
+notifying browser that file changed:  out\cashtime\calendar\view.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.332 seconds.[0m
+notifying browser that file changed:  out\cashtime\calendar\view.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.332 seconds.[0m
+notifying browser that file changed:  out\cashtime\calendar\view.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.407 seconds.[0m
+notifying browser that file changed:  resources/js/out/cljs_deps.js
+notifying browser that file changed:  out\cashtime\calendar\logic.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[36m----  Compiler Warning on   src/cashtime/calendar/view.cljs   line:295  column:58  ----[0m
+
+  [1mUse of undeclared Var cashtime.calendar.view/save-modal-item[0m
+
+  [36m291[0m  [36m(do[0m
+  [36m292[0m  [36m  (println "on modal mount")[0m
+  [36m293[0m  [36m  (let [rcomp (:rum/react-component st)][0m
+  [36m294[0m  [36m    (.modal (dom/rcomp->js$ rcomp) #js {:onApprove #(do[0m
+  [33m295[0m  [1m                                                      (save-modal-item)[0m
+  [0m   [0m  [33m                                                       ^--- Use of undeclared Var cashtime.calendar.view/save-modal-item[0m
+  [36m296[0m  [36m                                                      false)})[0m
+  [36m297[0m  [36m    (js/Pikaday. (clj->js {:field (.getElementById js/document "dateinput")[0m
+  [36m298[0m  [36m                           :format "DD.MM.YYYY"[0m
+  [36m299[0m  [36m                           :i18n mu/pikaday-i18n-params[0m
+  [36m300[0m  [36m                           :firstDay 1[0m
+
+[36m----  Compiler Warning : Please see src/cashtime/calendar/view.cljs  ----[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.366 seconds.[0m
+notifying browser that file changed:  resources/js/out/cljs_deps.js
+notifying browser that file changed:  out\cashtime\calendar\view.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[36m----  Compiler Warning on   src/cashtime/calendar/view.cljs   line:295  column:58  ----[0m
+
+  [1mUse of undeclared Var cashtime.calendar.view/save-modal-item[0m
+
+  [36m291[0m  [36m(do[0m
+  [36m292[0m  [36m  (println "on modal mount")[0m
+  [36m293[0m  [36m  (let [rcomp (:rum/react-component st)][0m
+  [36m294[0m  [36m    (.modal (dom/rcomp->js$ rcomp) #js {:onApprove #(do[0m
+  [33m295[0m  [1m                                                      (save-modal-item)[0m
+  [0m   [0m  [33m                                                       ^--- Use of undeclared Var cashtime.calendar.view/save-modal-item[0m
+  [36m296[0m  [36m                                                      false)})[0m
+  [36m297[0m  [36m    (js/Pikaday. (clj->js {:field (.getElementById js/document "dateinput")[0m
+  [36m298[0m  [36m                           :format "DD.MM.YYYY"[0m
+  [36m299[0m  [36m                           :i18n mu/pikaday-i18n-params[0m
+  [36m300[0m  [36m                           :firstDay 1[0m
+
+[36m----  Compiler Warning : Please see src/cashtime/calendar/view.cljs  ----[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.414 seconds.[0m
+notifying browser that file changed:  out\cashtime\calendar\logic.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.342 seconds.[0m
+notifying browser that file changed:  out\cashtime\calendar\view.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.392 seconds.[0m
+notifying browser that file changed:  out\cashtime\calendar\logic.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.393 seconds.[0m
+notifying browser that file changed:  resources/js/out/cljs_deps.js
+notifying browser that file changed:  out\cashtime\calendar\logic.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.356 seconds.[0m
+notifying browser that file changed:  resources/js/out/cljs_deps.js
+notifying browser that file changed:  out\cashtime\calendar\view.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[36m----  Compiler Warning on   src/cashtime/calendar/logic.cljs   line:315  column:22  ----[0m
+
+  [1mWrong number of args (2) passed to cljs.core/update[0m
+
+  [36m311[0m  [36m(println "saved item from modal")[0m
+  [36m312[0m  [36m(let [entry-params @(state-cursor [:current-entry-params])[0m
+  [36m313[0m  [36m      modal-params @(state-cursor [:entry-modal-params])[0m
+  [36m314[0m  [36m      ;; чистим конечную запись[0m
+  [33m315[0m  [1m      result-entry (update entry-params[0m
+  [0m   [0m  [33m                   ^--- Wrong number of args (2) passed to cljs.core/update[0m
+  [36m316[0m  [36m                           (fn[d][0m
+  [36m317[0m  [36m                             (reduce-kv (fn[m k v][0m
+  [36m318[0m  [36m                                          (if v (assoc m k v) m))[0m
+  [36m319[0m  [36m                                        {} d)))][0m
+  [36m320[0m  [36m  (println entry-params)[0m
+
+[36m----  Compiler Warning : Please see src/cashtime/calendar/logic.cljs  ----[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.45 seconds.[0m
+notifying browser that file changed:  out\cashtime\calendar\logic.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[36m----  Compiler Warning on   src/cashtime/calendar/logic.cljs   line:318  column:22  ----[0m
+
+  [1mWrong number of args (2) passed to cljs.core/update[0m
+
+  [36m314[0m  [36m(println "saved item from modal")[0m
+  [36m315[0m  [36m(let [entry-params @(state-cursor [:current-entry-params])[0m
+  [36m316[0m  [36m      modal-params @(state-cursor [:entry-modal-params])[0m
+  [36m317[0m  [36m      ;; чистим конечную запись[0m
+  [33m318[0m  [1m      result-entry (update entry-params[0m
+  [0m   [0m  [33m                   ^--- Wrong number of args (2) passed to cljs.core/update[0m
+  [36m319[0m  [36m                           (fn[d][0m
+  [36m320[0m  [36m                             (reduce-kv (fn[m k v][0m
+  [36m321[0m  [36m                                          (if v (assoc m k v) m))[0m
+  [36m322[0m  [36m                                        {} d)))][0m
+  [36m323[0m  [36m  (println entry-params)[0m
+
+[36m----  Compiler Warning : Please see src/cashtime/calendar/logic.cljs  ----[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.438 seconds.[0m
+notifying browser that file changed:  out\cashtime\calendar\logic.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[36m----  Compiler Warning on   src/cashtime/calendar/logic.cljs   line:319  column:22  ----[0m
+
+  [1mWrong number of args (2) passed to cljs.core/update[0m
+
+  [36m315[0m  [36m(println "saved item from modal")[0m
+  [36m316[0m  [36m(let [entry-params @(state-cursor [:current-entry-params])[0m
+  [36m317[0m  [36m      modal-params @(state-cursor [:entry-modal-params])[0m
+  [36m318[0m  [36m      ;; чистим конечную запись[0m
+  [33m319[0m  [1m      result-entry (update entry-params[0m
+  [0m   [0m  [33m                   ^--- Wrong number of args (2) passed to cljs.core/update[0m
+  [36m320[0m  [36m                           (fn[d][0m
+  [36m321[0m  [36m                             (reduce-kv (fn[m k v][0m
+  [36m322[0m  [36m                                          (if v (assoc m k v) m))[0m
+  [36m323[0m  [36m                                        {} d)))][0m
+  [36m324[0m  [36m  (println entry-params)[0m
+
+[36m----  Compiler Warning : Please see src/cashtime/calendar/logic.cljs  ----[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.422 seconds.[0m
+notifying browser that file changed:  out\cashtime\calendar\logic.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.323 seconds.[0m
+notifying browser that file changed:  out\cashtime\calendar\view.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.182 seconds.[0m
+notifying browser that file changed:  out\cashtime\calendar\main.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.426 seconds.[0m
+notifying browser that file changed:  out\cashtime\calendar\logic.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.43 seconds.[0m
+notifying browser that file changed:  out\cashtime\calendar\logic.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.366 seconds.[0m
+notifying browser that file changed:  out\cashtime\calendar\view.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.451 seconds.[0m
+notifying browser that file changed:  resources/js/out/cljs_deps.js
+notifying browser that file changed:  out\cashtime\calendar\logic.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.433 seconds.[0m
+notifying browser that file changed:  resources/js/out/cljs_deps.js
+notifying browser that file changed:  out\cashtime\calendar\logic.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.347 seconds.[0m
+notifying browser that file changed:  resources/js/out/cljs_deps.js
+notifying browser that file changed:  out\cashtime\calendar\view.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.414 seconds.[0m
+notifying browser that file changed:  out\cashtime\calendar\logic.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.446 seconds.[0m
+notifying browser that file changed:  resources/js/out/cljs_deps.js
+notifying browser that file changed:  out\cashtime\calendar\logic.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.358 seconds.[0m
+notifying browser that file changed:  resources/js/out/cljs_deps.js
+notifying browser that file changed:  out\cashtime\calendar\view.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.342 seconds.[0m
+notifying browser that file changed:  resources/js/out/cljs_deps.js
+notifying browser that file changed:  out\cashtime\calendar\view.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.341 seconds.[0m
+notifying browser that file changed:  out\cashtime\calendar\view.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.362 seconds.[0m
+notifying browser that file changed:  out\cashtime\calendar\view.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.36 seconds.[0m
+notifying browser that file changed:  out\cashtime\calendar\view.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.34 seconds.[0m
+notifying browser that file changed:  out\cashtime\calendar\view.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.391 seconds.[0m
+notifying browser that file changed:  out\cashtime\calendar\view.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.375 seconds.[0m
+notifying browser that file changed:  out\cashtime\calendar\view.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.683 seconds.[0m
+notifying browser that file changed:  out\cashtime\calendar\logic.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.921 seconds.[0m
+notifying browser that file changed:  out\cashtime\calendar\logic.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.483 seconds.[0m
+notifying browser that file changed:  out\cashtime\calendar\view.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.681 seconds.[0m
+notifying browser that file changed:  out\cashtime\calendar\logic.js
+Notifyng browser that CSS file changed: resources/css/basic.css
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[36m----  Compiler Warning on   src/cashtime/calendar/view.cljs   line:116  column:45  ----[0m
+
+  [1mWrong number of args (1) passed to cashtime.calendar.logic/is-current-date?[0m
+
+  [36m112[0m  [36m  [:tr[0m
+  [36m113[0m  [36m   (map (fn [d][0m
+  [36m114[0m  [36m          (rum/with-key (value-cell-td-view (get date-values d)[0m
+  [36m115[0m  [36m                                            flow-type[0m
+  [33m116[0m  [1m                                            (l/is-current-date? d-group-mode)) d))[0m
+  [0m   [0m  [33m                                            ^--- Wrong number of args (1) passed to cashtime.calendar.logic/is-current-date?[0m
+  [36m117[0m  [36m        dates)])[0m
+  [36m118[0m  [36m[0m
+  [36m119[0m  [36m(rum/defc date-total-td-view[0m
+  [36m120[0m  [36m  "Вьюшка для итого по столбцу (дате)"[0m
+  [36m121[0m  [36m  [date-total flow-type current-d?][0m
+
+[36m----  Compiler Warning : Please see src/cashtime/calendar/view.cljs  ----[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.412 seconds.[0m
+notifying browser that file changed:  out\cashtime\calendar\view.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[36m----  Compiler Warning on   src/cashtime/calendar/view.cljs   line:116  column:45  ----[0m
+
+  [1mWrong number of args (1) passed to cashtime.calendar.logic/is-current-date?[0m
+
+  [36m112[0m  [36m  [:tr[0m
+  [36m113[0m  [36m   (map (fn [d][0m
+  [36m114[0m  [36m          (rum/with-key (value-cell-td-view (get date-values d)[0m
+  [36m115[0m  [36m                                            flow-type[0m
+  [33m116[0m  [1m                                            (l/is-current-date? d-group-mode)) d))[0m
+  [0m   [0m  [33m                                            ^--- Wrong number of args (1) passed to cashtime.calendar.logic/is-current-date?[0m
+  [36m117[0m  [36m        dates)])[0m
+  [36m118[0m  [36m[0m
+  [36m119[0m  [36m(rum/defc date-total-td-view[0m
+  [36m120[0m  [36m  "Вьюшка для итого по столбцу (дате)"[0m
+  [36m121[0m  [36m  [date-total flow-type current-d?][0m
+
+[36m----  Compiler Warning : Please see src/cashtime/calendar/view.cljs  ----[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.461 seconds.[0m
+notifying browser that file changed:  out\cashtime\calendar\view.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.343 seconds.[0m
+notifying browser that file changed:  out\cashtime\calendar\view.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.379 seconds.[0m
+notifying browser that file changed:  resources/js/out/cljs_deps.js
+notifying browser that file changed:  out\cashtime\calendar\view.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.324 seconds.[0m
+notifying browser that file changed:  resources/js/out/cljs_deps.js
+notifying browser that file changed:  out\cashtime\calendar\view.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.357 seconds.[0m
+notifying browser that file changed:  out\cashtime\calendar\view.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.406 seconds.[0m
+notifying browser that file changed:  out\cashtime\calendar\view.js
+Notifyng browser that CSS file changed: resources/css/basic.css
+Notifyng browser that CSS file changed: resources/css/basic.css
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.467 seconds.[0m
+notifying browser that file changed:  out\cashtime\calendar\logic.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.401 seconds.[0m
+notifying browser that file changed:  out\cashtime\calendar\view.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.474 seconds.[0m
+notifying browser that file changed:  out\cashtime\calendar\logic.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.471 seconds.[0m
+notifying browser that file changed:  out\cashtime\calendar\logic.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.488 seconds.[0m
+notifying browser that file changed:  out\cashtime\calendar\logic.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.471 seconds.[0m
+notifying browser that file changed:  resources/js/out/cljs_deps.js
+notifying browser that file changed:  out\cashtime\calendar\logic.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.463 seconds.[0m
+notifying browser that file changed:  out\cashtime\calendar\logic.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.508 seconds.[0m
+notifying browser that file changed:  resources/js/out/cljs_deps.js
+notifying browser that file changed:  out\cashtime\calendar\logic.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.549 seconds.[0m
+notifying browser that file changed:  resources/js/out/cljs_deps.js
+notifying browser that file changed:  out\cashtime\calendar\logic.js
+[0mCompiling "resources/js/main.js" from ["src"]...[0m
+[32mSuccessfully compiled "resources/js/main.js" in 0.392 seconds.[0m
+notifying browser that file changed:  resources/js/out/cljs_deps.js
+notifying browser that file changed:  out\cashtime\calendar\view.js

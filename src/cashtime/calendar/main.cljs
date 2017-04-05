@@ -11,8 +11,8 @@
   "Инициализация модуля Платежный календарь"
   []
   (println "init core")
-  (l/refresh-random-data)
   (l/init-watchers)
+  (l/refresh-random-data)
   (.locale js/moment "ru")
   (rum/mount (v/main-view) (.getElementById js/document "main")))
 

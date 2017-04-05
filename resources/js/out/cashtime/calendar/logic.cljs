@@ -10,7 +10,8 @@
 
 (def default-entry-params
   {:v-type :plan :v-flow :inflow :v-summ 0
-   :dims [] :date (js/Date.)})
+   :dims {1 1 2 3}
+   :date (js/Date.)})
 
 (defonce appstate (atom
                     {:plain-entries [] ;; плоские данные, рандомно
@@ -20,7 +21,7 @@
 
                      :avail-dim-groups tp/test-avail-dim-groups
                      ;; активные (отображаемые) id групп измерений
-                     :active-dim-group-ids #{2 3}
+                     :active-dim-group-ids #{1 2}
 
                      ;; значение поисковой строки
                      :search-dim-str nil
@@ -34,6 +35,8 @@
                                    }
 
                      :current-entry-params default-entry-params
+                     :entry-modal-params {:mode :add-item
+                                          :title "Добавить запись"}
 
                      }))
 
@@ -97,7 +100,10 @@
 (defn update-entries!
   "Обновить записи в формат.виде"
   []
-  (let [plain-entries @(state-cursor [:plain-entries])
+  (let [plain-entries (-> @(state-cursor [:plain-entries])
+                          ;; добавляем пустую запись за сегодня, чтобы всегда отображалась
+;;                           (conj {:dims {1 1} :date (mu/current-date-iso-str) :v-summ 0 :v-type :plan :v-flow :inflow})
+                          )
         active-dim-group-ids @(state-cursor [:active-dim-group-ids])
         search-str @(state-cursor [:search-dim-str])
         search-tuple (when search-str (tp/get-search-tuple-with-substr @(state-cursor [:avail-dim-groups]) search-str))
@@ -116,14 +122,13 @@
     ;; сортируем
     (sort-entries!)))
 
+
 (defn refresh-random-data
   "Обновить случайные данные записей"
   []
   (let [plain-entries (random-plain-entries @(state-cursor [:avail-dim-groups])
                                             randomizer-params)]
-    (reset! (state-cursor [:plain-entries]) plain-entries)
-    ;; группируем формат.записи по дате
-    (update-entries!)))
+    (reset! (state-cursor [:plain-entries]) plain-entries)))
 
 
 ;;; ---------------------------------------------------------------------------
@@ -132,6 +137,11 @@
 (defn init-watchers
   "Иниц. всех вотчеров"
   []
+  ;; при изменении начальных плоских данных
+  (add-watch (state-cursor [:plain-entries]) :plain-entries-watch
+             (fn [k a old-s new-s]
+               (println "plain-entries watch")
+               (update-entries!)))
   ;; при изменении группировки дат
   (add-watch (state-cursor [:date-params :grouping-mode]) :d-group-mode-watch
              (fn [k a old-s new-s]
@@ -198,6 +208,10 @@
                  (apply conj (cons coll dates)))
                   #{})
        (into [])
+;;        ;; добавляем сегодняшнюю дату, если её нет
+;;        (cons (mu/current-date-iso-str))
+;;        ;; убираем если уже были повторы
+;;        distinct
        mu/sort-dates))
 
 (defn date-totals-from-entries
@@ -211,11 +225,21 @@
                             (update :plan + (or (get-in date-values [d :plan]) 0))))
                       {:fact 0 :plan 0} entries)))))
 
+(defn is-current-date?
+  "Проверка, что дата является текущей (с учетом группировки по дням/месяцам/годам)"
+  [d d-group-mode]
+  (let [current-iso-str-d (mu/current-date-iso-str)]
+    (case d-group-mode
+      :by-day (= d current-iso-str-d)
+      :by-month (and (= (.year (js/moment. d)) (.year (js/moment. current-iso-str-d)))
+                     (= (.month (js/moment. d)) (.month (js/moment. current-iso-str-d))))
+      :by-year (= (.year (js/moment. d)) (.year (js/moment. current-iso-str-d)))
+      false)))
 
 ;;; ---------------------------------------------------------------------------
 ;;; Функции при событии для вьюшек, связанные с изменением state-а
 ;;; ---------------------------------------------------------------------------
-(defn print-appstate
+(defn ^:export print-appstate
   "Распечатать в лог текущее содержимое appstate"
   []
   (println @appstate))
@@ -255,8 +279,75 @@
              (conj active-dims (:id dim-group))))))
 
 (defn add-new-item
+  "Открыть модальное окно добавления новой записи"
   []
   (println "add-new-item")
   (.modal (-> "#entry-modal"
-              js/$
-              (.modal)) "show"))
+              js/$) "show"))
+
+
+(defn set-current-v-summ
+  "Установить значение суммы в модальном окне"
+  [v-summ]
+  (println "set-current-v-summ " v-summ)
+  (reset! (state-cursor [:current-entry-params :v-summ])
+          v-summ))
+
+
+(defn set-current-date
+  "Установить значение даты в модальном окне"
+  [date]
+  (println "set-current-date " date)
+  (reset! (state-cursor [:current-entry-params :date])
+          date))
+
+
+(defn toggle-current-v-type
+  "Поменять режим план/факт в модальном окне"
+  [v-type]
+  (println "toggle-current-v-type " v-type)
+  (reset! (state-cursor [:current-entry-params :v-type])
+          v-type))
+
+
+(defn toggle-current-v-flow
+  "Поменять режим приток/отток в модальном окне"
+  [v-flow]
+  (println "toggle-current-v-flow " v-flow)
+  (reset! (state-cursor [:current-entry-params :v-flow])
+          v-flow))
+
+
+(defn change-modal-dim-to
+  "Изменить значение в дропдауне для измерения в модальном окне"
+  [dim-group-id dim-id]
+  (println "change modal dim to :" dim-group-id ", " dim-id)
+  (swap! (state-cursor [:current-entry-params :dims])
+         (fn[d] (assoc d dim-group-id dim-id))))
+
+
+(defn save-item-from-modal
+  "Сохранить запись через модальное окно"
+  []
+  (println "saved item from modal")
+  (let [entry-params @(state-cursor [:current-entry-params])
+        modal-params @(state-cursor [:entry-modal-params])
+        ;; чистим конечную запись
+        result-entry (-> entry-params
+                         (update :dims
+                                 (fn[dims]
+                                   (reduce-kv (fn[m k v]
+                                                (if v (assoc m k v) m))
+                                              {} dims)))
+                         (update :date #(.toISOString %))
+                         (update :v-summ #(js/parseFloat %)))]
+    (println entry-params)
+    ;; TODO: перенести логику добавления в другое место?
+    (when (= (:mode modal-params) :add-item)
+      (swap! (state-cursor [:plain-entries])
+             (fn [pe] (conj pe result-entry))))))
+
+
+
+
+
